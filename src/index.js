@@ -8,21 +8,13 @@ import Experience from "./scenes/Experience";
 import Education from "./scenes/Education";
 import Contact from "./scenes/Contact";
 import NavDrawer from "./components/menus/NavDrawer";
-import { getString } from "resources";
 
 class App extends Component {
     render() {
         return (
             <Router>
-                <div style={{backgroundColor:"#ff0000"}}>
-                    <NavDrawer
-                        firstItem={getString("home")}
-                        secondItem={getString("about")}
-                        thirdItem={getString("skills")}
-                        fourthItem={getString("experience")}
-                        fifthItem={getString("education")}
-                        sixthItem={getString("contact")}
-                    />
+                <div style={{backgroundColor:"#000000"}}>
+                    <NavDrawer/>
                     <Switch>
                         <Route path="/:lan/contact"
                                component={Contact}

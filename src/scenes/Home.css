@@ -1,28 +1,37 @@
 .App {
-  text-align: center;
+    text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+p {
+    font-size: 14px;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+@keyframes QUOGO {
+    25% {
+        transform: translateY(0);
+    }
+    35% {
+        right: 0;
+        transform: translateY(25%);
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        right: 100%;
+        transform: translateY(25%);
+    }
 }
 
-.App-title {
-  font-size: 1.5em;
+.QUO {
+    display: none;
+    bottom: 0;
+    position: fixed;
+    transform: translateY(100%);
+    right: 0;
 }
 
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.QUO-go {
+    animation: QUOGO 2500ms;
 }

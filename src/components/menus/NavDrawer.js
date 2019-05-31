@@ -18,11 +18,14 @@ import MenuIcon from '@material-ui/icons/Menu';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { getString } from "resources";
 
-const drawerWidth = 240;
+const drawerWidth = 250;
 
 const useStyles = makeStyles(theme => ( {
     root: {
         display: 'flex',
+        height: "100vh",
+        alignItems: "center",
+        position: "fixed"
     },
     drawer: {
         [theme.breakpoints.up('sm')]: {
@@ -62,48 +65,67 @@ function NavDrawer(props) {
         setMobileOpen(!mobileOpen);
     }
 
+    function ListItemLink(props) {
+        return <ListItem button
+                         component="a" {...props} />;
+    }
+
+
     const drawer = (
-        <div>
-            <List>
-                <ListItem button>
-                    <ListItemIcon>
-                        <HomeIcon />
-                    </ListItemIcon>
-                    <ListItemText primary={getString("home")} />
+        <div className={classes.root}>
+            <List component="nav">
+                <ListItem>
+                    <ListItemLink href="/home">
+                        <ListItemIcon>
+                            <HomeIcon />
+                        </ListItemIcon>
+                        <ListItemText primary={getString("home")} />
+                    </ListItemLink>
                 </ListItem>
-                <ListItem button>
-                    <ListItemIcon>
-                        <PersonIcon />
-                    </ListItemIcon>
-                    <ListItemText primary={getString("about")} />
+                <ListItem>
+                    <ListItemLink href="/about">
+                        <ListItemIcon>
+                            <PersonIcon />
+                        </ListItemIcon>
+                        <ListItemText primary={getString("about")} />
+                    </ListItemLink>
                 </ListItem>
-                <ListItem button>
-                    <ListItemIcon>
-                        <StarIcon />
-                    </ListItemIcon>
-                    <ListItemText primary={getString("skills")} />
+                <ListItem>
+                    <ListItemLink href="/skills">
+                        <ListItemIcon>
+                            <StarIcon />
+                        </ListItemIcon>
+                        <ListItemText primary={getString("skills")} />
+                    </ListItemLink>
                 </ListItem>
-                <ListItem button>
-                    <ListItemIcon>
-                        <WorkIcon />
-                    </ListItemIcon>
-                    <ListItemText primary={getString("experience")} />
+                <ListItem>
+                    <ListItemLink href="/experience">
+                        <ListItemIcon>
+                            <WorkIcon />
+                        </ListItemIcon>
+                        <ListItemText primary={getString("experience")} />
+                    </ListItemLink>
                 </ListItem>
-                <ListItem button>
-                    <ListItemIcon>
-                        <SchoolIcon />
-                    </ListItemIcon>
-                    <ListItemText primary={getString("education")} />
+                <ListItem>
+                    <ListItemLink href="/education">
+                        <ListItemIcon>
+                            <SchoolIcon />
+                        </ListItemIcon>
+                        <ListItemText primary={getString("education")} />
+                    </ListItemLink>
                 </ListItem>
-                <ListItem button>
-                    <ListItemIcon>
-                        <EmailIcon />
-                    </ListItemIcon>
-                    <ListItemText primary={getString("contact")} />
+                <ListItem>
+                    <ListItemLink href="/contact">
+                        <ListItemIcon>
+                            <EmailIcon />
+                        </ListItemIcon>
+                        <ListItemText primary={getString("contact")} />
+                    </ListItemLink>
                 </ListItem>
             </List>
         </div>
     );
+
 
     return (
         <div className={classes.root}>
@@ -150,8 +172,6 @@ function NavDrawer(props) {
                     </Drawer>
                 </Hidden>
             </nav>
-            <main className={classes.content}>
-            </main>
         </div>
     );
 }
