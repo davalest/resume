@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Home.css';
-import { Col, Grid, Row } from "react-bootstrap";
+import { Col, Container, Row } from "reactstrap";
 import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
 
@@ -20,7 +20,7 @@ class About extends Component {
                     alignItems: "center"
                 }}
                 >
-                    <Grid>
+                    <Container>
                         <Row>
                             <Col xs={12}
                                  md={3}
@@ -56,7 +56,7 @@ class About extends Component {
 
                             </Col>
                         </Row>
-                    </Grid>
+                    </Container>
                 </Paper>
             </div>
         );

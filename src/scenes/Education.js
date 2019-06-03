@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import './Home.css';
-import NavBar from "../components/menus/NavBar";
-import {getString} from "resources";
 
 class Education extends Component {
     render() {
