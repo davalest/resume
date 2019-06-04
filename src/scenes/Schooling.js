@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Home.css';
 
-class Experience extends Component {
+class Schooling extends Component {
     render() {
         return (
             <div className="App">
@@ -13,4 +13,4 @@ class Experience extends Component {
     }
 }
 
-export default Experience;
+export default Schooling;

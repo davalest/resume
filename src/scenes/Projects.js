@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Home.css';
 
-class Contact extends Component {
+class Projects extends Component {
     render() {
         return (
             <div className="App">
@@ -13,4 +13,4 @@ class Contact extends Component {
     }
 }
 
-export default Contact;
+export default Projects;

@@ -3,57 +3,48 @@ import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.css';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./scenes/Home";
-import About from "./scenes/About";
-import Skills from "./scenes/Skills";
-import Experience from "./scenes/Experience";
-import Education from "./scenes/Education";
-import Contact from "./scenes/Contact";
+import Resume from "./scenes/Resume";
+import Projects from "./scenes/Projects";
+import Schooling from "./scenes/Schooling";
 import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
 
 class App extends Component {
     render() {
         return (
             <Router>
                 <div>
-                    <Header/>
+                    <Header />
                     <Switch>
-                        <Route path="/:lan/contact"
-                               component={Contact}
+                        <Route path="/:lan/schooling"
+                               component={Schooling}
                         />
-                        <Route path="/contact"
-                               component={Contact}
+                        <Route path="/schooling"
+                               component={Schooling}
                         />
-                        <Route path="/:lan/education"
-                               component={Education}
+                        <Route path="/:lan/projects"
+                               component={Projects}
                         />
-                        <Route path="/education"
-                               component={Education}
+                        <Route path="/projects"
+                               component={Projects}
                         />
-                        <Route path="/:lan/experience"
-                               component={Experience}
+                        <Route path="/:lan/resume"
+                               component={Resume}
                         />
-                        <Route path="/experience"
-                               component={Experience}
-                        />
-                        <Route path="/:lan/skills"
-                               component={Skills}
-                        />
-                        <Route path="/skills"
-                               component={Skills}
-                        />
-                        <Route path="/:lan/gluquo"
-                               component={About}
-                        />
-                        <Route path="/about"
-                               component={About}
-                        />
-                        <Route path="/:lan/gluquo"
-                               component={Home}
+                        <Route path="/resume"
+                               component={Resume}
                         />
                         <Route path="/"
                                component={Home}
                         />
                     </Switch>
+                    <div style={{
+                        display: "flex",
+                        justifyContent: "center"
+                    }}
+                    >
+                        <Footer />
+                    </div>
                 </div>
             </Router>
         )

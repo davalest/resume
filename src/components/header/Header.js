@@ -35,14 +35,18 @@ export default class Header extends React.Component {
         return (
             <div className="header-container">
                 <div className="navbar-container">
-                    <Navbar expand="lg" dark fixed>
-                        <NavItem>
+                    <Navbar expand="lg"
+                            dark
+                            fixed
+                    >
+                        <NavItem style={{ listStyle: "none" }}>
                             <NavLink className="nav-link"
                                      exact
                                      to="/"
-                                     onClick={this.toggle}>
-                                <span className="name-title">David Valenciano</span> <br/>
-                                <span className="work-title">Web Developer</span>
+                                     onClick={this.toggle}
+                            >
+                                <span className="name-title">David Valenciano</span> <br />
+                                <span className="work-title">Frontend Developer</span>
                             </NavLink>
                         </NavItem>
                         <NavbarToggler onClick={this.toggle}
@@ -74,18 +78,16 @@ export default class Header extends React.Component {
                                              to="/resume"
                                              activeStyle={{ color: '#5ac4c3' }}
                                              onClick={this.toggle}
-                                    ><span
-                                        className="items"
-                                    >{getString("resume").toUpperCase()}</span></NavLink>
+                                    >
+                                        <span className="items">{getString("resume").toUpperCase()}</span></NavLink>
                                 </NavItem>
                                 <NavItem>
                                     <NavLink className="nav-link"
                                              to="/projects"
                                              activeStyle={{ color: '#5ac4c3' }}
                                              onClick={this.toggle}
-                                    ><span
-                                        className="items"
-                                    >{getString("project").toUpperCase()}</span></NavLink>
+                                    >
+                                        <span className="items">{getString("project").toUpperCase()}</span></NavLink>
                                 </NavItem>
                                 <NavItem>
                                     <NavLink className="nav-link"
@@ -95,14 +97,6 @@ export default class Header extends React.Component {
                                     ><span
                                         className="items"
                                     >{getString("education").toUpperCase()}</span></NavLink>
-                                </NavItem>
-                                <NavItem><NavLink className="nav-link"
-                                                  to="/contact"
-                                                  activeStyle={{ color: '#5ac4c3' }}
-                                                  onClick={this.toggle}
-                                ><span
-                                    className="items"
-                                >{getString("contact").toUpperCase()}</span></NavLink>
                                 </NavItem>
                             </Nav>
                         </Collapse>

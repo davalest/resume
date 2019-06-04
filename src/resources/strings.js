@@ -20,9 +20,9 @@ const strings = {
     en: {
         "home": "Home",
         "about": "About",
-        "skills": "Skills",
-        "experience": "Experience",
-        "education": "Education",
+        "skills": "Resume",
+        "experience": "Projects",
+        "education": "Schooling",
         "contact": "Contact",
         "know_me": "Know me",
         "resume":"Resume",

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Home.css';
-import Paper from '@material-ui/core/Paper';
+import { david } from "resources";
+import PersonalCard from "../components/card/PersonalCard";
 
 
 class Home extends Component {
@@ -8,19 +9,16 @@ class Home extends Component {
         return (
             <div style={{
                 display: "flex",
-                height: "100vh",
                 alignItems: "center",
-                justifyContent: "flex-end"
+                justifyContent: "center",
+                height: "80vh"
             }}
             >
-                <Paper style={{
-                    minHeight: 400,
-                    display: "flex",
-                    alignItems: "center"
-                }}
-                >
+                <PersonalCard
+                    src={david}
+                    title="David"
+                />
 
-                </Paper>
             </div>
         );
     }
