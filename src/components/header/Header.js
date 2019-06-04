@@ -9,27 +9,17 @@ import "./Header.css";
 export default class Header extends React.Component {
     constructor(props) {
         super(props);
-
-        this.dropDownToggle = this.dropDownToggle.bind(this);
         this.state = {
-            isOpen: false,
-            isOpenDrop: false
+            isOpen: false
         };
     }
 
     toggle = () => {
-        if (window.innerWidth < 995)
+        if (window.innerWidth < 770)
             this.setState({
                 isOpen: !this.state.isOpen
             });
     };
-
-    dropDownToggle() {
-        this.setState({
-            isOpenDrop: !this.state.isOpenDrop
-        });
-    }
-
 
     render() {
         return (
@@ -37,7 +27,6 @@ export default class Header extends React.Component {
                 <div className="navbar-container">
                     <Navbar expand="lg"
                             dark
-                            fixed
                     >
                         <NavItem style={{ listStyle: "none" }}>
                             <NavLink className="nav-link"
@@ -56,7 +45,7 @@ export default class Header extends React.Component {
                         <Collapse isOpen={this.state.isOpen}
                                   navbar
                                   style={this.state.isOpen ? {
-                                      backgroundColor: "#e7e5df",
+                                      backgroundColor: "#E1DBDB",
                                       paddingLeft: '1rem'
                                   } : ""}
                         >

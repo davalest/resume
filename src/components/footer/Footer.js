@@ -9,95 +9,122 @@ export default class Footer extends React.Component {
     render() {
         return (
             <div style={{
-                maxWidth: 1024
+                backgroundColor: "#E1DBDB",
+                width: "100%",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "flex-end"
             }}
             >
-                <Container>
-                    <Row>
-                        <Col xs={4}>
-                            <Row>
-                                <Col xs={4}>
-                                    <Fab style={{
-                                        backgroundColor: "#5ac4c3",
-                                        color: "#ffffff"
-                                    }}
-                                    >
+                <div style={{
+                    maxWidth: 1024,
+                    paddingTop: 20,
+                    paddingBottom: 20,
+                    zIndex: 999
+                }}
+                >
+                    <Container style={{
+                    }}>
+                        <Row>
+                            <Col xs={4}>
+                                <Row>
+                                    <Col xs={4}>
+                                        <Fab style={{
+                                            backgroundColor: "#5ac4c3",
+                                            color: "#ffffff",
+                                            "&:focus": {
+                                                outline: 0
+                                            }
+                                        }}
+                                        >
+                                            <a href="tel:+34 600 80 90 24"
+                                               style={{ color: "inherit" }}
+                                            > <PhoneIcon /></a>
+                                        </Fab>
+                                    </Col>
+                                    <Col xs={8}>
+                                        <p>Llamar</p>
                                         <a href="tel:+34 600 80 90 24"
-                                           style={{ color: "inherit" }}
-                                        > <PhoneIcon /></a>
-                                    </Fab>
-                                </Col>
-                                <Col xs={8}>
-                                    <p>Llamar</p>
-                                    <a href="tel:+34 600 80 90 24"
-                                       style={{
-                                           color: "inherit",
-                                           textDecoration: "inherit"
-                                       }}
-                                    >+34 600 80 90 24</a>
+                                           style={{
+                                               color: "inherit",
+                                               textDecoration: "inherit"
+                                           }}
+                                        >+34 600 80 90 24</a>
 
-                                </Col>
-                            </Row>
-                        </Col>
-                        <Col>
-                            <Row>
-                                <Col xs={4}>
-                                    <Fab style={{
-                                        backgroundColor: "#5ac4c3",
-                                        color: "#ffffff"
-                                    }}
-                                    >
+                                    </Col>
+                                </Row>
+                            </Col>
+                            <Col>
+                                <Row>
+                                    <Col xs={4}>
+                                        <Fab style={{
+                                            backgroundColor: "#5ac4c3",
+                                            color: "#ffffff",
+                                            "&:focus": {
+                                                outline: 0
+                                            }
+                                        }}
+                                        >
+                                            <a href="mailto:dartvales@gmail.com"
+                                               style={{
+                                                   color: "inherit",
+                                                   textDecoration: "inherit"
+                                               }}
+                                            ><MailIcon /></a>
+                                        </Fab>
+                                    </Col>
+                                    <Col xs={8}>
+                                        <p>Mail</p>
                                         <a href="mailto:dartvales@gmail.com"
                                            style={{
                                                color: "inherit",
                                                textDecoration: "inherit"
                                            }}
-                                        ><MailIcon /></a>
-                                    </Fab>
-                                </Col>
-                                <Col xs={8}>
-                                    <p>Mail</p>
-                                    <a href="mailto:dartvales@gmail.com"
-                                       style={{
-                                           color: "inherit",
-                                           textDecoration: "inherit"
-                                       }}
-                                    >dartvales@gmail.com</a>
-                                </Col>
-                            </Row>
-                        </Col>
-                        <Col>
-                            <Row>
-                                <Col xs={4}>
-                                    <Fab style={{
-                                        backgroundColor: "#5ac4c3",
-                                        color: "#ffffff"
-                                    }}
-                                    >
-                                        <a href="https://www.linkedin.com/in/david-valenciano"
-                                           style={{
-                                               color: "inherit",
-                                               textDecoration: "inherit"
-                                           }}
-                                        ><AddIcon /></a>
-                                    </Fab>
-                                </Col>
-                                <Col xs={8}>
-                                    <p>Sígueme</p>
-                                    <span style={{
-                                        fontSize: 23,
-                                        lineHeight: 1
-                                    }}
-                                    >
+                                        >dartvales@gmail.com</a>
+                                    </Col>
+                                </Row>
+                            </Col>
+                            <Col>
+                                <Row>
+                                    <Col xs={4}>
+                                        <Fab style={{
+                                            backgroundColor: "#5ac4c3",
+                                            color: "#ffffff",
+                                            "&:focus": {
+                                                outline: 0
+                                            }
+                                        }}
+                                        >
+                                            <a href="https://www.linkedin.com/in/david-valenciano"
+                                               style={{
+                                                   color: "inherit",
+                                                   textDecoration: "inherit"
+                                               }}
+                                            ><AddIcon /></a>
+                                        </Fab>
+                                    </Col>
+                                    <Col xs={8}>
+                                        <p>Sígueme</p>
+                                        <span style={{
+                                            fontSize: 23,
+                                            lineHeight: 1
+                                        }}
+                                        >
                                         <a href="https://www.linkedin.com/in/david-valenciano"> <i className="fab fa-linkedin-in" /></a>
-                                        &nbsp; &nbsp;
-                                        <a href="https://github.com/DartValEs"> <i className="fab fa-github" /> </a>
+                                            &nbsp;
+                                            <a href="https://github.com/DartValEs"
+                                               style={{
+                                                   color: "inherit",
+                                                   textDecoration: "inherit"
+                                               }}
+                                            > <i className="fab fa-github" /> </a>
                                     </span>
-                                </Col>
-                            </Row>
-                        </Col>
-                    </Row>
-                </Container>
+                                    </Col>
+                                </Row>
+                            </Col>
+                        </Row>
+                    </Container>
+                </div>
             </div>
         );
     }

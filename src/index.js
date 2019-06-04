@@ -38,13 +38,7 @@ class App extends Component {
                                component={Home}
                         />
                     </Switch>
-                    <div style={{
-                        display: "flex",
-                        justifyContent: "center"
-                    }}
-                    >
-                        <Footer />
-                    </div>
+                    <Footer />
                 </div>
             </Router>
         )

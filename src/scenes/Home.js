@@ -11,7 +11,7 @@ class Home extends Component {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                height: "80vh"
+                paddingTop:130
             }}
             >
                 <PersonalCard

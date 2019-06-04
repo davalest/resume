@@ -1,6 +1,10 @@
 .header-container {
     z-index: 999;
     width: 100%;
+    background-color: #E1DBDB;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: fixed;
 }
 
 .navbar-container {

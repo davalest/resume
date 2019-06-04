@@ -14,7 +14,7 @@ export default class PersonalCard extends React.Component {
                 <div>
                     <Container>
                         <Row>
-                            <Col xs={12} sm={5}>
+                            <Col sm={12} md={5}>
                                 <Avatar name={this.props.title}
                                         size={380}
                                         src={this.props.src}
@@ -22,7 +22,7 @@ export default class PersonalCard extends React.Component {
                                         round={true}
                                 />
                             </Col>
-                            <Col xs={12} sm={7}>
+                            <Col sm={12} md={7}>
                                 <p>Soy David Valenciano y me dedico a ser desarrollador front-end. Tambien
                                    he sido Maquetador Web. </p>
                                 <p>He participado en varios proyectos, en los que he trabajado con equipos pequeños
@@ -40,7 +40,10 @@ export default class PersonalCard extends React.Component {
                                              height: 150,
                                              width: 150,
                                              fontSize: 20,
-                                             backgroundColor:"#5ac4c3"
+                                             backgroundColor:"#5ac4c3",
+                                             "&:focus": {
+                                                 outline: 0
+                                             }
                                          }}
                                     >
                                         Resumen
@@ -52,7 +55,10 @@ export default class PersonalCard extends React.Component {
                                              width: 150,
                                              fontSize: 20,
                                              marginLeft: 30,
-                                             backgroundColor:"#5ac4c3"
+                                             backgroundColor:"#5ac4c3",
+                                             "&:focus": {
+                                                 outline: 0
+                                             }
                                          }}
                                     >
                                         Proyectos
@@ -64,7 +70,10 @@ export default class PersonalCard extends React.Component {
                                              width: 150,
                                              fontSize: 20,
                                              marginLeft: 30,
-                                             backgroundColor:"#5ac4c3"
+                                             backgroundColor:"#5ac4c3",
+                                             "&:focus": {
+                                                 outline: 0
+                                             }
                                          }}
                                     >
                                         Educación
