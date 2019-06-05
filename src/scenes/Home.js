@@ -10,8 +10,7 @@ class Home extends Component {
             <div style={{
                 display: "flex",
                 alignItems: "center",
-                justifyContent: "center",
-                paddingTop:130
+                justifyContent: "center"
             }}
             >
                 <PersonalCard
