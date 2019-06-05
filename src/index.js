@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./scenes/Home";
 import Resume from "./scenes/Resume";
 import Projects from "./scenes/Projects";
-import Schooling from "./scenes/Schooling";
+import Skills from "./scenes/Skills";
 import Contact from "./scenes/Contact";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
@@ -25,10 +25,10 @@ class App extends Component {
                                    component={Contact}
                             />
                             <Route path="/:lan/schooling"
-                                   component={Schooling}
+                                   component={Skills}
                             />
                             <Route path="/schooling"
-                                   component={Schooling}
+                                   component={Skills}
                             />
                             <Route path="/:lan/projects"
                                    component={Projects}

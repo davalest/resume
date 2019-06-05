@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Home.scss';
 
-class Schooling extends Component {
+class Skills extends Component {
     render() {
         return (
             <div className="App">
@@ -13,4 +13,4 @@ class Schooling extends Component {
     }
 }
 
-export default Schooling;
+export default Skills;

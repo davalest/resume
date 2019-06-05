@@ -29,12 +29,10 @@
     padding-left: 15px;
     padding-right: 15px;
     font-size: 12px;
-}
-
-
-.items:hover, .items:active, .items:visited:hover {
-    color: #5ac4c3 !important;
-    text-decoration: none !important;
+    &:hover, &:active, &:visited:hover {
+        color: #5ac4c3 !important;
+        text-decoration: none !important;
+    }
 }
 
 .items, .item:visited {

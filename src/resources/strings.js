@@ -22,7 +22,7 @@ const strings = {
         "about": "About",
         "skills": "Resume",
         "experience": "Projects",
-        "education": "Schooling",
+        "education": "Skills",
         "contact": "Contact",
         "know_me": "Know me",
         "resume":"Resume",
