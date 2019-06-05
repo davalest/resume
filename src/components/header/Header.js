@@ -4,7 +4,7 @@ import {
 } from 'reactstrap';
 import { getString } from 'resources';
 import { NavHashLink as NavLink } from 'react-router-hash-link';
-import "./Header.css";
+import "./Header.scss";
 
 export default class Header extends React.Component {
     constructor(props) {

@@ -1,0 +1,23 @@
+.footer-external {
+    background-color: #E1DBDB;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.footer-internal {
+    max-width: 1024px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    z-index: 999;
+}
+
+.footer-link, .footer-link:hover {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.footer-icons {
+    font-size: 23px;
+}

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Home.css';
+import './Home.scss';
 import { david } from "resources";
 import PersonalCard from "../components/card/PersonalCard";
 

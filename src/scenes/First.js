@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Home.css';
+import './Home.scss';
 import { Col, Container, Row } from "reactstrap";
 import Paper from '@material-ui/core/Paper';
 import { david, resume } from "resources";
