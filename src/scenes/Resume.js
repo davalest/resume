@@ -1,15 +1,13 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './Home.scss';
 import InfoSection from "../components/info/InfoSection";
 
-class Resume extends Component {
-    render() {
+const Resume = () => {
         return (
-            <div style={{paddignTop: 100}}>
+            <div>
                 <InfoSection/>
             </div>
         );
-    }
-}
+};
 
 export default Resume;

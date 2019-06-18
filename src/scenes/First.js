@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Home.scss';
 import { Col, Container, Row } from "reactstrap";
 import Paper from '@material-ui/core/Paper';
@@ -7,8 +7,7 @@ import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
 
 
-class Home extends Component {
-    render() {
+const Home = () => {
         return (
             <div style={{
                 display: "flex",
@@ -71,7 +70,6 @@ class Home extends Component {
                 </Paper>
             </div>
         );
-    }
-}
+};
 
 export default Home;
