@@ -1,6 +1,5 @@
 import React from 'react';
 import "./PersonalCard.scss";
-import { Container, Row, Col } from 'reactstrap';
 import Avatar from "react-avatar";
 import Fab from '@material-ui/core/Fab';
 import { makeStyles } from '@material-ui/core/styles';
@@ -27,21 +26,17 @@ const PersonalCard = (props) => {
     const classes = useStyles();
     return (
         <div className="personal-internal">
-            <Container>
-                <Row>
-                    <Col sm={12}
-                         md={5}
-                    >
+            <div className="container">
+                <div className="row">
+                    <div className="col-sm-12 col-md-5 d-flex justify-content-center">
                         <Avatar name={props.title}
                                 size={380}
                                 src={props.src}
                                 alt={props.title}
                                 round={true}
                         />
-                    </Col>
-                    <Col sm={12}
-                         md={7}
-                    >
+                    </div>
+                    <div className="col-sm-12 col-md-7 mt-sm-4">
                         <div className="personal-text">
                             <p>{getString("who_am_i")}</p>
                             <p>{getString("where_ive_work")}</p>
@@ -68,9 +63,9 @@ const PersonalCard = (props) => {
                                 </Fab>
                             </div>
                         </div>
-                    </Col>
-                </Row>
-            </Container>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };

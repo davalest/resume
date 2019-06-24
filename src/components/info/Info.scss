@@ -1,9 +1,23 @@
 .info-external {
-    padding-top: 100px;
+    padding-top: 50px;
+    margin: auto;
+}
+
+.info-external {
+    max-width: 1024px;
+}
+
+.resume-line{
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.resume-btns {
+    align-self: center;
 }
 
 .info-dates {
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .info-company {

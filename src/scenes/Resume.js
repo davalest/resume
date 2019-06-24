@@ -1,13 +1,19 @@
 import React from 'react';
 import './Home.scss';
-import InfoSection from "../components/info/InfoSection";
+import Divider from "@material-ui/core/Divider";
+import Profesional from "../components/info/Profesional";
+import Schooling from "../components/info/Schooling";
 
 const Resume = () => {
-        return (
-            <div>
-                <InfoSection/>
-            </div>
-        );
+    return (
+        <div>
+            <Profesional />
+            <Divider />
+            <Schooling />
+            <Divider />
+            <Schooling />
+        </div>
+    );
 };
 
 export default Resume;

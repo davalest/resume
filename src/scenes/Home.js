@@ -6,12 +6,11 @@ import PersonalCard from "../components/card/PersonalCard";
 
 const Home = () => {
     return (
-        <div className="personal-container">
+        <div className="d-flex align-items-center justify-content-center mt-5 mb-5">
             <PersonalCard
                 src={david}
                 title="David"
             />
-
         </div>
     );
 };

@@ -11,18 +11,21 @@ const strings = {
         "know_me": "Conóceme",
         "resume":"Resumen",
         "projects":"Proyectos",
-        "download_resume": "Descargar cv",
+        "download_resume": "Descargar CV",
         "who_am_i": "Soy David Valenciano Esteban y me dedico a ser desarrollador front-end. Tambien he sido Maquetador Web.",
         "where_ive_work":"He participado en varios proyectos, en los que he trabajado con equipos pequeños de gente estupenda. De los que me he llevado experiencias únicas.",
         "how_am_i": "Soy una persona proactiva que siempre está en busca de conocimientos y nuevas experiencias.",
         "work_with_me":"¿Quieres trabajar conmigo? Me encantaría saber de ti.",
         "work_experience":"Experiencia profesional",
         "feb_actual":"Febrero 2017–actualmente",
+        "2015_2016":"Septiembre 2015– Julio 2016",
         "developed_projects":"Proyectos desarrollados:",
+        "developed_tasks":"Tareas desempeñadas:",
         "used_tech":"Tecnologías empleadas: ",
         "web_app_dev":"Desarrollo de App web.",
         "website_development":"Maquetado y desarrollo de página web.",
         "design_website_development":"Diseño, maquetado y desarrollo de página web.",
+        "now":"Actualmente"
     },
     en: {
         "home": "Home",
@@ -41,11 +44,14 @@ const strings = {
         "work_with_me":"Do you want to work with me? I would love to hear from you.",
         "work_experience":"Professional experience",
         "feb_actual":"February 2017-currently",
+        "2015_2016":"September 2015– July 2016",
         "developed_projects":"Developed projects:",
+        "developed_tasks":"Developed tasks:",
         "used_tech ":"Used technology",
         "web_app_dev":"Web App development.",
         "website_development":"Layout and website development.",
         "design_website_development":"Design, layout and website development.",
+        "now":"Now"
     }
 };
 
