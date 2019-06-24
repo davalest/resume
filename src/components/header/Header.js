@@ -69,14 +69,6 @@ const Header = () => {
                                 >
                                     <span className="items">{getString("skills").toUpperCase()}</span></NavLink>
                             </NavItem>
-                            <NavItem>
-                                <NavLink className="nav-link"
-                                         to="/projects"
-                                         activeStyle={{ color: '#5ac4c3' }}
-                                         onClick={toggle}
-                                >
-                                    <span className="items">{getString("projects").toUpperCase()}</span></NavLink>
-                            </NavItem>
                         </Nav>
                     </Collapse>
                 </Navbar>

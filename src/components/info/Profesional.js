@@ -12,10 +12,16 @@ const useStyles = makeStyles({
             position: "fixed",
             bottom: 30,
             right: 30,
+            borderRadius:"50%",
+            height: 80,
+            width:80,
             zIndex: 998,
             "&:focus": {
                 outline: 0
             }
+        },
+    downloadIcon: {
+            fontSize:30
         },
         personalButton: {
             height: 150,
@@ -30,7 +36,7 @@ const useStyles = makeStyles({
 );
 
 
-const Profesional = (props) => {
+const Profesional = () => {
     const classes = useStyles();
     return (
         <div className="info-external">
@@ -43,11 +49,12 @@ const Profesional = (props) => {
                         aria-label={getString("download_resume")}
                         className={classes.downloadButton}
                     >
-                        <CloudDownloadIcon />
+                        <CloudDownloadIcon className={classes.downloadIcon} />
                     </Fab>
                 </Tooltip>
                 <div className="row">
-                    <div className="col-xs-6 col-md-3 resume-btns">
+                    <div className="col-xs-6 col-md-3 d-flex justify-content-center align-self-center">
+                        <div>
                         <Fab color="primary"
                              aria-label="resume"
                              disabled={true}
@@ -55,13 +62,14 @@ const Profesional = (props) => {
                         >
                             {getString("work_experience").toUpperCase()}
                         </Fab>
+                        </div>
                     </div>
                     <div className="col-9">
                         <div className="row resume-line">
-                            <div className="col-3">
+                            <div className="col-12 mt-5 mt-md-0 col-md-3">
                                 <p className="info-dates">{getString("feb_actual")}</p>
                             </div>
-                            <div className="col-9">
+                            <div className="col-12 col-md-9">
                                 <p>
                                     <span className="info-company">QUO Health SL </span>
                                     <span className="info-job">Front-end Developer </span>
@@ -122,13 +130,13 @@ const Profesional = (props) => {
                             </div>
                         </div>
                         <div className="row resume-line">
-                            <div className="col-3">
+                            <div className="col-12 mt-5 mt-md-0 col-md-3">
                                 <p className="info-dates">2016</p>
                             </div>
-                            <div className="col-9">
+                            <div className="col-12 col-md-9">
                                 <p>
                                     <span className="info-company">Freelance</span>
-                                    <span className="info-job">Front-end Developer </span>
+                                    <span className="info-job"> Front-end Developer </span>
                                     <span className="info-projects">{getString("developed_projects")} </span>
                                     <ul>
                                         <li>
@@ -146,10 +154,10 @@ const Profesional = (props) => {
                             </div>
                         </div>
                         <div className="row resume-line">
-                            <div className="col-3">
+                            <div className="col-12 mt-5 mt-md-0 col-md-3">
                                 <p className="info-dates">Septiembre 2015 – Julio 2016</p>
                             </div>
-                            <div className="col-9">
+                            <div className="col-12 col-md-9">
                                 <p>
                                     <span className="info-company">Hospitales HM (Montepríncipe)</span>
                                     <span className="info-job"> IT CAU (Prácticas) </span>

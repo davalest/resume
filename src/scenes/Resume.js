@@ -10,8 +10,6 @@ const Resume = () => {
             <Profesional />
             <Divider />
             <Schooling />
-            <Divider />
-            <Schooling />
         </div>
     );
 };

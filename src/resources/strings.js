@@ -42,7 +42,7 @@ const strings = {
         "where_ive_work":"I have participated in several projects, in which I have worked with small teams of great people. Of which I have taken unique experiences.",
         "how_am_i": "I am a proactive person who is always looking for knowledge and new experiences.",
         "work_with_me":"Do you want to work with me? I would love to hear from you.",
-        "work_experience":"Professional experience",
+        "work_experience":"Experience",
         "feb_actual":"February 2017-currently",
         "2015_2016":"September 2015– July 2016",
         "developed_projects":"Developed projects:",

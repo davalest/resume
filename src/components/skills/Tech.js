@@ -1,7 +1,7 @@
 import React from 'react';
 import Fab from "@material-ui/core/Fab";
 import { makeStyles } from '@material-ui/core/styles';
-import "./Info.scss";
+import "./Skills.scss";
 import { getString } from "resources";
 
 
@@ -28,7 +28,7 @@ const useStyles = makeStyles({
 );
 
 
-const Schooling = () => {
+const Tech = (props) => {
     const classes = useStyles();
     return (
         <div className="info-external">
@@ -84,4 +84,4 @@ const Schooling = () => {
     );
 };
 
-export default Schooling;
+export default Tech;

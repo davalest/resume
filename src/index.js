@@ -4,9 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./scenes/Home";
 import Resume from "./scenes/Resume";
-import Projects from "./scenes/Projects";
 import Skills from "./scenes/Skills";
-import Contact from "./scenes/Contact";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 
@@ -18,23 +16,11 @@ class App extends Component {
                     <Header />
                     <div style={{paddingTop: 80}}>
                         <Switch>
-                            <Route path="/:lan/contact"
-                                   component={Contact}
-                            />
-                            <Route path="/contact"
-                                   component={Contact}
-                            />
-                            <Route path="/:lan/schooling"
+                            <Route path="/:lan/skills"
                                    component={Skills}
                             />
-                            <Route path="/schooling"
+                            <Route path="/skills"
                                    component={Skills}
-                            />
-                            <Route path="/:lan/projects"
-                                   component={Projects}
-                            />
-                            <Route path="/projects"
-                                   component={Projects}
                             />
                             <Route path="/:lan/resume"
                                    component={Resume}
