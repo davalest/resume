@@ -1,12 +1,42 @@
 import React from 'react';
 import Fab from "@material-ui/core/Fab";
-import { makeStyles } from '@material-ui/core/styles';
 import "./Skills.scss";
 import { getString } from "resources";
-import SkillChart from "./SkillChart";
+import { makeStyles, withStyles } from '@material-ui/core/styles';
+import { lighten } from '@material-ui/core/styles/colorManipulator';
+import LinearProgress from '@material-ui/core/LinearProgress';
+
+const BorderLinearProgress = withStyles({
+    root: {
+        height: 10,
+        backgroundColor: lighten('#0088FE', 0.5),
+    },
+    bar: {
+        borderRadius: 20,
+        backgroundColor: '#0088FE',
+    },
+})(LinearProgress);
+
+const ProgressBar = (text) => {
+    const classes = useStyles();
+
+    return (
+        <div className={classes.root}>
+            <p>{text}</p>
+            <BorderLinearProgress
+                variant="determinate"
+                color="primary"
+                value={50}
+            />
+        </div>
+    );
+};
 
 
 const useStyles = makeStyles({
+        root: {
+            flexGrow: 1,
+        },
         downloadButton: {
             position: "fixed",
             bottom: 30,
@@ -42,115 +72,14 @@ const Knowledge = () => {
                              disabled={true}
                              className={classes.personalButton}
                         >
-                            {getString("skills").toUpperCase()}
+                            {getString("other_knowledge").toUpperCase()}
                         </Fab>
                     </div>
                     <div className="col-9">
-                        <div className="row">
-                            <div className="col-3 align-self-center">
-                                <SkillChart
-                                    data={[
-                                        {
-                                            name: 'native',
-                                            value: 50
-                                        },
-                                        {
-                                            name: 'no native',
-                                            value: 50
-                                        }
-                                    ]}
-                                    value="50%"
-                                />
-                            </div>
-                            <div className="col-3 align-self-center">
-                                <ul className="chart-skills">
-                                    <li className="tech-title">- React Native</li>
-                                </ul>
-                                <ul className="chart-skills">
-                                    <li className="tech-subtitle">{getString("beginner")},</li>
-                                    <li className="tech-subtitle">3 {getString("months").toLowerCase()}</li>
-                                </ul>
-                                <p className="tech-subtitle"> </p>
-                            </div>
-                            <div className="col-3 align-self-center">
-                                <SkillChart
-                                    data={[
-                                        {
-                                            name: 'node',
-                                            value: 75
-                                        },
-                                        {
-                                            name: 'no node',
-                                            value: 25
-                                        }
-                                    ]}
-                                    value="75%"
-                                />
-                            </div>
-                            <div className="col-3 align-self-center">
-                                <ul className="chart-skills">
-                                    <li className="tech-title">- Node.js</li>
-                                    <li className="tech-title">- Firebase</li>
-                                </ul>
-                                <ul className="chart-skills">
-                                    <li className="tech-subtitle">{getString("advanced")},</li>
-                                    <li className="tech-subtitle">{reactDif} {getString("years").toLowerCase()}</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div className="col-3 align-self-center">
-                                <SkillChart
-                                    data={[
-                                        {
-                                            name: 'react',
-                                            value: 88
-                                        },
-                                        {
-                                            name: 'no react',
-                                            value: 12
-                                        }
-                                    ]}
-                                    value="88%"
-                                />
-                            </div>
-                            <div className="col-3 align-self-center">
-                                <ul className="chart-skills">
-                                    <li className="tech-title">- React.js</li>
-                                    <li className="tech-title">- Redux</li>
-                                </ul>
-                                <ul className="chart-skills">
-                                    <li className="tech-subtitle">{getString("advanced")},</li>
-                                    <li className="tech-subtitle">{reactDif} {getString("years").toLowerCase()}</li>
-                                </ul>
-                            </div>
-                            <div className="col-3 align-self-center">
-                                <SkillChart
-                                    data={[
-                                        {
-                                            name: 'html',
-                                            value: 90
-                                        },
-                                        {
-                                            name: 'no html',
-                                            value: 10
-                                        }
-                                    ]}
-                                    value="90%"
-                                />
-                            </div>
-                            <div className="col-3 align-self-center">
-                                <ul className="chart-skills">
-                                    <li className="tech-title">- HTML</li>
-                                    <li className="tech-title">- CSS 3</li>
-                                    <li className="tech-title">- SCSS</li>
-                                </ul>
-                                <ul className="chart-skills">
-                                    <li className="tech-subtitle">{getString("expert")},</li>
-                                    <li className="tech-subtitle">{htmlDif} {getString("years").toLowerCase()}</li>
-                                </ul>
-                            </div>
-                        </div>
+                        <p>
+                            {getString("languages").toUpperCase()}
+                        </p>
+                        {ProgressBar("Castellano")}
                     </div>
                 </div>
             </div>

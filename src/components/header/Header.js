@@ -55,7 +55,7 @@ const Header = () => {
                             </NavItem>
                             <NavItem>
                                 <NavLink className="nav-link"
-                                         to="/resume"
+                                         to="/myresume"
                                          activeStyle={{ color: '#5ac4c3' }}
                                          onClick={toggle}
                                 >

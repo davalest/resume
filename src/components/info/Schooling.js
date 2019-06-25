@@ -49,7 +49,7 @@ const Schooling = () => {
                                 <p className="schooling-dates">{getString("now")}</p>
                             </div>
                             <div className="col-12 col-md-9">
-                                <p className="info-company">Técnico Superior de Desarrollo de Aplicaciones Web</p>
+                                <p className="info-job">Técnico Superior de Desarrollo de Aplicaciones Web</p>
                                 <p>- Ilerna, Online</p>
                             </div>
                         </div>
@@ -58,7 +58,7 @@ const Schooling = () => {
                                 <p className="schooling-dates">2017</p>
                             </div>
                             <div className="col-12 col-md-9">
-                                <p className="info-company">Técnico Superior de Administración de Sistemas
+                                <p className="info-job">Técnico Superior de Administración de Sistemas
                                                             Informáticos y Redes</p>
                                 <p>- IES Lázaro Cárdenas, Collado Villalba.</p>
                             </div>
@@ -68,7 +68,7 @@ const Schooling = () => {
                                 <p className="schooling-dates">2015</p>
                             </div>
                             <div className="col-12 col-md-9">
-                                <p className="info-company">Técnico de Sistemas Microinformáticos y Redes</p>
+                                <p className="info-job">Técnico de Sistemas Microinformáticos y Redes</p>
                                 <p>- IES Infanta Elena, Galapagar.</p>
                             </div>
                         </div>

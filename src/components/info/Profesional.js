@@ -74,7 +74,7 @@ const Profesional = () => {
                                     <span className="info-job">Front-end Developer </span>
                                     <span className="info-projects">{getString("developed_projects")} </span>
                                     <ul>
-                                        <li>
+                                        <li className="info-app">
                                             gluQUO Diabetes Academy -> {getString("web_app_dev")}
                                             <p className="info-tech">{getString("used_tech")} HTML 5,
                                                                                               SCSS,
@@ -82,7 +82,7 @@ const Profesional = () => {
                                                                                               React.js,
                                                                                               Firebase. </p>
                                         </li>
-                                        <li>
+                                        <li className="info-app">
                                             O.K Transport -> {getString("web_app_dev")}
                                             <p className="info-tech">{getString("used_tech")} HTML 5, SCSS,
                                                                                               Bootstrap,
@@ -92,7 +92,7 @@ const Profesional = () => {
                                                                                               MongoDB,
                                                                                               LoopBack. </p>
                                         </li>
-                                        <li>
+                                        <li className="info-app">
                                             gluQUO PRO -> {getString("web_app_dev")}
                                             <p className="info-tech">{getString("used_tech")} HTML 5,
                                                                                               SCSS,
@@ -102,13 +102,13 @@ const Profesional = () => {
                                                                                               Node.js,
                                                                                               Firebase. </p>
                                         </li>
-                                        <li>
+                                        <li className="info-app">
                                             Optima CC -> {getString("website_development")}
                                             <p className="info-tech">{getString("used_tech")}
                                                 HTML 5, CSS 3, Bootstrap, React.js,
                                                 Node.js</p>
                                         </li>
-                                        <li>
+                                        <li className="info-app">
                                             gluQUO -> {getString("website_development")}
                                             <p className="info-tech">{getString("used_tech")} HTML 5, CSS
                                                                                               3,
@@ -116,7 +116,7 @@ const Profesional = () => {
                                                                                               React.js,
                                                                                               Node.js.</p>
                                         </li>
-                                        <li>
+                                        <li className="info-app">
                                             QUO Health -> {getString("design_website_development")}
                                             <p className="info-tech">{getString("used_tech")} HTML 5, CSS
                                                                                               3,
@@ -135,12 +135,12 @@ const Profesional = () => {
                                     <span className="info-job"> Front-end Developer </span>
                                     <span className="info-projects">{getString("developed_projects")} </span>
                                     <ul>
-                                        <li>
+                                        <li className="info-app">
                                             MarVal -> {getString("design_website_development")}
                                             <p className="info-tech">{getString("used_tech")} HTML 5, CSS 3,
                                                                                               Bootstrap, JQuery. </p>
                                         </li>
-                                        <li>
+                                        <li className="info-app">
                                             La Parada -> {getString("design_website_development")}
                                             <p className="info-tech">{getString("used_tech")} HTML 5, CSS
                                                                                               3, Bootstrap, JQuery. </p>
@@ -154,7 +154,7 @@ const Profesional = () => {
                             </div>
                             <div className="col-12 col-md-9">
                                     <span className="info-company">Hospitales HM (Montepríncipe)</span>
-                                    <span className="info-job"> IT CAU (Prácticas) </span>
+                                    <span className="info-job"> IT CAU </span>
                                     <span className="info-projects">{getString("developed_tasks")} </span>
                                     <ul>
                                         <li>

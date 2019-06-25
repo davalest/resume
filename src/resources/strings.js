@@ -31,12 +31,14 @@ const strings = {
         "expert":"Experto",
         "months":"Meses",
         "years":"Años",
+        "other_knowledge":"Otros conocimientos",
+        "languages":"Idiomas",
     },
     en: {
         "home": "Home",
         "about": "About",
         "skills": "Skills",
-        "experience": "Projects",
+        "experience": "Experience",
         "education": "Schooling",
         "contact": "Contact",
         "know_me": "Know me",
@@ -62,6 +64,8 @@ const strings = {
         "expert":"Expert",
         "months":"Months",
         "years":"Years",
+        "other_knowledge":"Other knowledge",
+        "languages":"Languages",
     }
 };
 

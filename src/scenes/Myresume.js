@@ -4,7 +4,7 @@ import Divider from "@material-ui/core/Divider";
 import Profesional from "../components/info/Profesional";
 import Schooling from "../components/info/Schooling";
 
-const Resume = () => {
+const Myresume = () => {
     return (
         <div>
             <Profesional />
@@ -14,4 +14,4 @@ const Resume = () => {
     );
 };
 
-export default Resume;
+export default Myresume;

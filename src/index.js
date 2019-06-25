@@ -1,15 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.css';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./scenes/Home";
-import Resume from "./scenes/Resume";
+import Myresume from "./scenes/Myresume";
 import Skills from "./scenes/Skills";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 
-class App extends Component {
-    render() {
+const App = () => {
         return (
             <Router>
                 <div>
@@ -22,11 +21,11 @@ class App extends Component {
                             <Route path="/skills"
                                    component={Skills}
                             />
-                            <Route path="/:lan/resume"
-                                   component={Resume}
+                            <Route path="/:lan/myresume"
+                                   component={Myresume}
                             />
-                            <Route path="/resume"
-                                   component={Resume}
+                            <Route path="/myresume"
+                                   component={Myresume}
                             />
                             <Route path="/"
                                    component={Home}
@@ -37,7 +36,6 @@ class App extends Component {
                 </div>
             </Router>
         )
-    }
-}
+};
 
 ReactDOM.render(<App />, document.getElementById('root'));
