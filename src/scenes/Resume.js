@@ -8,7 +8,7 @@ const Resume = () => {
     return (
         <div>
             <Profesional />
-            <Divider />
+            <Divider style={{maxWidth:1024, margin:"auto"}}/>
             <Schooling />
         </div>
     );

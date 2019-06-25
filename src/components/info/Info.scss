@@ -2,19 +2,21 @@
     padding-top: 50px;
     padding-bottom: 50px;
     margin: auto;
+    .info-internal {
+        max-width: 1024px;
+        .download-text {
+            font-size: 20px;
+            padding-top: 6px;
+        }
+    }
 }
 
-.info-external {
-    max-width: 1024px;
-}
-
-.resume-line{
+.resume-line {
     padding-top: 10px;
     padding-bottom: 20px;
-}
-
-.info-dates {
-    font-size: 18px;
+    .info-dates {
+        font-size: 18px;
+    }
 }
 
 .info-company {
@@ -32,4 +34,8 @@
 
 .info-tech {
     margin-left: 10px;
+}
+
+.schooling-dates {
+    font-size: 18px;
 }

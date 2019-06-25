@@ -3,6 +3,8 @@ import Fab from "@material-ui/core/Fab";
 import { makeStyles } from '@material-ui/core/styles';
 import "./Skills.scss";
 import { getString } from "resources";
+import SkillChart from "./SkillChart";
+import moment from "moment";
 
 
 const useStyles = makeStyles({
@@ -28,11 +30,18 @@ const useStyles = makeStyles({
 );
 
 
-const Tech = (props) => {
+const Tech = () => {
     const classes = useStyles();
+
+    let a = moment(new Date());
+    let htmlDate = moment([2016, 5, 1]);
+    let reactDate = moment([2017, 2, 1]);
+    let htmlDif = a.diff(htmlDate, 'years');
+    let reactDif = a.diff(reactDate, 'years');
+
     return (
-        <div className="info-external">
-            <div className="container info-internal">
+        <div className="tech-external">
+            <div className="container tech-internal">
                 <div className="row">
                     <div className="col-xs-6 col-md-3 d-flex justify-content-center align-self-center">
                         <Fab color="primary"
@@ -40,41 +49,113 @@ const Tech = (props) => {
                              disabled={true}
                              className={classes.personalButton}
                         >
-                            {getString("education").toUpperCase()}
+                            {getString("skills").toUpperCase()}
                         </Fab>
                     </div>
                     <div className="col-9">
                         <div className="row">
-                            <div className="col-12 mt-5 mt-md-0 col-md-3">
-                                <p className="info-dates">{getString("now")}</p>
+                            <div className="col-3 align-self-center">
+                                <SkillChart
+                                    data={[
+                                        {
+                                            name: 'native',
+                                            value: 50
+                                        },
+                                        {
+                                            name: 'no native',
+                                            value: 50
+                                        }
+                                    ]}
+                                    value="50%"
+                                />
                             </div>
-                            <div className="col-12 col-md-9">
-                                <p>
-                                    <p className="info-company">Técnico Superior de Desarrollo de Aplicaciones Web</p>
-                                    <p>- Ilerna, Online</p>
-                                </p>
+                            <div className="col-3 align-self-center">
+                                <ul className="chart-skills">
+                                    <li className="tech-title">- React Native</li>
+                                </ul>
+                                <ul className="chart-skills">
+                                    <li className="tech-subtitle">{getString("beginner")},</li>
+                                    <li className="tech-subtitle">3 {getString("months").toLowerCase()}</li>
+                                </ul>
+                                <p className="tech-subtitle"> </p>
+                            </div>
+                            <div className="col-3 align-self-center">
+                                <SkillChart
+                                    data={[
+                                        {
+                                            name: 'node',
+                                            value: 75
+                                        },
+                                        {
+                                            name: 'no node',
+                                            value: 25
+                                        }
+                                    ]}
+                                    value="75%"
+                                />
+                            </div>
+                            <div className="col-3 align-self-center">
+                                <ul className="chart-skills">
+                                    <li className="tech-title">- Node.js</li>
+                                    <li className="tech-title">- Firebase</li>
+                                </ul>
+                                <ul className="chart-skills">
+                                    <li className="tech-subtitle">{getString("advanced")},</li>
+                                    <li className="tech-subtitle">{reactDif} {getString("years").toLowerCase()}</li>
+                                </ul>
                             </div>
                         </div>
                         <div className="row">
-                            <div className="col-12 mt-5 mt-md-0 col-md-3">
-                                <p className="info-dates">2017</p>
+                            <div className="col-3 align-self-center">
+                                <SkillChart
+                                    data={[
+                                        {
+                                            name: 'react',
+                                            value: 88
+                                        },
+                                        {
+                                            name: 'no react',
+                                            value: 12
+                                        }
+                                    ]}
+                                    value="88%"
+                                />
                             </div>
-                            <div className="col-12 col-md-9">
-                                <p>
-                                    <p className="info-company">Técnico Superior de Administración de Sistemas Informáticos y Redes</p>
-                                    <p>- IES Lázaro Cárdenas, Collado Villalba.</p>
-                                </p>
+                            <div className="col-3 align-self-center">
+                                <ul className="chart-skills">
+                                    <li className="tech-title">- React.js</li>
+                                    <li className="tech-title">- Redux</li>
+                                </ul>
+                                <ul className="chart-skills">
+                                    <li className="tech-subtitle">{getString("advanced")},</li>
+                                    <li className="tech-subtitle">{reactDif} {getString("years").toLowerCase()}</li>
+                                </ul>
                             </div>
-                        </div>
-                        <div className="row">
-                            <div className="col-12 mt-5 mt-md-0 col-md-3">
-                                <p className="info-dates">2015</p>
+                            <div className="col-3 align-self-center">
+                                <SkillChart
+                                    data={[
+                                        {
+                                            name: 'html',
+                                            value: 90
+                                        },
+                                        {
+                                            name: 'no html',
+                                            value: 10
+                                        }
+                                    ]}
+                                    value="90%"
+                                />
                             </div>
-                            <div className="col-12 col-md-9">
-                                <p>
-                                    <p className="info-company">Técnico de Sistemas Microinformáticos y Redes</p>
-                                    <p>- IES Infanta Elena, Galapagar.</p>
-                                </p>
+                            <div className="col-3 align-self-center">
+                                <ul className="chart-skills">
+                                    <li className="tech-title">- HTML</li>
+                                    <li className="tech-title">- CSS 3</li>
+                                    <li className="tech-title">- SCSS</li>
+                                </ul>
+                                <ul className="chart-skills">
+                                    <li className="tech-subtitle">{getString("expert")},</li>
+                                    <li className="tech-subtitle">{htmlDif} {getString("years").toLowerCase()}</li>
+                                </ul>
                             </div>
                         </div>
                     </div>

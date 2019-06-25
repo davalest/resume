@@ -46,35 +46,30 @@ const Schooling = () => {
                     <div className="col-9">
                         <div className="row">
                             <div className="col-12 mt-5 mt-md-0 col-md-3">
-                                <p className="info-dates">{getString("now")}</p>
+                                <p className="schooling-dates">{getString("now")}</p>
                             </div>
                             <div className="col-12 col-md-9">
-                                <p>
-                                    <p className="info-company">Técnico Superior de Desarrollo de Aplicaciones Web</p>
-                                    <p>- Ilerna, Online</p>
-                                </p>
+                                <p className="info-company">Técnico Superior de Desarrollo de Aplicaciones Web</p>
+                                <p>- Ilerna, Online</p>
                             </div>
                         </div>
                         <div className="row">
                             <div className="col-12 mt-5 mt-md-0 col-md-3">
-                                <p className="info-dates">2017</p>
+                                <p className="schooling-dates">2017</p>
                             </div>
                             <div className="col-12 col-md-9">
-                                <p>
-                                    <p className="info-company">Técnico Superior de Administración de Sistemas Informáticos y Redes</p>
-                                    <p>- IES Lázaro Cárdenas, Collado Villalba.</p>
-                                </p>
+                                <p className="info-company">Técnico Superior de Administración de Sistemas
+                                                            Informáticos y Redes</p>
+                                <p>- IES Lázaro Cárdenas, Collado Villalba.</p>
                             </div>
                         </div>
                         <div className="row">
                             <div className="col-12 mt-5 mt-md-0 col-md-3">
-                                <p className="info-dates">2015</p>
+                                <p className="schooling-dates">2015</p>
                             </div>
                             <div className="col-12 col-md-9">
-                                <p>
-                                    <p className="info-company">Técnico de Sistemas Microinformáticos y Redes</p>
-                                    <p>- IES Infanta Elena, Galapagar.</p>
-                                </p>
+                                <p className="info-company">Técnico de Sistemas Microinformáticos y Redes</p>
+                                <p>- IES Infanta Elena, Galapagar.</p>
                             </div>
                         </div>
                     </div>

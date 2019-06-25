@@ -7,6 +7,8 @@
     "@material-ui/core": "^4.0.1",
     "@material-ui/icons": "^4.0.1",
     "bootstrap": "^4.3.1",
+    "gh-pages": "^2.0.1",
+    "moment": "^2.24.0",
     "node-sass": "^4.12.0",
     "react": "^16.4.2",
     "react-avatar": "^3.6.0",
@@ -16,6 +18,7 @@
     "react-router-hash-link": "^1.2.1",
     "react-scripts": "^3.0.1",
     "reactstrap": "^8.0.0",
+    "recharts": "^1.6.2",
     "resources": "file:src/resources"
   },
   "scripts": {

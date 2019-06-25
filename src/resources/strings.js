@@ -4,7 +4,7 @@ const strings = {
     es: {
         "home": "Home",
         "about": "Sobre mi",
-        "skills": "Conocimientos",
+        "skills": "Aptitudes",
         "experience": "Experiencia",
         "education": "Educación",
         "contact": "Contacto",
@@ -25,12 +25,17 @@ const strings = {
         "web_app_dev":"Desarrollo de App web.",
         "website_development":"Maquetado y desarrollo de página web.",
         "design_website_development":"Diseño, maquetado y desarrollo de página web.",
-        "now":"Actualmente"
+        "now":"Actualmente",
+        "beginner":"Principiante",
+        "advanced":"Avanzado",
+        "expert":"Experto",
+        "months":"Meses",
+        "years":"Años",
     },
     en: {
         "home": "Home",
         "about": "About",
-        "skills": "Resume",
+        "skills": "Skills",
         "experience": "Projects",
         "education": "Schooling",
         "contact": "Contact",
@@ -51,7 +56,12 @@ const strings = {
         "web_app_dev":"Web App development.",
         "website_development":"Layout and website development.",
         "design_website_development":"Design, layout and website development.",
-        "now":"Now"
+        "now":"Now",
+        "beginner":"Beginner",
+        "advanced":"Advanced",
+        "expert":"Expert",
+        "months":"Months",
+        "years":"Years",
     }
 };
 

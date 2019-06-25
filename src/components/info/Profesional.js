@@ -12,16 +12,16 @@ const useStyles = makeStyles({
             position: "fixed",
             bottom: 30,
             right: 30,
-            borderRadius:"50%",
+            borderRadius: "50%",
             height: 80,
-            width:80,
+            width: 80,
             zIndex: 998,
             "&:focus": {
                 outline: 0
             }
         },
-    downloadIcon: {
-            fontSize:30
+        downloadIcon: {
+            fontSize: 30
         },
         personalButton: {
             height: 150,
@@ -41,7 +41,7 @@ const Profesional = () => {
     return (
         <div className="info-external">
             <div className="container info-internal">
-                <Tooltip title={getString("download_resume")}>
+                <Tooltip title={<p className="download-text">{getString("download_resume")}</p>}>
                     <Fab
                         variant="extended"
                         href={resume}
@@ -55,13 +55,13 @@ const Profesional = () => {
                 <div className="row">
                     <div className="col-xs-6 col-md-3 d-flex justify-content-center align-self-center">
                         <div>
-                        <Fab color="primary"
-                             aria-label="resume"
-                             disabled={true}
-                             className={classes.personalButton}
-                        >
-                            {getString("work_experience").toUpperCase()}
-                        </Fab>
+                            <Fab color="primary"
+                                 aria-label="resume"
+                                 disabled={true}
+                                 className={classes.personalButton}
+                            >
+                                {getString("work_experience").toUpperCase()}
+                            </Fab>
                         </div>
                     </div>
                     <div className="col-9">
@@ -70,7 +70,6 @@ const Profesional = () => {
                                 <p className="info-dates">{getString("feb_actual")}</p>
                             </div>
                             <div className="col-12 col-md-9">
-                                <p>
                                     <span className="info-company">QUO Health SL </span>
                                     <span className="info-job">Front-end Developer </span>
                                     <span className="info-projects">{getString("developed_projects")} </span>
@@ -101,7 +100,6 @@ const Profesional = () => {
                                                                                               React.js,
                                                                                               Moment.js,
                                                                                               Node.js,
-                                                                                              Express,
                                                                                               Firebase. </p>
                                         </li>
                                         <li>
@@ -126,7 +124,6 @@ const Profesional = () => {
                                                                                               JQuery.</p>
                                         </li>
                                     </ul>
-                                </p>
                             </div>
                         </div>
                         <div className="row resume-line">
@@ -134,7 +131,6 @@ const Profesional = () => {
                                 <p className="info-dates">2016</p>
                             </div>
                             <div className="col-12 col-md-9">
-                                <p>
                                     <span className="info-company">Freelance</span>
                                     <span className="info-job"> Front-end Developer </span>
                                     <span className="info-projects">{getString("developed_projects")} </span>
@@ -150,7 +146,6 @@ const Profesional = () => {
                                                                                               3, Bootstrap, JQuery. </p>
                                         </li>
                                     </ul>
-                                </p>
                             </div>
                         </div>
                         <div className="row resume-line">
@@ -158,7 +153,6 @@ const Profesional = () => {
                                 <p className="info-dates">Septiembre 2015 – Julio 2016</p>
                             </div>
                             <div className="col-12 col-md-9">
-                                <p>
                                     <span className="info-company">Hospitales HM (Montepríncipe)</span>
                                     <span className="info-job"> IT CAU (Prácticas) </span>
                                     <span className="info-projects">{getString("developed_tasks")} </span>
@@ -171,7 +165,6 @@ const Profesional = () => {
                                                                      infraestructura. </p>
                                         </li>
                                     </ul>
-                                </p>
                             </div>
                         </div>
                     </div>
