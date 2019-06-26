@@ -1,0 +1,50 @@
+.info-external {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin: auto;
+    .info-internal {
+        max-width: 1024px;
+    }
+}
+
+.download-text {
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+.resume-line {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    .info-dates {
+        font-size: 18px;
+    }
+}
+
+.info-company {
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.info-job {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.info-projects {
+    font-style: italic;
+    font-size: 13px;
+}
+
+.info-app {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.info-tech {
+    margin-left: 10px;
+    font-weight: normal;
+}
+
+.schooling-dates {
+    font-size: 18px;
+}

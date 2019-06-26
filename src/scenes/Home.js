@@ -1,18 +1,18 @@
-import React, { Component } from 'react';
-import './Home.css';
-import NavBar from "../components/menus/NavBar";
-import {getString} from "resources";
+import React from 'react';
+import './Home.scss';
+import { david } from "resources";
+import PersonalCard from "../components/card/PersonalCard";
 
-class Home extends Component {
-  render() {
+
+const Home = () => {
     return (
-      <div className="App">
-          <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+        <div className="d-flex align-items-center justify-content-center mt-5 mb-5">
+            <PersonalCard
+                src={david}
+                title="David"
+            />
+        </div>
     );
-  }
-}
+};
 
 export default Home;

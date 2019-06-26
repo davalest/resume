@@ -1,0 +1,58 @@
+.tech-external {
+    margin: auto;
+    .tech-internal {
+        max-width: 1024px;
+    }
+}
+
+.tech-title {
+    font-size: 17px;
+}
+
+.tech-subtitle {
+    font-size: 13px;
+    margin-left: 5px;
+}
+
+.chart-skills {
+    list-style: none;
+    padding-left: 0;
+}
+
+.known-external {
+    margin: auto;
+    .known-internal {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        max-width: 1024px;
+    }
+}
+
+.other-subtitle {
+    font-size: 18px;
+}
+
+.other-language {
+    font-size: 20px;
+}
+
+.other-list {
+    list-style: none;
+    font-size: 16px;
+    li:before {
+        content: '✓';
+        color: #6cb04a;
+        margin-right: 10px;
+    }
+}
+
+.title-bar-text {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.subtitle-bar-text {
+    font-size: 14px;
+    font-weight: normal;
+    margin-left: 20px;
+}

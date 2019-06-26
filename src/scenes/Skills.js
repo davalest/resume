@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
-import './Home.css';
+import './Home.scss';
+import Divider from "@material-ui/core/Divider";
+import Tech from "../components/skills/Tech";
+import Knowledge from "../components/skills/Knowledge";
 
 class Skills extends Component {
     render() {
         return (
-            <div className="App">
-                <p className="App-intro">
-                    To get started, edit <code>src/App.js</code> and save to reload.
-                </p>
+            <div>
+                <Tech/>
+                <Divider style={{maxWidth:1024, margin:"auto"}}/>
+                <Knowledge/>
             </div>
         );
     }
