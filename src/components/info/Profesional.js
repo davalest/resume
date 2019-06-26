@@ -13,6 +13,8 @@ const useStyles = makeStyles({
             bottom: 30,
             right: 30,
             borderRadius: "50%",
+            backgroundColor: "#252525",
+            color: "#6cb04a",
             height: 80,
             width: 80,
             zIndex: 998,
@@ -24,10 +26,10 @@ const useStyles = makeStyles({
             fontSize: 30
         },
         personalButton: {
-            height: 150,
-            width: 150,
+            height: 170,
+            width: 170,
             fontSize: 18,
-            color: "#5ac4c3 !important",
+            color: "#6cb04a !important",
             "&:focus": {
                 outline: 0
             }

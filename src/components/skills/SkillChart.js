@@ -3,7 +3,8 @@ import {
     PieChart, Pie, Cell, Label, ResponsiveContainer
 } from 'recharts';
 
-const COLORS = ['#0088FE', '#00C49F'];
+const COLORS = ['#6e6e6e', '#444444'];
+
 
 const SkillChart = (props) => {
     return (
@@ -24,6 +25,7 @@ const SkillChart = (props) => {
                         value={props.value}
                         position="center"
                         fontSize={16}
+                        stroke="#6cb04a"
                     />
                     {
                         props.data.map((entry, index) => <Cell key={`cell-${index}`}

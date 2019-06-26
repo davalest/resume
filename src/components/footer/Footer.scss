@@ -1,5 +1,5 @@
 .footer-external {
-    background-color: #E1DBDB;
+    background-color: #000000;
     width: 100%;
     position: relative;
     bottom: 0;
@@ -16,10 +16,10 @@
 .footer-link, .footer-item {
     display: flex;
     align-items: center;
-    color: inherit;
+    color: #6e6e6e;
     text-decoration: none;
     &:hover {
-        color: #5ac4c3;
+        color: #6cb04a;
         text-decoration: none;
     }
     &:focus, &:active, &:visited, &:visited:hover {

@@ -18,10 +18,10 @@ const useStyles = makeStyles({
             }
         },
         personalButton: {
-            height: 150,
-            width: 150,
+            height: 170,
+            width: 170,
             fontSize: 18,
-            color: "#5ac4c3 !important",
+            color: "#6cb04a !important",
             "&:focus": {
                 outline: 0
             }

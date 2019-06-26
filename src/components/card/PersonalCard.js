@@ -13,7 +13,8 @@ const useStyles = makeStyles({
             fontSize: 20,
             marginLeft: 30,
             marginTop: 30,
-            backgroundColor: "#5ac4c3",
+            backgroundColor: "#252525",
+            color: "#6cb04a",
             "&:focus": {
                 outline: 0
             }

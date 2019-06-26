@@ -1,7 +1,7 @@
 .header-container {
     z-index: 999;
     width: 100%;
-    background-color: #E1DBDB;
+    background-color: #000000;
     padding-top: 10px;
     padding-bottom: 10px;
     position: fixed;
@@ -14,7 +14,7 @@
 
 .btn-tog {
     padding-top: 15px;
-    color: #ffffff;
+    color: #6e6e6e;
 }
 
 .list-header {
@@ -29,30 +29,34 @@
     padding-right: 15px;
     font-size: 12px;
     &:hover, &:active, &:visited:hover {
-        color: #5ac4c3 !important;
+        color: #6cb04a !important;
         text-decoration: none !important;
     }
 }
 
 .items, .items:visited {
-    color: #3c3c3c !important;
+    color: #6e6e6e !important;
 }
 
 .nav-link{
     margin-left: -20px;
-    color: #3c3c3c !important;
+    color: #6e6e6e !important;
     .name-title {
         height: 100%;
         align-items: left;
         font-size: 31px;
-        color:#3c3c3c;
+        color:#6e6e6e;
+        &:hover, &:active, &:visited:hover {
+            color: #6cb04a !important;
+            text-decoration: none !important;
+        }
     }
 
     .work-title{
         height: 100%;
         font-size: 18px;
         align-items: left;
-        color:#3c3c3c;
+        color:#6e6e6e;
     }
 }
 

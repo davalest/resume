@@ -36,7 +36,7 @@ const Header = () => {
                     <Collapse isOpen={isOpen}
                               navbar
                               style={isOpen ? {
-                                  backgroundColor: "#E1DBDB",
+                                  backgroundColor: "#000000",
                                   paddingLeft: '1rem'
                               } : ""}
                     >
@@ -47,7 +47,7 @@ const Header = () => {
                                 <NavLink className="nav-link"
                                          exact
                                          to="/"
-                                         activeStyle={{ color: '#5ac4c3' }}
+                                         activeStyle={{ color: '#6cb04a' }}
                                          onClick={toggle}
                                 >
                                     <span className="items">{getString("home").toUpperCase()}</span>
@@ -56,7 +56,7 @@ const Header = () => {
                             <NavItem>
                                 <NavLink className="nav-link"
                                          to="/myresume"
-                                         activeStyle={{ color: '#5ac4c3' }}
+                                         activeStyle={{ color: '#6cb04a' }}
                                          onClick={toggle}
                                 >
                                     <span className="items">{getString("resume").toUpperCase()}</span></NavLink>
@@ -64,7 +64,7 @@ const Header = () => {
                             <NavItem>
                                 <NavLink className="nav-link"
                                          to="/skills"
-                                         activeStyle={{ color: '#5ac4c3' }}
+                                         activeStyle={{ color: '#6cb04a' }}
                                          onClick={toggle}
                                 >
                                     <span className="items">{getString("skills").toUpperCase()}</span></NavLink>
