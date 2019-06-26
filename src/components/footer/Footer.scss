@@ -18,6 +18,7 @@
     align-items: center;
     color: #6e6e6e;
     text-decoration: none;
+    font-size: 14px;
     &:hover {
         color: #6cb04a;
         text-decoration: none;
@@ -34,7 +35,8 @@
 }
 
 .footer-avatar {
-    margin-right: 20px;
+    margin-right: 10px;
+    height: 25px;
 }
 
 .footer-icons {
