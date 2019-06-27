@@ -41,4 +41,8 @@
 
 .footer-icons {
     font-size: 23px;
+    &:hover {
+        color: #6cb04a;
+        text-decoration: none;
+    }
 }

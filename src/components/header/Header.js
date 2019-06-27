@@ -1,8 +1,12 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import {
     Collapse, Navbar, NavbarToggler, Nav, NavItem
 } from 'reactstrap';
-import { getString } from 'resources';
+import {
+    getString,
+    changeLanguage,
+    currentLanguage,
+} from 'resources';
 import { NavHashLink as NavLink } from 'react-router-hash-link';
 import "./Header.scss";
 
@@ -68,6 +72,36 @@ const Header = () => {
                                          onClick={toggle}
                                 >
                                     <span className="items">{getString("skills").toUpperCase()}</span></NavLink>
+                            </NavItem>
+                            <NavItem style={{ display: "inline-flex" }}>
+                                <NavLink className="nav-link "
+                                         to="/es/"
+                                         onClick={(e) => {
+                                             e.preventDefault();
+                                             changeLanguage("es")
+                                         }}
+                                >
+                                    <span className="items">{( currentLanguage === "es" ) ?
+                                        <b style={{
+                                            cursor: "pointer",
+                                        }}
+                                        >ES</b> : "ES"}</span><span>|</span>
+                                </NavLink>
+                                <NavLink className="nav-link"
+                                         to="/en/"
+                                         onClick={(e) => {
+                                             e.preventDefault();
+                                             changeLanguage("en")
+                                         }}
+                                >
+                                    <span className="items"
+                                    >{( currentLanguage === "en" ) ?
+                                        <b style={{
+                                            cursor: "pointer",
+                                        }}
+                                        >EN</b> : "EN"}</span>
+
+                                </NavLink>
                             </NavItem>
                         </Nav>
                     </Collapse>
