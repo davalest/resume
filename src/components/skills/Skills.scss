@@ -39,6 +39,7 @@
 .other-list {
     list-style: none;
     font-size: 16px;
+    padding:0;
     li:before {
         content: '✓';
         color: #6cb04a;

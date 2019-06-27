@@ -3,7 +3,7 @@ import {
     PieChart, Pie, Cell, Label, ResponsiveContainer
 } from 'recharts';
 
-const COLORS = ['#6e6e6e', '#444444'];
+const COLORS = ['#6e6e6e', '#2a2a2a'];
 
 
 const SkillChart = (props) => {
@@ -17,7 +17,7 @@ const SkillChart = (props) => {
                     innerRadius={50}
                     outerRadius={80}
                     labelLine={false}
-                    fill="#8884d8"
+                    stroke="#000000"
                     paddingAngle={0}
                     dataKey="value"
                 >

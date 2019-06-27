@@ -55,7 +55,7 @@ const Profesional = () => {
                     </Fab>
                 </Tooltip>
                 <div className="row">
-                    <div className="col-xs-6 col-md-3 d-flex justify-content-center align-self-center">
+                    <div className="col-xs-12 col-md-3 d-flex justify-content-center align-self-center">
                         <div>
                             <Fab color="primary"
                                  aria-label="resume"
@@ -66,7 +66,7 @@ const Profesional = () => {
                             </Fab>
                         </div>
                     </div>
-                    <div className="col-9">
+                    <div className="col-xs-12 col-md-9">
                         <div className="row resume-line">
                             <div className="col-12 mt-5 mt-md-0 col-md-3">
                                 <p className="info-dates">{getString("feb_actual")}</p>

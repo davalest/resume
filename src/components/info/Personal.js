@@ -3,6 +3,7 @@ import Fab from "@material-ui/core/Fab";
 import { makeStyles } from '@material-ui/core/styles';
 import "./Info.scss";
 import { getString } from "resources";
+import Divider from "@material-ui/core/Divider";
 
 
 const useStyles = makeStyles({
@@ -28,6 +29,16 @@ const useStyles = makeStyles({
 );
 
 
+const Tuple = (title, text) => {
+    return (
+        <div className="col-12">
+            <p>{getString(title)}: {getString(text)}</p>
+            <Divider /><br />
+        </div>
+    );
+};
+
+
 const Personal = () => {
     const classes = useStyles();
     return (
@@ -40,37 +51,17 @@ const Personal = () => {
                              disabled={true}
                              className={classes.personalButton}
                         >
-                            {getString("education").toUpperCase()}
+                            {getString("about").toUpperCase()}
                         </Fab>
                     </div>
                     <div className="col-9">
-                        <div className="row">
-                            <div className="col-12 mt-5 mt-md-0 col-md-3">
-                                <p className="schooling-dates">{getString("now")}</p>
-                            </div>
-                            <div className="col-12 col-md-9">
-                                <p className="info-job">Técnico Superior de Desarrollo de Aplicaciones Web</p>
-                                <p>- Ilerna, Online</p>
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div className="col-12 mt-5 mt-md-0 col-md-3">
-                                <p className="schooling-dates">2017</p>
-                            </div>
-                            <div className="col-12 col-md-9">
-                                <p className="info-job">Técnico Superior de Administración de Sistemas
-                                                        Informáticos y Redes</p>
-                                <p>- IES Lázaro Cárdenas, Collado Villalba.</p>
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div className="col-12 mt-5 mt-md-0 col-md-3">
-                                <p className="schooling-dates">2015</p>
-                            </div>
-                            <div className="col-12 col-md-9">
-                                <p className="info-job">Técnico de Sistemas Microinformáticos y Redes</p>
-                                <p>- IES Infanta Elena, Galapagar.</p>
-                            </div>
+                        <div className="row mt-5">
+                            {Tuple("name_title", "name_text")}
+                            {Tuple("email_title", "email_text")}
+                            {Tuple("phone_title", "phone_text")}
+                            {Tuple("birthdate_title", "birthdate_text")}
+                            {Tuple("address_title", "address_text")}
+                            {Tuple("nationality_title", "nationality_text")}
                         </div>
                     </div>
                 </div>

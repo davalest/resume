@@ -11,7 +11,8 @@ const Footer = () => {
             <div className="footer-internal">
                 <Container>
                     <Row>
-                        <Col xs={6}
+                        <Col xs={12}
+                             sm={6}
                              md={3}
                         >
                             <div className="footer-item">
@@ -24,7 +25,8 @@ const Footer = () => {
                                     +34 600 80 90 24</a>
                             </div>
                         </Col>
-                        <Col xs={6}
+                        <Col xs={12}
+                             sm={6}
                              md={3}
                         >
                             <div className="footer-item">
@@ -37,7 +39,8 @@ const Footer = () => {
                                     dartvales@gmail.com</a>
                             </div>
                         </Col>
-                        <Col xs={6}
+                        <Col xs={12}
+                             sm={6}
                              md={3}
                         >
                             <div className="footer-item">
@@ -50,7 +53,8 @@ const Footer = () => {
                                     Github </a>
                             </div>
                         </Col>
-                        <Col xs={6}
+                        <Col xs={12}
+                             sm={6}
                              md={3}
                         >
                             <div className="footer-item">

@@ -78,9 +78,9 @@ const Knowledge = () => {
                             {getString("other_knowledge").toUpperCase()}
                         </Fab>
                     </div>
-                    <div className="col-9">
+                    <div className="col-xs-12 col-md-9">
                         <div className="row">
-                            <div className="col-12">
+                            <div className="col-12 mt-5">
                                 <p className="other-subtitle">
                                     {getString("language_skills").toUpperCase()}
                                 </p>

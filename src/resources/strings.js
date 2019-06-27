@@ -42,6 +42,19 @@ const strings = {
         "cross_browser":"Compatibilidad cross-browser",
         "responsive_implementation": "Implementación responsive",
         "team_working_skills":"Habilidades de trabajo en equipo",
+        "name_title":"Nombre",
+        "name_text":"David Valenciano Esteban",
+        "email_title":"Email",
+        "email_text":"dartvales@gmail.com",
+        "phone_title":"Teléfono",
+        "phone_text":"+ 34 600 80 90 24",
+        "birthdate_title":"Fecha de nacimiento",
+        "birthdate_text":"17 Mayo 1991",
+        "address_title":"Dirección",
+        "address_text":"C/ Isla de la Toja nº1 escalera derecha 3ºD",
+        "nationality_title":"Nationalidad",
+        "nationality_text":"Español",
+
     },
     en: {
         "home": "Home",
@@ -84,6 +97,18 @@ const strings = {
         "cross_browser":"Cross-browser compatibility",
         "responsive_implementation": "Responsive implementation",
         "team_working_skills":"Team working skills",
+        "name_title":"Name",
+        "name_text":"David Valenciano Esteban",
+        "email_title":"Email",
+        "email_text":"dartvales@gmail.com",
+        "phone_title":"Phone",
+        "phone_text":"+ 34 600 80 90 24",
+        "birthdate_title":"Date of birth",
+        "birthdate_text":"17 May 1991",
+        "address_title":"Address",
+        "address_text":"C/ Isla de la Toja nº1 escalera derecha 3ºD",
+        "nationality_title":"Nationality",
+        "nationality_text":"Spanish",
     }
 };
 
