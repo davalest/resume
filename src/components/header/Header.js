@@ -10,7 +10,7 @@ const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggle = () => {
-        if (window.innerWidth < 770)
+        if (window.innerWidth <= 770)
             setIsOpen(!isOpen);
     };
     return (

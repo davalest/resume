@@ -15,6 +15,11 @@ const useStyles = makeStyles({
             borderRadius: "50%",
             backgroundColor: "#252525",
             color: "#6cb04a",
+            "&:hover": {
+                color: "#252525",
+                backgroundColor: "#6cb04a",
+
+            },
             height: 80,
             width: 80,
             zIndex: 998,
@@ -23,7 +28,7 @@ const useStyles = makeStyles({
             }
         },
         downloadIcon: {
-            fontSize: 30
+            fontSize: 30,
         },
         personalButton: {
             height: 170,
@@ -72,60 +77,60 @@ const Profesional = () => {
                                 <p className="info-dates">{getString("feb_actual")}</p>
                             </div>
                             <div className="col-12 col-md-9">
-                                    <span className="info-company">QUO Health SL </span>
-                                    <span className="info-job">Front-end Developer </span>
-                                    <span className="info-projects">{getString("developed_projects")} </span>
-                                    <ul>
-                                        <li className="info-app">
-                                            gluQUO Diabetes Academy -> {getString("web_app_dev")}
-                                            <p className="info-tech">{getString("used_tech")} HTML 5,
-                                                                                              SCSS,
-                                                                                              Bootstrap,
-                                                                                              React.js,
-                                                                                              Firebase. </p>
-                                        </li>
-                                        <li className="info-app">
-                                            O.K Transport -> {getString("web_app_dev")}
-                                            <p className="info-tech">{getString("used_tech")} HTML 5, SCSS,
-                                                                                              Bootstrap,
-                                                                                              React.js,
-                                                                                              Moment.js,
-                                                                                              Node.js,
-                                                                                              MongoDB,
-                                                                                              LoopBack. </p>
-                                        </li>
-                                        <li className="info-app">
-                                            gluQUO PRO -> {getString("web_app_dev")}
-                                            <p className="info-tech">{getString("used_tech")} HTML 5,
-                                                                                              SCSS,
-                                                                                              Bootstrap,
-                                                                                              React.js,
-                                                                                              Moment.js,
-                                                                                              Node.js,
-                                                                                              Firebase. </p>
-                                        </li>
-                                        <li className="info-app">
-                                            Optima CC -> {getString("website_development")}
-                                            <p className="info-tech">{getString("used_tech")}
-                                                HTML 5, CSS 3, Bootstrap, React.js,
-                                                Node.js</p>
-                                        </li>
-                                        <li className="info-app">
-                                            gluQUO -> {getString("website_development")}
-                                            <p className="info-tech">{getString("used_tech")} HTML 5, CSS
-                                                                                              3,
-                                                                                              Bootstrap,
-                                                                                              React.js,
-                                                                                              Node.js.</p>
-                                        </li>
-                                        <li className="info-app">
-                                            QUO Health -> {getString("design_website_development")}
-                                            <p className="info-tech">{getString("used_tech")} HTML 5, CSS
-                                                                                              3,
-                                                                                              Bootstrap,
-                                                                                              JQuery.</p>
-                                        </li>
-                                    </ul>
+                                <span className="info-company">QUO Health SL </span>
+                                <span className="info-job">Front-end Developer </span>
+                                <span className="info-projects">{getString("developed_projects")} </span>
+                                <ul>
+                                    <li className="info-app">
+                                        gluQUO Diabetes Academy -> {getString("web_app_dev")}
+                                        <p className="info-tech">{getString("used_tech")} HTML 5,
+                                                                                          SCSS,
+                                                                                          Bootstrap,
+                                                                                          React.js,
+                                                                                          Firebase. </p>
+                                    </li>
+                                    <li className="info-app">
+                                        O.K Transport -> {getString("web_app_dev")}
+                                        <p className="info-tech">{getString("used_tech")} HTML 5, SCSS,
+                                                                                          Bootstrap,
+                                                                                          React.js,
+                                                                                          Moment.js,
+                                                                                          Node.js,
+                                                                                          MongoDB,
+                                                                                          LoopBack. </p>
+                                    </li>
+                                    <li className="info-app">
+                                        gluQUO PRO -> {getString("web_app_dev")}
+                                        <p className="info-tech">{getString("used_tech")} HTML 5,
+                                                                                          SCSS,
+                                                                                          Bootstrap,
+                                                                                          React.js,
+                                                                                          Moment.js,
+                                                                                          Node.js,
+                                                                                          Firebase. </p>
+                                    </li>
+                                    <li className="info-app">
+                                        Optima CC -> {getString("website_development")}
+                                        <p className="info-tech">{getString("used_tech")}
+                                            HTML 5, CSS 3, Bootstrap, React.js,
+                                            Node.js</p>
+                                    </li>
+                                    <li className="info-app">
+                                        gluQUO -> {getString("website_development")}
+                                        <p className="info-tech">{getString("used_tech")} HTML 5, CSS
+                                                                                          3,
+                                                                                          Bootstrap,
+                                                                                          React.js,
+                                                                                          Node.js.</p>
+                                    </li>
+                                    <li className="info-app">
+                                        QUO Health -> {getString("design_website_development")}
+                                        <p className="info-tech">{getString("used_tech")} HTML 5, CSS
+                                                                                          3,
+                                                                                          Bootstrap,
+                                                                                          JQuery.</p>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                         <div className="row resume-line">
@@ -133,21 +138,21 @@ const Profesional = () => {
                                 <p className="info-dates">2016</p>
                             </div>
                             <div className="col-12 col-md-9">
-                                    <span className="info-company">Freelance</span>
-                                    <span className="info-job"> Front-end Developer </span>
-                                    <span className="info-projects">{getString("developed_projects")} </span>
-                                    <ul>
-                                        <li className="info-app">
-                                            MarVal -> {getString("design_website_development")}
-                                            <p className="info-tech">{getString("used_tech")} HTML 5, CSS 3,
-                                                                                              Bootstrap, JQuery. </p>
-                                        </li>
-                                        <li className="info-app">
-                                            La Parada -> {getString("design_website_development")}
-                                            <p className="info-tech">{getString("used_tech")} HTML 5, CSS
-                                                                                              3, Bootstrap, JQuery. </p>
-                                        </li>
-                                    </ul>
+                                <span className="info-company">Freelance</span>
+                                <span className="info-job"> Front-end Developer </span>
+                                <span className="info-projects">{getString("developed_projects")} </span>
+                                <ul>
+                                    <li className="info-app">
+                                        MarVal -> {getString("design_website_development")}
+                                        <p className="info-tech">{getString("used_tech")} HTML 5, CSS 3,
+                                                                                          Bootstrap, JQuery. </p>
+                                    </li>
+                                    <li className="info-app">
+                                        La Parada -> {getString("design_website_development")}
+                                        <p className="info-tech">{getString("used_tech")} HTML 5, CSS
+                                                                                          3, Bootstrap, JQuery. </p>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                         <div className="row resume-line">
@@ -155,18 +160,18 @@ const Profesional = () => {
                                 <p className="info-dates">Septiembre 2015 – Julio 2016</p>
                             </div>
                             <div className="col-12 col-md-9">
-                                    <span className="info-company">Hospitales HM (Montepríncipe)</span>
-                                    <span className="info-job"> IT CAU </span>
-                                    <span className="info-projects">{getString("developed_tasks")} </span>
-                                    <ul>
-                                        <li>
-                                            <p className="info-tech">Mantenimiento y gestión de incidencias. </p>
-                                        </li>
-                                        <li>
-                                            <p className="info-tech">Desarrollo e implementación de
-                                                                     infraestructura. </p>
-                                        </li>
-                                    </ul>
+                                <span className="info-company">Hospitales HM (Montepríncipe)</span>
+                                <span className="info-job"> IT CAU </span>
+                                <span className="info-projects">{getString("developed_tasks")} </span>
+                                <ul>
+                                    <li>
+                                        <p className="info-tech">Mantenimiento y gestión de incidencias. </p>
+                                    </li>
+                                    <li>
+                                        <p className="info-tech">Desarrollo e implementación de
+                                                                 infraestructura. </p>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>

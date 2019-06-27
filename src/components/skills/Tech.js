@@ -43,7 +43,7 @@ const Tech = () => {
         <div className="tech-external">
             <div className="container tech-internal">
                 <div className="row">
-                    <div className="col-6 col-md-3 mt-5 d-flex justify-content-center align-self-center">
+                    <div className="col-12 col-md-3 mt-5 d-flex justify-content-center align-self-center">
                         <Fab color="primary"
                              aria-label="resume"
                              disabled={true}
@@ -52,9 +52,9 @@ const Tech = () => {
                             {getString("skills").toUpperCase()}
                         </Fab>
                     </div>
-                    <div className="col-12 col-md-9">
+                    <div className="col-12 col-md-9 mb-5">
                         <div className="row">
-                            <div className="col-md-6 col-lg-3 align-self-center">
+                            <div className="col-sm-6 col-lg-3 align-self-center">
                                 <SkillChart
                                     data={[
                                         {
@@ -69,16 +69,14 @@ const Tech = () => {
                                     value="50%"
                                 />
                             </div>
-                            <div className="col-md-6 col-lg-3 align-self-center">
+                            <div className="col-sm-6 col-lg-3 d-flex flex-column justify-content-center align-items-center">
                                 <ul className="chart-skills">
                                     <li className="tech-title">- React Native</li>
-                                </ul>
-                                <ul className="chart-skills">
                                     <li className="tech-subtitle">{getString("beginner")},</li>
                                     <li className="tech-subtitle">3 {getString("months").toLowerCase()}</li>
                                 </ul>
                             </div>
-                            <div className="col-md-6 col-lg-3 align-self-center">
+                            <div className="col-sm-6 col-lg-3 align-self-center">
                                 <SkillChart
                                     data={[
                                         {
@@ -93,19 +91,17 @@ const Tech = () => {
                                     value="75%"
                                 />
                             </div>
-                            <div className="col-md-6 col-lg-3 align-self-center">
+                            <div className="col-sm-6 col-lg-3 d-flex flex-column justify-content-center align-items-center">
                                 <ul className="chart-skills">
                                     <li className="tech-title">- Node.js</li>
                                     <li className="tech-title">- Firebase</li>
-                                </ul>
-                                <ul className="chart-skills">
                                     <li className="tech-subtitle">{getString("advanced")},</li>
                                     <li className="tech-subtitle">{reactDif} {getString("years").toLowerCase()}</li>
                                 </ul>
                             </div>
                         </div>
                         <div className="row">
-                            <div className="col-md-6 col-lg-3 align-self-center">
+                            <div className="col-sm-6 col-lg-3 align-self-center">
                                 <SkillChart
                                     data={[
                                         {
@@ -120,17 +116,15 @@ const Tech = () => {
                                     value="88%"
                                 />
                             </div>
-                            <div className="col-md-6 col-lg-3 align-self-center">
+                            <div className="col-sm-6 col-lg-3 d-flex flex-column justify-content-center align-items-center">
                                 <ul className="chart-skills">
                                     <li className="tech-title">- React.js</li>
                                     <li className="tech-title">- Redux</li>
-                                </ul>
-                                <ul className="chart-skills">
                                     <li className="tech-subtitle">{getString("advanced")},</li>
                                     <li className="tech-subtitle">{reactDif} {getString("years").toLowerCase()}</li>
                                 </ul>
                             </div>
-                            <div className="col-md-6 col-lg-3 align-self-center">
+                            <div className="col-sm-6 col-lg-3 align-self-center">
                                 <SkillChart
                                     data={[
                                         {
@@ -145,13 +139,11 @@ const Tech = () => {
                                     value="90%"
                                 />
                             </div>
-                            <div className="col-md-6 col-lg-3 align-self-center">
+                            <div className="col-sm-6 col-lg-3 d-flex flex-column justify-content-center align-items-center">
                                 <ul className="chart-skills">
                                     <li className="tech-title">- HTML</li>
                                     <li className="tech-title">- CSS 3</li>
                                     <li className="tech-title">- SCSS</li>
-                                </ul>
-                                <ul className="chart-skills">
                                     <li className="tech-subtitle">{getString("expert")},</li>
                                     <li className="tech-subtitle">{htmlDif} {getString("years").toLowerCase()}</li>
                                 </ul>
