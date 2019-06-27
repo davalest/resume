@@ -73,27 +73,32 @@ const Header = () => {
                                 >
                                     <span className="items">{getString("skills").toUpperCase()}</span></NavLink>
                             </NavItem>
-                            <NavItem style={{ display: "inline-flex" }}>
-                                <NavLink className="nav-link "
-                                         to="/es/"
-                                         onClick={(e) => {
-                                             e.preventDefault();
-                                             changeLanguage("es")
-                                         }}
-                                >
+                            {( currentLanguage === "es" ) ?
+                                <NavItem style={{ display: "inline-flex" }}>
+                                    <NavLink className="nav-link "
+                                             to="/es/"
+                                             onClick={(e) => {
+                                                 e.preventDefault();
+                                                 changeLanguage("es")
+                                             }}
+                                    >
                                     <span className="items">{( currentLanguage === "es" ) ?
                                         <b style={{
                                             cursor: "pointer",
                                         }}
-                                        >ES</b> : "ES"}</span><span>|</span>
-                                </NavLink>
-                                <NavLink className="nav-link"
-                                         to="/en/"
-                                         onClick={(e) => {
-                                             e.preventDefault();
-                                             changeLanguage("en")
-                                         }}
-                                >
+                                        >ES</b> : "ES"}</span><span style={{
+                                        paddingLeft: 5,
+                                        paddingRight: 5
+                                    }}
+                                    >|</span>
+                                    </NavLink>
+                                    <NavLink className="nav-link"
+                                             to="/en/"
+                                             onClick={(e) => {
+                                                 e.preventDefault();
+                                                 changeLanguage("en")
+                                             }}
+                                    >
                                     <span className="items"
                                     >{( currentLanguage === "en" ) ?
                                         <b style={{
@@ -101,8 +106,43 @@ const Header = () => {
                                         }}
                                         >EN</b> : "EN"}</span>
 
-                                </NavLink>
-                            </NavItem>
+                                    </NavLink>
+                                </NavItem>
+                                :
+                                <NavItem style={{ display: "inline-flex" }}>
+                                    <NavLink className="nav-link "
+                                             to="/en/"
+                                             onClick={(e) => {
+                                                 e.preventDefault();
+                                                 changeLanguage("en")
+                                             }}
+                                    >
+                                    <span className="items">{( currentLanguage === "en" ) ?
+                                        <b style={{
+                                            cursor: "pointer",
+                                        }}
+                                        >EN</b> : "EN"}</span><span style={{
+                                        paddingLeft: 5,
+                                        paddingRight: 5
+                                    }}
+                                    >|</span>
+                                    </NavLink>
+                                    <NavLink className="nav-link"
+                                             to="/es/"
+                                             onClick={(e) => {
+                                                 e.preventDefault();
+                                                 changeLanguage("es")
+                                             }}
+                                    >
+                                    <span className="items"
+                                    >{( currentLanguage === "es" ) ?
+                                        <b style={{
+                                            cursor: "pointer",
+                                        }}
+                                        >ES</b> : "ES"}</span>
+
+                                    </NavLink>
+                                </NavItem>}
                         </Nav>
                     </Collapse>
                 </Navbar>
