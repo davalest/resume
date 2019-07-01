@@ -2,11 +2,11 @@ import getString, {addLangToPath, changeLanguage, currentLanguage} from "./strin
 import {getUrlParam, createCookie, getCookie} from "./utils";
 import david from "./david.jpg";
 import resume from "./resume.pdf";
-import quorize from "./quorize.js";
+import davalize from "./davalize.js";
 
 export {
     david,
-    quorize,
+    davalize,
     resume,
     addLangToPath,
     changeLanguage,

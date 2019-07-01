@@ -8,6 +8,11 @@ import Myresume from "./scenes/Myresume";
 import Skills from "./scenes/Skills";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
+import ReactGA from 'react-ga';
+
+
+ReactGA.initialize('UA-143051267-1');
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 const theme = createMuiTheme({
     palette: {

@@ -3,9 +3,7 @@ import {
     Collapse, Navbar, NavbarToggler, Nav, NavItem
 } from 'reactstrap';
 import {
-    getString,
-    changeLanguage,
-    currentLanguage,
+    getString
 } from 'resources';
 import { NavHashLink as NavLink } from 'react-router-hash-link';
 import "./Header.scss";

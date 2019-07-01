@@ -6,7 +6,7 @@ p {
     font-size: 14px;
 }
 
-@keyframes QUOGO {
+@keyframes DAVALGO {
     25% {
         transform: translateY(0);
     }
@@ -24,7 +24,7 @@ p {
     }
 }
 
-.QUO {
+.DAVAL {
     display: none;
     bottom: 0;
     position: fixed;
@@ -32,8 +32,8 @@ p {
     right: 0;
 }
 
-.QUO-go {
-    animation: QUOGO 2500ms;
+.DAVAL-go {
+    animation: DAVALGO 2500ms;
 }
 
 .external {

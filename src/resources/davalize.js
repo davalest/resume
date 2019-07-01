@@ -1,14 +1,14 @@
-let quorize = ( function(extended) {
+let davalize = ( function(extended) {
 
     let body, defaults, options,
         audioTemplate, sourceAudioTemplate, imageTemplate,
-        audio, image
+        audio, image;
 
 // Wrap the require in check for window
     if (typeof document !== `undefined`) {
-        body = document.body
+        body = document.body;
 
-        options = {}
+        options = {};
 
         //--- OPTIONS ---//
         defaults = {
@@ -16,28 +16,28 @@ let quorize = ( function(extended) {
                         "//zurb.com/playground/uploads/upload/upload/231/raptor-sound.ogg"],
             imagePath: "//zurb.com/playground/uploads/upload/upload/224/raptor.png",
 
-            className: "QUO",
+            className: "DAVAL",
             animationTime: 2000,
-        }
+        };
 
-        extend(options, defaults, extended)
+        extend(options, defaults, extended);
 
         //--- SETUP ---//
-        audioTemplate = document.createElement("audio")
-        audioTemplate.className = options.className + "-source"
+        audioTemplate = document.createElement("audio");
+        audioTemplate.className = options.className + "-source";
 
         for (let source in options.audioPath) {
-            sourceAudioTemplate = document.createElement("source")
-            sourceAudioTemplate.src = options.audioPath[source]
+            sourceAudioTemplate = document.createElement("source");
+            sourceAudioTemplate.src = options.audioPath[source];
             audioTemplate.appendChild(sourceAudioTemplate)
         }
 
-        imageTemplate = document.createElement("img")
-        imageTemplate.className = options.className
-        imageTemplate.src = options.imagePath
+        imageTemplate = document.createElement("img");
+        imageTemplate.className = options.className;
+        imageTemplate.src = options.imagePath;
 
-        audio = body.appendChild(audioTemplate)
-        image = body.appendChild(imageTemplate)
+        audio = body.appendChild(audioTemplate);
+        image = body.appendChild(imageTemplate);
 
         image.style.display = "none"
     }
@@ -46,10 +46,10 @@ let quorize = ( function(extended) {
     function go() {
         setTimeout(function() {
             audio.play()
-        }, ( options.animationTime / 3 ))
+        }, ( options.animationTime / 3 ));
 
-        image.style.display = "block"
-        image.classList.add(options.className + "-go")
+        image.style.display = "block";
+        image.classList.add(options.className + "-go");
 
         setTimeout(function() {
             image.classList.remove(options.className + "-go")
@@ -59,7 +59,7 @@ let quorize = ( function(extended) {
     //--- EXTEND (COMMON) ---//
     // Use Object.assign() for EcmaScript 6.
     function extend(out) {
-        out = out || {}
+        out = out || {};
 
         for (let i = 1; i < arguments.length; i++) {
             if (!arguments[i]) {
@@ -76,32 +76,32 @@ let quorize = ( function(extended) {
     }
 
     return { go: go }
-} )
+} );
 
 //--- USAGE WITH SECS---//
-//let yourQUO = quorize({
+//let yourDAVAL = davalize({
 //    audioPath: ['//zurb.com/playground/uploads/upload/upload/230/raptor-sound.mp3',
 //        '//zurb.com/playground/uploads/upload/upload/231/raptor-sound.ogg'],
 //    imagePath: '//zurb.com/playground/uploads/upload/upload/224/raptor.png',
 //});
 
-// setTimeout(yourQUO.go, 3000);
+// setTimeout(yourDAVAL.go, 3000);
 
 //--- USAGE ---//
 
 
-let myQUO, konamiIndex, konamiCode
+let myDAVAL, konamiIndex, konamiCode;
 
-myQUO = quorize()
-konamiIndex = 0
-konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]
+myDAVAL = davalize();
+konamiIndex = 0;
+konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
 
 if (typeof document !== `undefined`) {
     window.addEventListener("keydown", function(event) {
         if (event.keyCode === konamiCode[konamiIndex]) {
-            konamiIndex++
+            konamiIndex++;
             if (konamiIndex === konamiCode.length) {
-                myQUO.go()
+                myDAVAL.go()
             }
         } else {
             konamiIndex = 0
