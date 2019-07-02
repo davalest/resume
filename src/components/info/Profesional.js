@@ -4,7 +4,7 @@ import CloudDownloadIcon from '@material-ui/icons/CloudDownload';
 import { makeStyles } from '@material-ui/core/styles';
 import Tooltip from '@material-ui/core/Tooltip';
 import "./Info.scss";
-import { getString, resume } from "resources";
+import { getString, currentLanguage, resumeEs, resumeEn } from "resources";
 
 
 const useStyles = makeStyles({
@@ -51,7 +51,7 @@ const Profesional = () => {
                 <Tooltip title={<p className="download-text">{getString("download_resume")}</p>}>
                     <Fab
                         variant="extended"
-                        href={resume}
+                        href={currentLanguage === "es" ? resumeEs : resumeEn}
                         download
                         aria-label={getString("download_resume")}
                         className={classes.downloadButton}

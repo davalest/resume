@@ -25,6 +25,8 @@ const strings = {
         "web_app_dev":"Desarrollo de App web.",
         "website_development":"Maquetado y desarrollo de página web.",
         "design_website_development":"Diseño, maquetado y desarrollo de página web.",
+        "incident_management":"Mantenimiento y gestión de incidencias.",
+        "infraestructure_management":"Desarrollo e implementación de infraestructura.",
         "now":"Actualmente",
         "beginner":"Principiante",
         "advanced":"Avanzado",
@@ -80,6 +82,8 @@ const strings = {
         "web_app_dev":"Web App development.",
         "website_development":"Layout and website development.",
         "design_website_development":"Design, layout and website development.",
+        "incident_management":"Maintenance and incident management.",
+        "infraestructure_management":"Development and implementation of infrastructure.",
         "now":"Now",
         "beginner":"Beginner",
         "advanced":"Advanced",
@@ -112,7 +116,7 @@ const strings = {
     }
 };
 
-const DEFAULT_LANGUAGE = "es";
+const DEFAULT_LANGUAGE = "en";
 
 const lang = (getPathArray().length > 1 && strings[getPathArray()[1]]) ? getPathArray()[1] : undefined;
 

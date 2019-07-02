@@ -1,13 +1,15 @@
 import getString, {addLangToPath, changeLanguage, currentLanguage} from "./strings";
 import {getUrlParam, createCookie, getCookie} from "./utils";
 import david from "./david.jpg";
-import resume from "./resume.pdf";
+import resumeEs from "./resumeEs.pdf";
+import resumeEn from "./resumeEn.pdf";
 import davalize from "./davalize.js";
 
 export {
     david,
     davalize,
-    resume,
+    resumeEn,
+    resumeEs,
     addLangToPath,
     changeLanguage,
     currentLanguage,
