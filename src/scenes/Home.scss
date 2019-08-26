@@ -1,0 +1,41 @@
+body{
+    background-color: #141414;
+    color: #979797;
+}
+p {
+    font-size: 14px;
+}
+
+@keyframes DAVALGO {
+    25% {
+        transform: translateY(0);
+    }
+    35% {
+        right: 0;
+        transform: translateY(25%);
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        right: 100%;
+        transform: translateY(25%);
+    }
+}
+
+.DAVAL {
+    display: none;
+    bottom: 0;
+    position: fixed;
+    transform: translateY(100%);
+    right: 0;
+}
+
+.DAVAL-go {
+    animation: DAVALGO 2500ms;
+}
+
+.external {
+    max-width: 1024px;
+}
