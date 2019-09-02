@@ -24,13 +24,13 @@ const Footer = () => {
                         </div>
                         <div className="col-12 col-sm-6 col-md-3">
                             <div className="footer-item">
-                                <a href="mailto:dartvales@gmail.com"
+                                <a href="mailto:dvalencianoe@gmail.com"
                                    className="footer-link"
                                 >
                                     <Avatar className="footer-avatar">
                                         <MailIcon style={{ color: "#000000" }} />
                                     </Avatar>
-                                    dartvales@gmail.com</a>
+                                    dvalencianoe@gmail.com</a>
                             </div>
                         </div>
                         <div className="col-12 col-sm-6 col-md-3">
