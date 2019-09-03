@@ -14,10 +14,10 @@ const useStyles = makeStyles({
             right: 30,
             borderRadius: "50%",
             backgroundColor: "#252525",
-            color: "#6cb04a",
+            color: "#FF0100",
             "&:hover": {
                 color: "#252525",
-                backgroundColor: "#6cb04a",
+                backgroundColor: "#FF0100",
 
             },
             height: 80,
@@ -34,7 +34,7 @@ const useStyles = makeStyles({
             height: 170,
             width: 170,
             fontSize: 18,
-            color: "#6cb04a !important",
+            color: "#FF0100 !important",
             "&:focus": {
                 outline: 0
             }

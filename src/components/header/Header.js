@@ -49,7 +49,7 @@ const Header = () => {
                                 <NavLink className="nav-link"
                                          exact
                                          to="/"
-                                         activeStyle={{ color: '#6cb04a' }}
+                                         activeStyle={{ color: '#FF0100' }}
                                          onClick={toggle}
                                 >
                                     <span className="items">{getString("home").toUpperCase()}</span>
@@ -58,7 +58,7 @@ const Header = () => {
                             <NavItem>
                                 <NavLink className="nav-link"
                                          to="/myresume"
-                                         activeStyle={{ color: '#6cb04a' }}
+                                         activeStyle={{ color: '#FF0100' }}
                                          onClick={toggle}
                                 >
                                     <span className="items">{getString("resume").toUpperCase()}</span></NavLink>
@@ -66,7 +66,7 @@ const Header = () => {
                             <NavItem>
                                 <NavLink className="nav-link"
                                          to="/skills"
-                                         activeStyle={{ color: '#6cb04a' }}
+                                         activeStyle={{ color: '#FF0100' }}
                                          onClick={toggle}
                                 >
                                     <span className="items">{getString("skills").toUpperCase()}</span></NavLink>
