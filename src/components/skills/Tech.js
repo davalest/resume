@@ -21,7 +21,7 @@ const useStyles = makeStyles({
             height: 170,
             width: 170,
             fontSize: 18,
-            color: "#FF0100 !important",
+            color: "#46ABB7 !important",
             "&:focus": {
                 outline: 0
             }

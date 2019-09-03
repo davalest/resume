@@ -25,7 +25,7 @@ const SkillChart = (props) => {
                         value={props.value}
                         position="center"
                         fontSize={16}
-                        stroke="#FF0100"
+                        stroke="#46ABB7"
                     />
                     {
                         props.data.map((entry, index) => <Cell key={`cell-${index}`}
