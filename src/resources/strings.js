@@ -110,7 +110,7 @@ const strings = {
         "birthdate_title":"Date of birth",
         "birthdate_text":"17 May 1991",
         "address_title":"Address",
-        "address_text":"C/ Isla de la Toja nº1 escalera derecha 3ºD",
+        "address_text":"1 Isla de la Toja Street 3ºD",
         "nationality_title":"Nationality",
         "nationality_text":"Spanish",
     }

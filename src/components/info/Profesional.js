@@ -157,7 +157,7 @@ const Profesional = () => {
                         </div>
                         <div className="row resume-line">
                             <div className="col-12 mt-5 mt-md-0 col-md-3">
-                                <p className="info-dates">Septiembre 2015 – Julio 2016</p>
+                                <p className="info-dates">{getString("2015_2016")}</p>
                             </div>
                             <div className="col-12 col-md-9">
                                 <span className="info-company">Hospitales HM (Montepríncipe)</span>
@@ -165,11 +165,10 @@ const Profesional = () => {
                                 <span className="info-projects">{getString("developed_tasks")} </span>
                                 <ul>
                                     <li>
-                                        <p className="info-tech">Mantenimiento y gestión de incidencias. </p>
+                                        <p className="info-tech">{getString("incident_management")} </p>
                                     </li>
                                     <li>
-                                        <p className="info-tech">Desarrollo e implementación de
-                                                                 infraestructura. </p>
+                                        <p className="info-tech">{getString("infraestructure_management")} </p>
                                     </li>
                                 </ul>
                             </div>
