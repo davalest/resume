@@ -46,7 +46,7 @@ const Schooling = () => {
                     <div className="col-9">
                         <div className="row">
                             <div className="col-12 mt-5 mt-md-0 col-md-3">
-                                <p className="schooling-dates">{getString("now")}</p>
+                                <p className="schooling-dates">2019</p>
                             </div>
                             <div className="col-12 col-md-9">
                                 <p className="info-job">Técnico Superior de Desarrollo de Aplicaciones Web</p>

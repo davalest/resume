@@ -3,6 +3,7 @@ import PhoneIcon from '@material-ui/icons/Phone';
 import MailIcon from '@material-ui/icons/Mail';
 import Avatar from '@material-ui/core/Avatar';
 import "./Footer.scss";
+import {getString} from "resources";
 
 
 const Footer = () => {
@@ -24,13 +25,13 @@ const Footer = () => {
                         </div>
                         <div className="col-12 col-sm-6 col-md-3">
                             <div className="footer-item">
-                                <a href="mailto:dvalencianoe@gmail.com"
+                                <a href="mailto:david.valenciano.esteban@gmail.com"
                                    className="footer-link"
                                 >
                                     <Avatar className="footer-avatar">
                                         <MailIcon style={{ color: "#000000" }} />
                                     </Avatar>
-                                    dvalencianoe@gmail.com</a>
+                                    {getString("email_text2")}</a>
                             </div>
                         </div>
                         <div className="col-12 col-sm-6 col-md-3">
