@@ -4,7 +4,7 @@ import {makeStyles} from '@material-ui/core/styles';
 import "./Skills.scss";
 import {getString} from "resources";
 import SkillChart from "./SkillChart";
-import moment from "moment";
+import { HTML_EXPERTISE, REACT_EXPERTISE} from "./SkillsUtils";
 
 
 const useStyles = makeStyles({
@@ -29,34 +29,9 @@ const useStyles = makeStyles({
     }
 );
 
-const datesDifference = date => {
-    const today = moment(new Date());
-    const dateDiff = today.diff(date, 'years');
-    let level;
-
-    switch (dateDiff) {
-        case dateDiff <= 1:
-            return level = "beginner";
-
-        case (dateDiff > 1 && dateDiff <= 3):
-            return level = "advanced";
-
-        case dateDiff > 3:
-            return level = "expert";
-
-        default:
-            return;
-    }
-}
 
 const Tech = () => {
         const classes = useStyles();
-        const htmlDate = moment([2016, 5, 1]);
-        const reactDate = moment([2017, 2, 1]);
-        const today = moment(new Date());
-
-        let htmlDif = today.diff(datesDifference(htmlDate), 'years');
-        let reactDif = today.diff(reactDate, 'years');
 
 
         return (
@@ -79,14 +54,14 @@ const Tech = () => {
                                         data={[
                                             {
                                                 name: 'native',
-                                                value: 50
+                                                value: 30
                                             },
                                             {
                                                 name: 'no native',
-                                                value: 50
+                                                value: 70
                                             }
                                         ]}
-                                        value="50%"
+                                        value="30%"
                                     />
                                 </div>
                                 <div
@@ -102,14 +77,14 @@ const Tech = () => {
                                         data={[
                                             {
                                                 name: 'node',
-                                                value: 75
+                                                value: 60
                                             },
                                             {
                                                 name: 'no node',
-                                                value: 25
+                                                value: 40
                                             }
                                         ]}
-                                        value="75%"
+                                        value="60%"
                                     />
                                 </div>
                                 <div
@@ -117,7 +92,8 @@ const Tech = () => {
                                     <ul className="chart-skills">
                                         <li className="tech-title">- Node.js</li>
                                         <li className="tech-title">- Firebase</li>
-                                        <li className="tech-subtitle">{getString("advanced")},</li>
+                                        <li className="tech-title">- GraphQL</li>
+                                        <li className="tech-subtitle">{getString("beginner")},</li>
                                         <li className="tech-subtitle">2 {getString("years").toLowerCase()}</li>
                                     </ul>
                                 </div>
@@ -144,7 +120,7 @@ const Tech = () => {
                                         <li className="tech-title">- React.js</li>
                                         <li className="tech-title">- Redux</li>
                                         <li className="tech-subtitle">{getString("advanced")},</li>
-                                        <li className="tech-subtitle">{datesDifference(reactDate)} {getString("years").toLowerCase()}</li>
+                                        <li className="tech-subtitle">{REACT_EXPERTISE} {getString("years").toLowerCase()}</li>
                                     </ul>
                                 </div>
                                 <div className="col-sm-6 col-lg-3 align-self-center">
@@ -166,10 +142,10 @@ const Tech = () => {
                                     className="col-sm-6 col-lg-3 d-flex flex-column justify-content-center align-items-center">
                                     <ul className="chart-skills">
                                         <li className="tech-title">- HTML</li>
-                                        <li className="tech-title">- CSS 3</li>
                                         <li className="tech-title">- SCSS</li>
+                                        <li className="tech-title">- JavaScript</li>
                                         <li className="tech-subtitle">{getString("expert")},</li>
-                                        <li className="tech-subtitle">{datesDifference(htmlDif)} {getString("years").toLowerCase()}</li>
+                                        <li className="tech-subtitle">{HTML_EXPERTISE} {getString("years").toLowerCase()}</li>
                                     </ul>
                                 </div>
                             </div>

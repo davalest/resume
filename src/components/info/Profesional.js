@@ -1,10 +1,10 @@
 import React from 'react';
 import Fab from "@material-ui/core/Fab";
 import CloudDownloadIcon from '@material-ui/icons/CloudDownload';
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import Tooltip from '@material-ui/core/Tooltip';
 import "./Info.scss";
-import { getString, currentLanguage, resumeEs, resumeEn } from "resources";
+import {getString, currentLanguage, resumeEs, resumeEn} from "resources";
 
 
 const useStyles = makeStyles({
@@ -56,7 +56,7 @@ const Profesional = () => {
                         aria-label={getString("download_resume")}
                         className={classes.downloadButton}
                     >
-                        <CloudDownloadIcon className={classes.downloadIcon} />
+                        <CloudDownloadIcon className={classes.downloadIcon}/>
                     </Fab>
                 </Tooltip>
                 <div className="row">
@@ -74,7 +74,27 @@ const Profesional = () => {
                     <div className="col-xs-12 col-md-9">
                         <div className="row resume-line">
                             <div className="col-12 mt-5 mt-md-0 col-md-3">
-                                <p className="info-dates">{getString("feb_actual")}</p>
+                                <p className="info-dates">{getString("actual_work")}</p>
+                            </div>
+                            <div className="col-12 col-md-9">
+                                <span className="info-company">Capitole Consulting SL </span>
+                                <span className="info-job">Front-end Developer </span>
+                                <span className="info-projects">{getString("developed_projects")} </span>
+                                <ul>
+                                    <li className="info-app">
+                                        OWA -> {getString("web_app_dev")}
+                                        <p className="info-tech">{getString("used_tech")} HTML 5,
+                                            SCSS,
+                                            React.js,
+                                            Redux,
+                                            GraphQL. </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="row resume-line">
+                            <div className="col-12 mt-5 mt-md-0 col-md-3">
+                                <p className="info-dates">{getString("2017_2019")}</p>
                             </div>
                             <div className="col-12 col-md-9">
                                 <span className="info-company">QUO Health SL </span>
@@ -84,30 +104,31 @@ const Profesional = () => {
                                     <li className="info-app">
                                         gluQUO Diabetes Academy -> {getString("web_app_dev")}
                                         <p className="info-tech">{getString("used_tech")} HTML 5,
-                                                                                          SCSS,
-                                                                                          Bootstrap,
-                                                                                          React.js,
-                                                                                          Firebase. </p>
+                                            SCSS,
+                                            Bootstrap,
+                                            React.js,
+                                            Redux,
+                                            Firebase. </p>
                                     </li>
                                     <li className="info-app">
                                         O.K Transport -> {getString("web_app_dev")}
                                         <p className="info-tech">{getString("used_tech")} HTML 5, SCSS,
-                                                                                          Bootstrap,
-                                                                                          React.js,
-                                                                                          Moment.js,
-                                                                                          Node.js,
-                                                                                          MongoDB,
-                                                                                          LoopBack. </p>
+                                            Bootstrap,
+                                            React.js,
+                                            Redux,
+                                            Node.js,
+                                            MongoDB,
+                                            LoopBack. </p>
                                     </li>
                                     <li className="info-app">
                                         gluQUO PRO -> {getString("web_app_dev")}
                                         <p className="info-tech">{getString("used_tech")} HTML 5,
-                                                                                          SCSS,
-                                                                                          Bootstrap,
-                                                                                          React.js,
-                                                                                          Moment.js,
-                                                                                          Node.js,
-                                                                                          Firebase. </p>
+                                            SCSS,
+                                            Bootstrap,
+                                            React.js,
+                                            Redux,
+                                            Node.js,
+                                            Firebase. </p>
                                     </li>
                                     <li className="info-app">
                                         Optima CC -> {getString("website_development")}
@@ -118,17 +139,17 @@ const Profesional = () => {
                                     <li className="info-app">
                                         gluQUO -> {getString("website_development")}
                                         <p className="info-tech">{getString("used_tech")} HTML 5, CSS
-                                                                                          3,
-                                                                                          Bootstrap,
-                                                                                          React.js,
-                                                                                          Node.js.</p>
+                                            3,
+                                            Bootstrap,
+                                            React.js,
+                                            Node.js.</p>
                                     </li>
                                     <li className="info-app">
                                         QUO Health -> {getString("design_website_development")}
                                         <p className="info-tech">{getString("used_tech")} HTML 5, CSS
-                                                                                          3,
-                                                                                          Bootstrap,
-                                                                                          JQuery.</p>
+                                            3,
+                                            Bootstrap,
+                                            JQuery.</p>
                                     </li>
                                 </ul>
                             </div>
@@ -145,12 +166,12 @@ const Profesional = () => {
                                     <li className="info-app">
                                         MarVal -> {getString("design_website_development")}
                                         <p className="info-tech">{getString("used_tech")} HTML 5, CSS 3,
-                                                                                          Bootstrap, JQuery. </p>
+                                            Bootstrap, JQuery. </p>
                                     </li>
                                     <li className="info-app">
                                         La Parada -> {getString("design_website_development")}
                                         <p className="info-tech">{getString("used_tech")} HTML 5, CSS
-                                                                                          3, Bootstrap, JQuery. </p>
+                                            3, Bootstrap, JQuery. </p>
                                     </li>
                                 </ul>
                             </div>

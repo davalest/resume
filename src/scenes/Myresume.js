@@ -1,10 +1,13 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './Home.scss';
 import Divider from "@material-ui/core/Divider";
 import Profesional from "../components/info/Profesional";
 import Schooling from "../components/info/Schooling";
 
 const Myresume = () => {
+    useEffect(() => {
+        window.scroll(0, 0)
+    }, [])
     return (
         <div>
             <Profesional />

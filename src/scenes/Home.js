@@ -1,12 +1,15 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './Home.scss';
-import { david } from "resources";
+import {david} from "resources";
 import Divider from "@material-ui/core/Divider";
 import PersonalCard from "../components/card/PersonalCard";
 import Personal from "../components/info/Personal";
 
 
 const Home = () => {
+    useEffect(() => {
+        window.scroll(0, 0)
+    }, [])
     return (
         <div className="container">
             <div className="row">
@@ -23,7 +26,7 @@ const Home = () => {
             }}
             />
             <div className="row">
-                <Personal />
+                <Personal/>
             </div>
         </div>
     );

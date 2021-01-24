@@ -107,10 +107,16 @@ const Knowledge = () => {
                                     <li>
                                         Grid & Layout
                                     </li>
+                                    <li>
+                                        {getString("willing_relocation")}
+                                    </li>
                                 </ul>
                             </div>
                             <div className="col-6">
                                 <ul className="other-list">
+                                    <li>
+                                        {getString("git_knowledge")}
+                                    </li>
                                     <li>
                                         {getString("cross_browser")}
                                     </li>
