@@ -2,6 +2,7 @@
   "name": "resume",
   "version": "0.1.0",
   "private": true,
+  "author": "David Valenciano <david.valenciano.esteban@gmail.com>",
   "homepage": "http://davalest.github.io/resume",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.8.2",

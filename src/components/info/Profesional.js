@@ -77,6 +77,26 @@ const Profesional = () => {
                                 <p className="info-dates">{getString("actual_work")}</p>
                             </div>
                             <div className="col-12 col-md-9">
+                                <span className="info-company">Stack & Vault SL </span>
+                                <span className="info-job">Front-end Developer </span>
+                                <span className="info-projects">{getString("developed_projects")} </span>
+                                <ul>
+                                    <li className="info-app">
+                                        InmoScout -> {getString("web_app_dev")}
+                                        <p className="info-tech">{getString("used_tech")} HTML 5,
+                                            SCSS,
+                                            React.js,
+                                            Typescript,
+                                            Redux. </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="row resume-line">
+                            <div className="col-12 mt-5 mt-md-0 col-md-3">
+                                <p className="info-dates">{getString("2019_2021")}</p>
+                            </div>
+                            <div className="col-12 col-md-9">
                                 <span className="info-company">Capitole Consulting SL </span>
                                 <span className="info-job">Front-end Developer </span>
                                 <span className="info-projects">{getString("developed_projects")} </span>
