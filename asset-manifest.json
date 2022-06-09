@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/resume/static/css/main.59392632.chunk.css",
-    "main.js": "/resume/static/js/main.0ac78f8b.chunk.js",
-    "main.js.map": "/resume/static/js/main.0ac78f8b.chunk.js.map",
+    "main.css": "/resume/static/css/main.90ee0371.chunk.css",
+    "main.js": "/resume/static/js/main.8321c883.chunk.js",
+    "main.js.map": "/resume/static/js/main.8321c883.chunk.js.map",
     "runtime-main.js": "/resume/static/js/runtime-main.75d8c91e.js",
     "runtime-main.js.map": "/resume/static/js/runtime-main.75d8c91e.js.map",
-    "static/css/2.87a9c7a2.chunk.css": "/resume/static/css/2.87a9c7a2.chunk.css",
-    "static/js/2.0f98e2e3.chunk.js": "/resume/static/js/2.0f98e2e3.chunk.js",
-    "static/js/2.0f98e2e3.chunk.js.map": "/resume/static/js/2.0f98e2e3.chunk.js.map",
+    "static/css/2.5aa997f2.chunk.css": "/resume/static/css/2.5aa997f2.chunk.css",
+    "static/js/2.9fc5a4b2.chunk.js": "/resume/static/js/2.9fc5a4b2.chunk.js",
+    "static/js/2.9fc5a4b2.chunk.js.map": "/resume/static/js/2.9fc5a4b2.chunk.js.map",
     "index.html": "/resume/index.html",
-    "precache-manifest.d0f74278cb7486a0ae57b6896fb9f79e.js": "/resume/precache-manifest.d0f74278cb7486a0ae57b6896fb9f79e.js",
+    "precache-manifest.dd639bad878a9145f122a2552049b363.js": "/resume/precache-manifest.dd639bad878a9145f122a2552049b363.js",
     "service-worker.js": "/resume/service-worker.js",
-    "static/css/2.87a9c7a2.chunk.css.map": "/resume/static/css/2.87a9c7a2.chunk.css.map",
-    "static/css/main.59392632.chunk.css.map": "/resume/static/css/main.59392632.chunk.css.map",
-    "static/js/2.0f98e2e3.chunk.js.LICENSE.txt": "/resume/static/js/2.0f98e2e3.chunk.js.LICENSE.txt",
+    "static/css/2.5aa997f2.chunk.css.map": "/resume/static/css/2.5aa997f2.chunk.css.map",
+    "static/css/main.90ee0371.chunk.css.map": "/resume/static/css/main.90ee0371.chunk.css.map",
+    "static/js/2.9fc5a4b2.chunk.js.LICENSE.txt": "/resume/static/js/2.9fc5a4b2.chunk.js.LICENSE.txt",
     "static/media/david.jpg": "/resume/static/media/david.5eff4de6.jpg",
-    "static/media/resumeEn.pdf": "/resume/static/media/resumeEn.cf501f29.pdf",
-    "static/media/resumeEs.pdf": "/resume/static/media/resumeEs.97b48263.pdf"
+    "static/media/resumeEn.pdf": "/resume/static/media/resumeEn.cf05a46b.pdf",
+    "static/media/resumeEs.pdf": "/resume/static/media/resumeEs.c063d0f5.pdf"
   },
   "entrypoints": [
     "static/js/runtime-main.75d8c91e.js",
-    "static/css/2.87a9c7a2.chunk.css",
-    "static/js/2.0f98e2e3.chunk.js",
-    "static/css/main.59392632.chunk.css",
-    "static/js/main.0ac78f8b.chunk.js"
+    "static/css/2.5aa997f2.chunk.css",
+    "static/js/2.9fc5a4b2.chunk.js",
+    "static/css/main.90ee0371.chunk.css",
+    "static/js/main.8321c883.chunk.js"
   ]
 }
