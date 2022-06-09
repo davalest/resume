@@ -1,5 +1,5 @@
 import React, { useEffect} from 'react';
-import './Home.scss';
+import './Home.css';
 import Divider from "@material-ui/core/Divider";
 import Tech from "../components/skills/Tech";
 import Knowledge from "../components/skills/Knowledge";

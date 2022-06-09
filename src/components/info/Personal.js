@@ -1,7 +1,7 @@
 import React from 'react';
 import Fab from "@material-ui/core/Fab";
 import { makeStyles } from '@material-ui/core/styles';
-import "./Info.scss";
+import "./Info.css";
 import { getString } from "resources";
 import Divider from "@material-ui/core/Divider";
 

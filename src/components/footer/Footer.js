@@ -2,7 +2,7 @@ import React from 'react';
 import PhoneIcon from '@material-ui/icons/Phone';
 import MailIcon from '@material-ui/icons/Mail';
 import Avatar from '@material-ui/core/Avatar';
-import "./Footer.scss";
+import "./Footer.css";
 import {getString} from "resources";
 
 

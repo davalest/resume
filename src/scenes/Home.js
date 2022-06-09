@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import './Home.scss';
+import './Home.css';
 import {david} from "resources";
 import Divider from "@material-ui/core/Divider";
 import PersonalCard from "../components/card/PersonalCard";

@@ -6,7 +6,7 @@ import {
     getString
 } from 'resources';
 import { NavHashLink as NavLink } from 'react-router-hash-link';
-import "./Header.scss";
+import "./Header.css";
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);

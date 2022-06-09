@@ -1,7 +1,7 @@
 import React from 'react';
 import Fab from "@material-ui/core/Fab";
 import { makeStyles } from '@material-ui/core/styles';
-import "./Info.scss";
+import "./Info.css";
 import { getString } from "resources";
 
 
@@ -34,7 +34,7 @@ const Schooling = () => {
         <div className="info-external">
             <div className="container info-internal">
                 <div className="row">
-                    <div className="col-xs-6 col-md-3 d-flex justify-content-center align-self-center">
+                    <div className="col-xs-6 col-md-3 d-flex justify-content-center align-self-start">
                         <Fab color="primary"
                              aria-label="resume"
                              disabled={true}
@@ -44,6 +44,15 @@ const Schooling = () => {
                         </Fab>
                     </div>
                     <div className="col-9">
+                        <div className="row">
+                            <div className="col-12 mt-5 mt-md-0 col-md-3">
+                                <p className="schooling-dates">{getString("now")}</p>
+                            </div>
+                            <div className="col-12 col-md-9">
+                                <p className="info-job">Técnico Superior de Desarrollo de Aplicaciones Multiplataforma</p>
+                                <p>- Ilerna, Online</p>
+                            </div>
+                        </div>
                         <div className="row">
                             <div className="col-12 mt-5 mt-md-0 col-md-3">
                                 <p className="schooling-dates">2019</p>

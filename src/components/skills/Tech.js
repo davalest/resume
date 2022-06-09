@@ -1,7 +1,7 @@
 import React from 'react';
 import Fab from "@material-ui/core/Fab";
 import {makeStyles} from '@material-ui/core/styles';
-import "./Skills.scss";
+import "./Skills.css";
 import {getString} from "resources";
 import SkillChart from "./SkillChart";
 import { HTML_EXPERTISE, REACT_EXPERTISE} from "./SkillsUtils";

@@ -1,5 +1,5 @@
 import React from 'react';
-import "./PersonalCard.scss";
+import "./PersonalCard.css";
 import Avatar from "react-avatar";
 import { getString } from "resources";
 

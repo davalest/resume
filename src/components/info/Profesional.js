@@ -3,7 +3,7 @@ import Fab from "@material-ui/core/Fab";
 import CloudDownloadIcon from '@material-ui/icons/CloudDownload';
 import {makeStyles} from '@material-ui/core/styles';
 import Tooltip from '@material-ui/core/Tooltip';
-import "./Info.scss";
+import "./Info.css";
 import {getString, currentLanguage, resumeEs, resumeEn} from "resources";
 
 
@@ -60,7 +60,7 @@ const Profesional = () => {
                     </Fab>
                 </Tooltip>
                 <div className="row">
-                    <div className="col-xs-12 col-md-3 d-flex justify-content-center align-self-center">
+                    <div className="col-xs-12 col-md-3 d-flex justify-content-center align-self-start">
                         <div>
                             <Fab color="primary"
                                  aria-label="resume"
@@ -81,6 +81,31 @@ const Profesional = () => {
                                 <span className="info-job">Front-end Developer </span>
                                 <span className="info-projects">{getString("developed_projects")} </span>
                                 <ul>
+                                    <li className="info-app">
+                                        Wotoch -> {getString("native_app_dev")}
+                                        <p className="info-tech">{getString("used_tech")}
+                                            Svelte,
+                                            Typescript.
+                                        </p>
+                                    </li>
+                                    <li className="info-app">
+                                        Voting Manager -> {getString("native_app_dev")}
+                                        <p className="info-tech">{getString("used_tech")} HTML 5,
+                                            SCSS,
+                                            React.js,
+                                            React Native,
+                                            Typescript,
+                                            Redux.
+                                        </p>
+                                    </li>
+                                    <li className="info-app">
+                                        VR Manager -> {getString("web_app_dev")}
+                                        <p className="info-tech">{getString("used_tech")} HTML 5,
+                                            SCSS,
+                                            React.js,
+                                            Typescript.
+                                        </p>
+                                    </li>
                                     <li className="info-app">
                                         InmoScout -> {getString("web_app_dev")}
                                         <p className="info-tech">{getString("used_tech")} HTML 5,
@@ -122,11 +147,12 @@ const Profesional = () => {
                                 <span className="info-projects">{getString("developed_projects")} </span>
                                 <ul>
                                     <li className="info-app">
-                                        gluQUO Diabetes Academy -> {getString("web_app_dev")}
+                                        gluQUO Diabetes Academy -> {getString("native_app_dev")}
                                         <p className="info-tech">{getString("used_tech")} HTML 5,
                                             SCSS,
                                             Bootstrap,
                                             React.js,
+                                            React Native,
                                             Redux,
                                             Firebase. </p>
                                     </li>

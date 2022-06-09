@@ -1,6 +1,6 @@
 import React from 'react';
 import Fab from "@material-ui/core/Fab";
-import "./Skills.scss";
+import "./Skills.css";
 import { getString } from "resources";
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import { darken } from '@material-ui/core/styles/colorManipulator';
