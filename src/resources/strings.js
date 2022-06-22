@@ -62,13 +62,18 @@ const strings = {
         "address_text":"C/ Isla de la Toja nº1 escalera derecha 3ºD",
         "nationality_title":"Nationalidad",
         "nationality_text":"Español",
+        "hnc_dam": "Técnico Superior de Desarrollo de Aplicaciones Multiplataforma",
+        "hnc_daw": "Técnico Superior de Desarrollo de Aplicaciones Web",
+        "hnc_asir": "Técnico Superior de Administración de Sistemas Informáticos y Redes",
+        "hnc_smr": "Técnico de Sistemas Microinformáticos y Redes"
+
     },
     en: {
         "home": "Home",
         "about": "About",
         "skills": "Skills",
         "experience": "Experience",
-        "education": "Schooling",
+        "education": "Education",
         "contact": "Contact",
         "know_me": "Know me",
         "resume":"Resume",
@@ -92,7 +97,7 @@ const strings = {
         "design_website_development":"Design, layout and website development.",
         "incident_management":"Maintenance and incident management.",
         "infraestructure_management":"Development and implementation of infrastructure.",
-        "now":"Now",
+        "now":"Currently",
         "beginner":"Beginner",
         "advanced":"Advanced",
         "expert":"Expert",
@@ -124,6 +129,11 @@ const strings = {
         "address_text":"1 Isla de la Toja Street 3ºD",
         "nationality_title":"Nationality",
         "nationality_text":"Spanish",
+        "hnc_dam": "HNC in Multiplatform Application Development",
+        "hnc_daw": "HND in Web Application Development",
+        "hnc_asir": "HND in Computer Systems and Networks Administration",
+        "hnc_smr": "HND in Microcomputer Systems and Networks Technician"
+
     }
 };
 
