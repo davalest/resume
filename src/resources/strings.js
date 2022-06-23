@@ -129,7 +129,7 @@ const strings = {
         "address_text":"1 Isla de la Toja Street 3ºD",
         "nationality_title":"Nationality",
         "nationality_text":"Spanish",
-        "hnc_dam": "HNC in Multiplatform Application Development",
+        "hnc_dam": "HND in Multiplatform Application Development",
         "hnc_daw": "HND in Web Application Development",
         "hnc_asir": "HND in Computer Systems and Networks Administration",
         "hnc_smr": "HND in Microcomputer Systems and Networks Technician"
