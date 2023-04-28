@@ -1,11 +1,11 @@
 import { getString } from "resources";
 import React from "react";
 
-const ProfesionalRow = ({company, job,}) => (
+const ProfesionalRow = ({company, job, dates}) => (
     <div className="row resume-line">
         <div
             className="col-12 mt-5 mt-md-0 col-md-3">
-            <p className="info-dates">{ getString("actual_work") }</p>
+            <p className="info-dates">{ dates }</p>
         </div>
         <div className="col-12 col-md-9">
             <span
