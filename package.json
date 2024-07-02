@@ -1,46 +1,35 @@
 {
   "name": "resume",
-  "version": "0.1.0",
   "private": true,
-  "author": "David Valenciano <david.valenciano.esteban@gmail.com>",
-  "homepage": "http://davalest.github.io/resume",
-  "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.8.2",
-    "@material-ui/core": "^4.0.1",
-    "@material-ui/icons": "^4.0.1",
-    "bootstrap": "^4.3.1",
-    "gh-pages": "^3.1.0",
-    "moment": "^2.24.0",
-    "react": "^16.4.2",
-    "react-avatar": "^3.6.0",
-    "react-dom": "^16.4.2",
-    "react-ga": "^2.6.0",
-    "react-router": "^4.3.1",
-    "react-router-dom": "^4.3.1",
-    "react-router-hash-link": "^1.2.1",
-    "react-scripts": "^3.0.1",
-    "reactstrap": "^8.0.0",
-    "recharts": "^1.6.2",
-    "resources": "file:src/resources"
-  },
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "dependencies": {
+    "assets": "file:src/assets",
+    "i18next": "^23.11.5",
+    "i18next-browser-languagedetector": "^8.0.0",
+    "i18next-http-backend": "^2.5.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-i18next": "^14.1.2",
+    "react-router-dom": "^6.23.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "@typescript-eslint/parser": "^7.2.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.6",
+    "sass": "^1.77.6",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0"
   }
 }

@@ -1,0 +1,11 @@
+{
+  "resume": "Resumen",
+  "footer": "Pie",
+  "header": {
+    "name": "David Valenciano",
+    "work": "Desarrollador Frontend",
+    "home": "Inicio",
+    "resume": "Resumen",
+    "skills": "Aptitudes"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "resume": "Resume",
+  "footer": "Footer",
+  "header": {
+    "name": "David Valenciano",
+    "work": "Frontend Developer",
+    "home": "Home",
+    "resume": "Resume",
+    "skills": "Skills"
+  }
+}
