@@ -1,9 +1,19 @@
 import {Link, NavLink} from "react-router-dom";
 import "./header.scss"
 import {useTranslation} from "react-i18next";
-
+import {useLanguage} from "../../contexts/language";
+import i18n from "i18next";
+import {english, spanish} from "assets";
 const Header = () => {
     const {t} = useTranslation();
+    const {language, setLanguage} = useLanguage();
+
+    const changeLanguages = (lng: string) => {
+        i18n.changeLanguage(lng).then(() => setLanguage(lng))
+    };
+
+    const setNewLangTo = language === "es" ? "en" : "es";
+    const langImg = language === "es" ? english : spanish;
 
     return (
         <div className="header-container">
@@ -33,6 +43,7 @@ const Header = () => {
                     >
                         {t('header.skills')}
                     </NavLink>
+                    <img className="lang-selector" src={langImg} alt={"language"} onClick={() => changeLanguages(setNewLangTo)}/>
                 </div>
             </div>
         </div>

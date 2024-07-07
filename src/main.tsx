@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './views/App.tsx'
+import Home from './views/Home.tsx'
 import './index.css'
 import {
     createBrowserRouter,
@@ -9,7 +9,8 @@ import {
 import Resume from "./views/Resume.tsx";
 import Layout from "./views/Layout.tsx";
 import './i18n';
-import {LanguageProvider} from "./contexts/Language.tsx";
+import {LanguageProvider} from "./contexts/language";
+
 
 
 const router = createBrowserRouter([
@@ -22,11 +23,11 @@ const router = createBrowserRouter([
         children: [
             {
                 path: "home",
-                element: <App/>,
+                element: <Home/>,
             },
             {
                 path: "",
-                element: <App/>,
+                element: <Home/>,
             },
             {
                 path: "resume",

@@ -22,7 +22,7 @@
 
         .name-title {
           font-size: 28px;
-          color: #6e6e6e;
+          color: #979797;
 
           &:hover {
             color: #46ABB7;
@@ -31,7 +31,7 @@
 
         .work-title {
           font-size: 18px;
-          color: #6e6e6e;
+          color: #979797;
 
           &:hover {
             color: #46ABB7;
@@ -44,9 +44,10 @@
       flex: 1;
       display: flex;
       justify-content: space-around;
+      align-items: center;
 
       .nav-link {
-        color: #6e6e6e;
+        color: #979797;
         padding: 5px 10px;
         text-transform: uppercase;
 
@@ -55,6 +56,13 @@
           border-radius: 15px;
           color: white;
         }
+      }
+
+      .lang-selector {
+        width: 30px;
+        height: 20px;
+        cursor: pointer;
+        margin: 0 10px;
       }
 
       .active {

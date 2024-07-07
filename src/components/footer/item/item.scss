@@ -1,0 +1,10 @@
+.footer-item-container {
+  color: #979797;
+
+  &:hover {
+    > * {
+      color: #46ABB7;
+    }
+  }
+}
+
