@@ -1,47 +1,49 @@
-import {Link, NavLink} from "react-router-dom";
-import "./header.scss"
+import i18n from "i18next";
 import {useTranslation} from "react-i18next";
 import {useLanguage} from "../../contexts/language";
-import i18n from "i18next";
+import {Link, NavLink, useLocation} from "react-router-dom";
 import {english, spanish} from "assets";
-const Header = () => {
-    const {t} = useTranslation();
-    const {language, setLanguage} = useLanguage();
+import "./header.scss"
+import {pathList} from "../../contexts/routes/constants.ts";
 
+const Header = () => {
+    const {t} = useTranslation("", { keyPrefix: 'header' });
+    const {language, setLanguage} = useLanguage();
+    const location = useLocation();
     const changeLanguages = (lng: string) => {
         i18n.changeLanguage(lng).then(() => setLanguage(lng))
     };
 
-    const setNewLangTo = language === "es" ? "en" : "es";
-    const langImg = language === "es" ? english : spanish;
+    const setNewLangTo = language === "en" ? "es" : "en";
+    const langImg = language === "en" ? spanish : english;
 
     return (
         <div className="header-container">
             <div className="header-content">
                 <div className="header-name">
                     <Link className="name-link" to="/">
-                        <div className="name-title">{t('header.name')}</div>
-                        <div className="work-title">{t('header.work')}</div>
+                        <div className="name-title">{t('name')}</div>
+                        <div className="work-title">{t('work')}</div>
                     </Link>
                 </div>
                 <div className="header-navigation">
                     <NavLink
-                        to="/"
-                        className={({isActive}) => `nav-link ${isActive && "active"}`}
+                        to={pathList.root}
+                        className={({isActive}) => `nav-link ${(location.pathname.toString() === pathList.home || isActive) && "active"}`}
                     >
-                        {t('header.home')}
+                        {t('home')}
                     </NavLink>
                     <NavLink
-                        to="/resume"
+                        to={pathList.resume}
                         className={({isActive}) => `nav-link ${isActive && "active"}`}
                     >
-                        {t('header.resume')}
+                        {t('resume')}
                     </NavLink>
                     <NavLink
-                        to="/skills"
+                        to={pathList.skills}
                         className={({isActive}) => `nav-link ${isActive && "active"}`}
                     >
-                        {t('header.skills')}
+                        {t('skills')}
                     </NavLink>
                     <img className="lang-selector" src={langImg} alt={"language"} onClick={() => changeLanguages(setNewLangTo)}/>
                 </div>
