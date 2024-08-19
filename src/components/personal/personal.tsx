@@ -1,16 +1,14 @@
-import {david} from "assets";
 import Intro from "./intro/intro.tsx";
 import Info from "./info/info.tsx";
 import "./personal.scss"
+import Hero from "./hero/hero.tsx";
 
 const Personal = () => {
 
     return (
         <>
-            <div className="personal-container">
-                <img className="personal-image" src={david} alt="david"/>
-                <Intro/>
-            </div>
+            <Hero/>
+            <Intro/>
             <div style={{display: "flex", padding:"50px 0",
                 placeContent:"center"}}>
                 <div style={{width:"40%", display:"flex", justifyContent:"center", alignItems:"center"}}>

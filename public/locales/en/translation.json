@@ -6,7 +6,18 @@
     "resume": "Resume",
     "skills": "Skills"
   },
+  "professions": {
+    "react": "React Dev.",
+    "js": "JS Dev.",
+    "front": "Frontend Dev.",
+    "ts": "TS Dev.",
+    "design": "Web designer"
+  },
   "personal": {
+    "hero": {
+      "i_am": "I'm",
+      "experience": "I'm a web developer with over {{years}} years of experience. Experienced with all stages of the development cycle for dynamic web projects."
+    },
     "who_am_i":"Hi! I'm David, a passionate front-end developer with extensive experience in web design and layout.",
     "where_ive_work":"Throughout my career, I've had the opportunity to work on diverse projects, collaborating with both small and large teams, and always alongside incredible people who have provided me with valuable experiences.",
     "how_am_i": "I consider myself a proactive individual, constantly seeking new knowledge and challenges to enhance my professional growth.",
