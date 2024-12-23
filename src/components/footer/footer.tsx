@@ -1,18 +1,15 @@
 import "./footer.scss";
-import FooterItem from "./item/item.tsx";
+import FooterItem from "./item/footerItem.tsx";
 import {footerItems} from "./constants.ts";
 
-const Footer = () => {
-
-    return (
-        <div className="footer-container">
-            <div className="footer-content">
-                {footerItems.map((item)=>
-                    <FooterItem key={item.text} icon={item.icon} text={item.text} link={item.link}/>
-                )}
-            </div>
+const Footer = () => (
+    <footer className="footer-container">
+        <div className="footer-content">
+            {footerItems.map(({icon, text, link}) => (
+                <FooterItem key={text} icon={icon} text={text} link={link}/>
+            ))}
         </div>
-    )
-}
+    </footer>
+);
 
-export default Footer
+export default Footer;

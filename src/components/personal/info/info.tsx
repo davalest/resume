@@ -1,35 +1,22 @@
 import "./info.scss"
 import {useTranslation} from "react-i18next";
+import InfoItem from "./item/infoItem.tsx";
 
 const Info = () => {
-    const { t } = useTranslation("", { keyPrefix: 'personal' });
+    const {t} = useTranslation("", {keyPrefix: 'personal'});
 
     return (
-        <div>
-            <p>
-                <span className="info-title">{t("name_title")}</span>
-                {t("name_info")}
-            </p>
-            <p>
-                <span className="info-title">{t("email_title")}</span>
-                {t("email_info")}
-            </p>
-            <p>
-                <span className="info-title">{t("phone_title")}</span>
-                {t("phone_info")}
-            </p>
-            <p>
-                <span className="info-title">{t("birth_date_title")}</span>
-                {t("birth_date_info")}
-            </p>
-            <p>
-                <span className="info-title">{t("located_title")}</span>
-                {t("located_info")}
-            </p>
-            <p>
-                <span className="info-title">{t("nationality_title")}</span>
-                {t("nationality_info")}
-            </p>
+        <div className="info-container">
+            <div>
+                <InfoItem title={t("name_title")} label={t("name_info")}/>
+                <InfoItem title={t("email_title")} label={t("email_info")}/>
+                <InfoItem title={t("phone_title")} label={t("phone_info")}/>
+            </div>
+            <div>
+                <InfoItem title={t("birth_date_title")} label={t("birth_date_info")}/>
+                <InfoItem title={t("located_title")} label={t("located_info")}/>
+                <InfoItem title={t("nationality_title")} label={t("nationality_info")}/>
+            </div>
         </div>
     )
 }

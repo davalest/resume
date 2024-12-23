@@ -1,7 +1,6 @@
 import {useContext} from "react";
 import {LanguageContext} from "./Language.tsx";
 
-
 export const useLanguage = () => {
     const context = useContext(LanguageContext);
     if (!context) {
