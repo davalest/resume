@@ -1,4 +1,4 @@
-import "./item.scss";
+import "../footer.scss";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {FooterItemProps} from "../types.ts";
 import {Link} from "react-router-dom";
