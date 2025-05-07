@@ -1,90 +1,93 @@
 \documentclass[11pt,a4paper]{moderncv}
-
 \moderncvtheme[blue]{classic}
-\usepackage[utf8]{inputenc}  %Windows
 
-%\usepackage[scale=0.975]{geometry}
+\usepackage[utf8]{inputenc}
 \usepackage[top=0.5cm, bottom=0.5cm, left=0.5cm, right=0.5cm]{geometry}
 \usepackage{graphicx}
+\usepackage{multibib}
+\usepackage{fontawesome5} % para íconos de redes sociales
 
+% Datos personales
 \firstname{David}
 \familyname{Valenciano}
 \title{Front-End Developer}
-\address{C/Isla de la Toja}{Nº1 esc D 3ºD}
 \mobile{+34 600 80 90 24}
-%\phone{}
-%\fax{Votre Fax}
 \email{david.valenciano.esteban@gmail.com}
-\extrainfo{}
-%\photo[50pt]{photo.png}
-\makeatletter
-\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
-\makeatother
+%\photo[50pt][0.4pt]{photo.jpg}
+%\social[linkedin]{davidvalenciano}
+%\social[github]{dvalenciano}
 
-\usepackage{multibib}
+% Otros ajustes
 \newcites{book,misc}{{Books},{Others}}
-
 \nopagenumbers{}
+
 \begin{document}
-    \maketitle
-    \section{Experiencia Profesional}
-    \cventry{Ago 2022-- Currently }{Shopery SL}{Front-end Engineer }{}{Developed projects:}
-    {\begin{itemize}
-         \item Mustang, desarrollo de App Web. Tecnologías empleadas: HTML5, SCSS, React.js, Next.js, Typescript.
-         \item YouPop, desarrollo de App Web. Tecnologías empleadas: HTML5, SCSS, React.js, Next.js, Typescript.
-    \end{itemize}
-    }
-    \cventry{Sept 2021-- Ago 2022 }{Stack and Vault SL}{Front-end Engineer }{}{Developed projects:}
-    {\begin{itemize}
-         \item Wotoch, desarrollo de App Web. Tecnologías empleadas: Svelte, TypeScript.
-         \item Voting Manager, desarrollo de App Web y Nativa. Tecnologías empleadas: HTML 5, SCSS, React.js, React Native, TypesSript.
-         \item VR Manager, desarrollo de App Web. Tecnologías empleadas: HTML 5, SCSS, React.js, TypesSript.
-         \item InmmoScout24, desarrollo de App Web. Tecnologías empleadas: HTML 5, SCSS, React.js, TypesSript, Redux.
-    \end{itemize}
-    }
-    \cventry{Oct 2019-- Sept 2021}{Capitole Consulting}{Analista programador}{}{Proyectos desarrollados:}
-    {\begin{itemize}
-         \item OWA, desarrollo de App Web. Tecnologías empleadas: HTML 5, SCSS, React.js, Redux, GraphQl.
-    \end{itemize}
-    }
-    \cventry{Feb 2017-- Oct 2019}{QUO Health SL}{Front-end Developer}{}{Proyectos desarrollados:}
-    {\begin{itemize}
-         \item gluQUO Diabetes Academy, desarrollo de App Web. Tecnologías empleadas: HTML 5, SCSS, Bootstrap, React.js, React Native, Firebase.
-         \item O.K Transport. Desarrollo de App Web. Tecnologías empleadas: HTML 5, CSS 3, Bootstrap, React.js, Node.js, MongoDB, LoopBack.
-         \item gluQUO PRO. Desarrollo de App web. Tecnologías empleadas: HTML 5, CSS 3, Bootstrap, React.js, Node.js, Firebase
-         \item Optima cc web. Maquetado y creación de página web. Tecnologías empleadas: HTML 5, CSS 3, Bootstrap, React.js
-         \item gluQUO web.Maquetado y creación, desarrollo de página web. Tecnologías empleadas: HTML 5, CSS 3, Bootstrap, React.js.
-         \item QUO Health web. Diseño, maquetado, creación y desarrollo de página web. Tecnologías empleadas: HTML 5, CSS 3, Bootstrap, JQuery
-    \end{itemize}
-    }
-    \cventry{2016}{Freelance}{Front-end Developer}{}{Proyectos desarrollados:}
-    {
-    \begin{itemize}
-        \item Diseño, maquetado, creación y desarrollo de página web.(MarVal S.L) Tecnologías empleadas: HTML 5, CSS 3, Bootstrap, JQuery
-    \end{itemize}
-    \begin{itemize}
-        \item Diseño, maquetado, creación y desarrollo de página web.(La Parada S.L) Tecnologías empleadas: HTML 5, CSS 3, Bootstrap, JQuery
-    \end{itemize}
-    }
-    \cventry{Sep 2015-- Jul 2016}{HM Hospitales (Montepríncipe)}{IT CAU}{}{Funciones desarrollados:}{
-    \begin{itemize}
-        \item Mantenimiento y gestión de incidencias.
-    \end{itemize}
-    \begin{itemize}
-        \item Desarrollo e implementación de infraestructura.
-    \end{itemize}
-    }
+\maketitle
 
-    \section{Tecnologías}
-    \cvline{}{HTML 5, CSS 3, Bootstrap, JavaScript, Typescript, Express, Node.js, React.js, Next.js, Redux, React native, Apache, MongoDB, Git, Cross-browser compatibility, Firebase, Material-UI}
+\section{Experiencia Profesional}
+\cventry{Ene 2024 -- Actualidad}{Front-End Engineer}{Aplicaciones de Salud SL}{}{}{
+\begin{itemize}
+    \item \textit{VideoConsultation}, \textit{Portal}, \textit{Docline Components}: apps web con React.js, Styled-Components y TypeScript.
+    \item \textit{Docline Care}: app híbrida con React Native, Expo y TypeScript.
+\end{itemize}
+}
 
-    \section{Formación Académica}
-    \cventry{Actualmente}{Técnico Superior de Desarrollo de Aplicaciones Multiplataforma}{}{Ilerna}{Online}{}
-    \cventry{2020}{Técnico Superior de Desarrollo de Aplicaciones Web}{}{Ilerna}{Online}{}
-    \cventry{2017}{Técnico Superior de Administración de Sistemas Informáticos y Redes}{}{IES Lázaro Cárdenas}{Collado Villalba}{}
-    \cventry{2015}{Técnico de Sistemas Microinformáticos y Redes}{}{IES Infanta Elena}{Galapagar}{}
-    \section{Otros datos de interés}
-    \cvline{Idiomas}{Castellano (Nativo), Inglés (Profesional)}
-    \cvline{Permiso de conducir}{B (coche propio)}
+\cventry{Ago 2022 -- Nov 2023}{Front-End Engineer}{Shopery SL}{}{}{
+\begin{itemize}
+    \item \textit{Mustang} y \textit{YouPop}: apps web con HTML5, SCSS, React.js, Next.js y TypeScript.
+\end{itemize}
+}
+
+\cventry{Sep 2021 -- Ago 2022}{Front-End Engineer}{Stack and Vault SL}{}{}{
+\begin{itemize}
+    \item \textit{Wotoch}: app web con Svelte y TypeScript.
+    \item \textit{Voting Manager}: app híbrida con React.js, React Native, HTML5, SCSS y TypeScript.
+    \item \textit{VR Manager} e \textit{InmmoScout24}: apps web con React.js, HTML5, SCSS, TypeScript y Redux.
+\end{itemize}
+}
+
+\cventry{Oct 2019 -- Sep 2021}{Analista Programador}{Capitole Consulting}{}{}{
+\begin{itemize}
+    \item \textit{Verisure OWA}: app web con React.js, Redux, GraphQL, HTML5 y SCSS.
+\end{itemize}
+}
+
+\cventry{Feb 2017 -- Oct 2019}{Front-End Developer}{QUO Health SL}{}{}{
+\begin{itemize}
+    \item \textit{gluQUO Diabetes Academy}: app híbrida y web con React.js, React Native, HTML5, SCSS, Firebase.
+    \item \textit{O.K Transport}: app web con React.js, HTML5, CSS3, Bootstrap, Node.js, MongoDB.
+    \item \textit{gluQUO PRO}, \textit{Optima cc web}, \textit{gluQUO web}, \textit{QUO Health web}: apps web con React.js, HTML5, CSS3, Bootstrap.
+\end{itemize}
+}
+
+\cventry{2016}{Front-End Developer Freelance}{}{}{}{
+\begin{itemize}
+    \item \textit{MarVal S.L.} y \textit{La Parada S.L.}: diseño, maquetación y desarrollo web con HTML5, CSS3, Bootstrap y JQuery.
+\end{itemize}
+}
+
+\cventry{Sep 2015 -- Jul 2016}{IT CAU}{HM Hospitales (Montepríncipe)}{}{}{
+\begin{itemize}
+    \item Mantenimiento, gestión de incidencias e implementación de infraestructura.
+\end{itemize}
+}
+
+\section{Tecnologías}
+\cvitem{}{
+\begin{tabular}{p{0.45\linewidth} p{0.45\linewidth}}
+  HTML5, CSS3, SCSS, SASS, Bootstrap & JavaScript, TypeScript, Git \\
+  React.js, React Native, Redux & Node.js, Express, Next.js \\
+  Firebase, MongoDB & GraphQL, JQuery \\
+\end{tabular}
+}
+
+\section{Formación Académica}
+\cventry{Actualmente}{Técnico Superior en Desarrollo de Aplicaciones Multiplataforma}{Ilerna}{}{Online}{}
+\cventry{2020}{Técnico Superior en Desarrollo de Aplicaciones Web}{Ilerna}{}{Online}{}
+\cventry{2017}{Técnico Superior en Administración de Sistemas Informáticos y Redes}{IES Lázaro Cárdenas}{}{Collado Villalba}{}
+\cventry{2015}{Técnico en Sistemas Microinformáticos y Redes}{IES Infanta Elena}{}{Galapagar}{}
+
+\section{Información Adicional}
+\cvline{Idiomas}{Castellano (nativo), Inglés (profesional)}
 
 \end{document}
