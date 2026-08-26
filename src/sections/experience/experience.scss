@@ -1,0 +1,100 @@
+@use "breakpoints" as *;
+
+.role {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 34px;
+
+  .role-dates {
+    flex: 0 0 150px;
+    margin: 0;
+    color: var(--color-accent);
+    font-weight: 600;
+  }
+
+  .role-detail {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .role-title {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+
+  .role-company {
+    font-weight: 400;
+    color: var(--color-text-muted);
+  }
+
+  .role-context {
+    margin: 4px 0 0;
+    color: var(--color-text-muted);
+    font-style: italic;
+  }
+
+  .role-bullets {
+    margin: 10px 0 0;
+    padding-left: 18px;
+
+    li {
+      margin-bottom: 7px;
+      line-height: 1.5;
+    }
+  }
+
+  @include mobile {
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 26px;
+  }
+}
+
+.earlier-title {
+  margin: 40px 0 18px;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.earlier-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.earlier-role {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 16px;
+
+  .role-dates {
+    flex: 0 0 150px;
+    margin: 0;
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+  }
+
+  .role-detail {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .earlier-role-title {
+    margin: 0;
+    font-weight: 600;
+  }
+
+  .earlier-role-summary {
+    margin: 2px 0 0;
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+  }
+
+  @include mobile {
+    flex-direction: column;
+    gap: 2px;
+  }
+}

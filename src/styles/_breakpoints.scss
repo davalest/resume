@@ -1,0 +1,21 @@
+$breakpoint-md: 768px;
+
+$breakpoint-header: 900px;
+
+@mixin below($width) {
+  @media (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @include below($breakpoint-md) {
+    @content;
+  }
+}
+
+@mixin header-stacked {
+  @include below($breakpoint-header) {
+    @content;
+  }
+}

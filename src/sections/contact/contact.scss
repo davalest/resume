@@ -1,0 +1,49 @@
+@use "breakpoints" as *;
+
+.contact-body {
+  max-width: 60ch;
+
+  .contact-lead {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+
+  .contact-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  .contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 22px 0 0;
+    padding: 0;
+    list-style: none;
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--color-text-muted);
+      transition: color 0.2s ease-in-out;
+
+      &:hover {
+        color: var(--color-accent);
+      }
+    }
+  }
+
+  .contact-availability {
+    margin: 24px 0 0;
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    font-style: italic;
+  }
+
+  @include mobile {
+    max-width: none;
+  }
+}
