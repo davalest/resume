@@ -1,89 +1,104 @@
 \documentclass[11pt,a4paper]{moderncv}
-
 \moderncvtheme[blue]{classic}
-\usepackage[utf8]{inputenc}  %Windows
 
-%\usepackage[scale=0.975]{geometry}
+\usepackage[utf8]{inputenc}
 \usepackage[top=0.5cm, bottom=0.5cm, left=0.5cm, right=0.5cm]{geometry}
 \usepackage{graphicx}
+\usepackage{multibib}
+\usepackage{fontawesome5} % para íconos de redes sociales
 
+% Datos personales
 \firstname{David}
 \familyname{Valenciano}
-\title{Front-End Developer}
-\address{C/Isla de la Toja}{Nº1 esc D 3ºD}
+\title{Senior Front-End Engineer}
 \mobile{+34 600 80 90 24}
-%\phone{}
-%\fax{Votre Fax}
 \email{david.valenciano.esteban@gmail.com}
-\extrainfo{}
-%\photo[50pt]{photo.png}
-\makeatletter
-\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
-\makeatother
+\homepage{davalest.github.io/resume}
+\extrainfo{linkedin.com/in/david-valenciano \quad github.com/davalest}
+%\photo[50pt][0.4pt]{photo.jpg}
+% Handles corrected: the commented-out ones pointed at profiles that do not exist.
+%\social[linkedin]{david-valenciano}
+%\social[github]{davalest}
 
-\usepackage{multibib}
+% Otros ajustes
 \newcites{book,misc}{{Books},{Others}}
-
 \nopagenumbers{}
+
 \begin{document}
     \maketitle
+
+    \section{Profile}
+    \cvitem{}{Front-end engineer with over 10 years of experience, 9 of them with React.
+    I build component systems that scale, typed codebases that catch problems before QA does,
+    and web and cross-platform apps that hold up in production. Currently at Docline (healthtech),
+    working on the online-consultation platform and the component library its products share.}
+
     \section{Experience}
-
-    \cventry{Aug 2022-- Currently }{Shopery SL}{Front-end Engineer }{}{Developed projects:}
-    {\begin{itemize}
-         \item Mustang, Web App development. Used technologies: HTML5, SCSS, React.js, Next.js, Typescript.
-         \item YouPop, Web App development. Used technologies: HTML5, SCSS, React.js, Next.js, Typescript.
-    \end{itemize}
-    }
-    \cventry{Sept 2021-- Aug 2022 }{Stack and Vault SL}{Front-end Engineer }{}{Developed projects:}
-    {\begin{itemize}
-         \item Wotoch, Web App development. Used technologies: Svelte, TypeScript.
-         \item Voting Manager, Web App and Mobile development. Used technologies: HTML 5, SCSS, React.js, React Native, TypesSript.
-         \item VR Manager, Web App development. Used technologies: HTML 5, SCSS, React.js, TypesSript.
-         \item InmmoScout24, Web App development. Used technologies: HTML 5, SCSS, React.js, TypesSript, Redux.
-    \end{itemize}
-    }
-    \cventry{Oct 2019-- Sept 2021 }{Capitole Consulting}{Programmer Analyst}{}{Developed projects:}
-    {\begin{itemize}
-         \item OWA, Web App development. Used technologies: HTML 5, SCSS, React.js, Redux, GraphQL.
-    \end{itemize}
-    }
-
-    \cventry{Feb 2017-- Oct 2019 }{QUO Health SL}{Front-end Developer}{}{Developed projects:}
-    {\begin{itemize}
-         \item gluQUO Diabetes Academy, Web App development. Used technologies: HTML 5, SCSS, Bootstrap, React.js, Redux, React Native, Firebase.
-         \item O.K Transport. Web App development. Used technologies: HTML 5, CSS 3, Bootstrap, React.js, Redux, Node.js, MongoDB, LoopBack.
-         \item gluQUO PRO. Web App development. Used technologies: HTML 5, CSS 3, Bootstrap, React.js, Redux, Node.js, Firebase
-         \item Optima cc web. Layout and website development. Used technologies: HTML 5, CSS 3, Bootstrap, React.js
-         \item gluQUO web. Layout and website development. Used technologies: HTML 5, CSS 3, Bootstrap, React.js.
-         \item QUO Health web. Design, layout and website development. Used technologies: HTML 5, CSS 3, Bootstrap, JQuery
-    \end{itemize}
-    }
-    \cventry{2016}{Freelance}{Front-end Developer}{}{Developed projects:}
-    {
+    \cventry{Jan 2024 -- Currently}{Senior Front-End Engineer}{Docline (Aplicaciones de Salud, S.L.)}{}{}{
         \begin{itemize}
-            \item Design, layout and website development. Used technologies: HTML 5, CSS 3, Bootstrap, JQuery
-        \end{itemize}
-        \begin{itemize}
-            \item Design, layout and website development. Used technologies: HTML 5, CSS 3, Bootstrap, JQuery
-        \end{itemize}
-    }
-    \cventry{Sep 2015 -- Jul 2016}{HM Hospitals (Montepríncipe)}{IT CAU}{}{Developed tasks:}{
-        \begin{itemize}
-            \item Maintenance and incident management.
-        \end{itemize}
-        \begin{itemize}
-            \item Development and implementation of infrastructure.
+            \item One of two front-end engineers covering all five of the company's products: \textit{VideoConsultation}, \textit{Portal}, \textit{Backoffice}, \textit{Docline Care} and \textit{Docline Components}.
+            \item Own \textit{Docline Components}, the component library every one of those products is built on. React, Styled-Components and TypeScript.
+            \item Set the front-end architecture and coding standards, and run code review and mentoring for the team.
+            \item Sole developer of \textit{Docline Care}: built with React Native and Expo and shipped to both the App Store and Google Play.
+            \item Leading Docline's AI-adoption push since March 2026: introduced an agentic AI development methodology (BMAD), used it to build the company's back-office end-to-end, and now runs mentoring sessions and workshops to roll it out to the rest of the team.
         \end{itemize}
     }
 
-    \section{Techs}
-    \cvline{}{HTML 5, CSS 3, Bootstrap, JavaScript, Typescript, Express, Node.js, React.js, Next.js, Redux, React native, Apache, MongoDB, Git, Cross-browser compatibility, Firebase, Material-UI}
+    \cventry{Aug 2022 -- Nov 2023}{Front-End Engineer}{Shopery, S.L.}{}{}{
+        \begin{itemize}
+            \item \textit{Mustang} and \textit{YouPop}: storefronts with Next.js, React.js, TypeScript and SCSS, live in Spain, Mexico and the Dominican Republic. Front-end team of five.
+        \end{itemize}
+    }
+
+    \cventry{Sep 2021 -- Aug 2022}{Front-End Engineer}{Stack and Vault, S.L.}{}{}{
+        \begin{itemize}
+            \item \textit{Wotoch}: web app with Svelte and TypeScript.
+            \item \textit{Voting Manager}: hybrid app with React.js, React Native, HTML5, SCSS and TypeScript.
+            \item \textit{VR Manager} and \textit{ImmoScout24}: web apps with React.js, HTML5, SCSS, TypeScript and Redux.
+        \end{itemize}
+    }
+
+    \cventry{Oct 2019 -- Sep 2021}{Programmer Analyst}{Capitole Consulting}{}{}{
+        \begin{itemize}
+            \item \textit{Verisure OWA}: web app with React.js, Redux, GraphQL, HTML5 and SCSS.
+        \end{itemize}
+    }
+
+    \cventry{Feb 2017 -- Oct 2019}{Front-End Developer}{QUO Health, S.L.}{}{}{
+        \begin{itemize}
+            \item \textit{gluQUO Diabetes Academy}: hybrid and web app with React.js, React Native, HTML5, SCSS, Firebase.
+            \item \textit{O.K Transport}: web app with React.js, HTML5, CSS3, Bootstrap, Node.js, MongoDB.
+            \item \textit{gluQUO PRO}, \textit{Optima cc web}, \textit{gluQUO web}, \textit{QUO Health web}: web apps with React.js, HTML5, CSS3, Bootstrap.
+        \end{itemize}
+    }
+
+    \cventry{2016}{Front-End Developer, freelance}{}{}{}{
+        \begin{itemize}
+            \item \textit{MarVal, S.L.} and \textit{La Parada, S.L.}: Design, layout and website development with HTML5, CSS3, Bootstrap and JQuery.
+        \end{itemize}
+    }
+
+    \cventry{Sep 2015 -- Jul 2016}{IT Support (CAU)}{HM Hospitales (Montepríncipe)}{}{}{
+        \begin{itemize}
+            \item Maintenance, incident management and implementation of infrastructure.
+        \end{itemize}
+    }
+
+    \section{Stack}
+    \cvitem{}{
+        \begin{tabular}{p{0.26\linewidth} p{0.68\linewidth}}
+            \textbf{Day to day} & React, TypeScript, React Native, Expo, Styled-Components, SCSS \\
+            \textbf{In production} & Next.js, Svelte, Redux, GraphQL \\
+            \textbf{Backend (2017--2019)} & Node.js, Express, Firebase, MongoDB \\
+        \end{tabular}
+    }
 
     \section{Education}
-    \cventry{Currently}{HND in Multiplatform Application Development}{}{Ilerna}{Online}{}
-    \cventry{2020}{HND in Web Application Development}{}{Ilerna}{Online}{}
-    \cventry{2017}{HND in Computer Systems and Networks Administration}{}{IES Lázaro Cárdenas}{Collado Villalba}{}
-    \cventry{2015}{HND in Microcomputer Systems and Networks Technician}{}{IES Infanta Elena}{Galapagar}{}
+    \cventry{2024}{HND in Multiplatform Application Development}{Ilerna}{}{Online}{}
+    \cventry{2020}{HND in Web Application Development}{Ilerna}{}{Online}{}
+    \cventry{2017}{HND in Computer Systems and Networks Administration}{IES Lázaro Cárdenas}{}{Collado Villalba}{}
+    \cventry{2015}{HND in Microcomputer Systems and Networks Technician}{IES Infanta Elena}{}{Galapagar}{}
 
+    \section{Additional Information}
+    \cvline{Languages}{Spanish (native), English (fluent, after living in Dublin)}
 \end{document}

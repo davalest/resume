@@ -1,0 +1,59 @@
+{
+  "seo": {
+    "title": "David Valenciano — Senior Front-End Engineer",
+    "description": "Senior Front-End Engineer en Madrid. React, TypeScript y React Native. Ahora en Docline, donde construyo la plataforma de consulta médica online y la librería de componentes que comparten sus productos.",
+    "og_description": "React · TypeScript · React Native. Abierto a roles senior y lead — remoto o híbrido en Madrid.",
+    "image_alt": "David Valenciano, Senior Front-End Engineer — React y TypeScript, React Native, Next.js",
+    "job_title": "Senior Front-End Engineer"
+  },
+  "header": {
+    "name": "David Valenciano",
+    "role": "Senior Front-End Engineer",
+    "language_label": "Idioma"
+  },
+  "hero": {
+    "role": "Senior Front-End Engineer",
+    "pitch": "Más de {{years}} años en front-end, {{reactYears}} de ellos con React. Ahora en Docline (healthtech), donde construyo la plataforma de consulta médica online y la librería de componentes que comparten sus productos.",
+    "availability": "Abierto a roles senior y lead — remoto o híbrido en Madrid.",
+    "photo_alt": "Retrato de David Valenciano",
+    "cta": {
+      "experience": "Ver experiencia",
+      "contact": "Hablemos",
+      "cv": "Descargar CV"
+    }
+  },
+  "experience": {
+    "title": "Experiencia",
+    "present": "Actualidad",
+    "earlier_title": "Trayectoria anterior"
+  },
+  "stack": {
+    "title": "Stack"
+  },
+  "about": {
+    "title": "Sobre mí",
+    "p1": "Construyo front-ends que aguantan con el tiempo: sistemas de componentes que escalan, TypeScript que caza los problemas antes de que lleguen a QA, e interfaces que funcionan en los dispositivos que la gente tiene de verdad.",
+    "p2": "He trabajado en healthtech (Docline, QUO Health), e-commerce (Shopery) y consultoría (Capitole), en equipos de tamaños muy distintos y siempre al lado de gente de la que he aprendido algo.",
+    "p3": "El trabajo con clientes está bajo NDA, así que esta misma web es la muestra de trabajo: React 19, TypeScript estricto, con tests, con CI y con Lighthouse como filtro antes de publicar. Código fuente:"
+  },
+  "education": {
+    "title": "Formación",
+    "in_progress": "En curso",
+    "languages_title": "Idiomas",
+    "languages": "Español (nativo) · Inglés (fluido, tras vivir en Dublín)"
+  },
+  "contact": {
+    "title": "Hablemos",
+    "lead": "El email es la vía más rápida para llegar a mí.",
+    "email_cta": "Escríbeme un email",
+    "availability": "Abierto a roles senior y lead de front-end — remoto o híbrido en Madrid."
+  },
+  "error": {
+    "title": "Algo ha ido mal",
+    "message": "Esta página se ha encontrado con un error inesperado. Vamos a llevarte a un sitio seguro.",
+    "cta": "Volver al inicio"
+  },
+  "a11y": {
+    "skip_to_content": "Saltar al contenido"
+  }
+}

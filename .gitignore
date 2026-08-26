@@ -6,9 +6,14 @@
 
 # testing
 /coverage
+/.lighthouseci
+/playwright-report
+/test-results
+/blob-report
 
 # production
 /build
+/dist
 
 # misc
 .DS_Store

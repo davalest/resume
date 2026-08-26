@@ -1,0 +1,53 @@
+@use "breakpoints" as *;
+
+.study-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.study {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 2px 24px;
+  margin-bottom: 18px;
+
+  .study-year {
+    grid-row: span 2;
+    color: var(--color-accent);
+    font-weight: 600;
+  }
+
+  .study-title {
+    font-weight: 600;
+  }
+
+  .study-school {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+  }
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: 2px;
+
+    .study-year {
+      grid-row: auto;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+.languages {
+  margin: 28px 0 0;
+
+  .languages-label {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+}

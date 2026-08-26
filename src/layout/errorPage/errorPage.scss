@@ -1,0 +1,19 @@
+.error-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  min-height: 60dvh;
+  padding: var(--layout-gutter);
+  text-align: center;
+}
+
+.error-title {
+  font-size: 1.75rem;
+}
+
+.error-message {
+  color: var(--color-text-muted);
+  max-width: 40ch;
+}

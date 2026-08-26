@@ -1,0 +1,143 @@
+@use "breakpoints" as *;
+
+.header-container {
+  z-index: 10;
+  width: 100%;
+  height: var(--header-height);
+  background-color: var(--color-surface);
+  padding: 0 var(--layout-gutter);
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+
+  .header-content {
+    width: 100%;
+    margin: auto;
+    max-width: var(--layout-max-width);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .header-identity {
+    display: flex;
+    flex-direction: column;
+
+    .header-name {
+      font-size: 26px;
+      color: var(--color-on-surface);
+    }
+
+    .header-role {
+      font-size: 15px;
+      color: var(--color-on-surface);
+    }
+
+    &:hover .header-name,
+    &:hover .header-role {
+      color: var(--color-accent-on-surface);
+    }
+  }
+
+  .header-navigation {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    .nav-link {
+      color: var(--color-on-surface);
+      padding: 6px 12px;
+      border-radius: 15px;
+      text-transform: uppercase;
+      font-size: 14px;
+      white-space: nowrap;
+      transition:
+              background-color 0.2s ease-in-out,
+              color 0.2s ease-in-out;
+
+      /* --color-accent-strong, not the plain accent: white on #46ABB7 is 2.70:1, and the
+         active navigation item is the most prominent state in the interface. */
+      &:hover,
+      &.active {
+        background: var(--color-accent-strong);
+        color: var(--color-on-accent);
+      }
+    }
+
+    .lang-switch {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      margin-left: 12px;
+      padding-left: 12px;
+      border-left: 1px solid var(--color-border);
+      flex-shrink: 0;
+    }
+
+    .lang-link {
+      /* SC 2.5.8 asks for 24x24: the two-letter code alone would be ~20px tall. */
+      min-width: 32px;
+      min-height: 26px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 13px;
+      color: var(--color-on-surface);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition:
+              background-color 0.2s ease-in-out,
+              color 0.2s ease-in-out;
+
+      &:hover {
+        color: var(--color-accent-on-surface);
+      }
+
+      &.active {
+        background: var(--color-accent-strong);
+        color: var(--color-on-accent);
+      }
+    }
+  }
+
+  @include header-stacked {
+    .header-content {
+      flex-direction: column;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .header-identity {
+      align-items: center;
+
+      .header-name {
+        font-size: 20px;
+      }
+
+      .header-role {
+        font-size: 13px;
+      }
+    }
+
+    .header-navigation {
+      flex-wrap: wrap;
+      justify-content: center;
+      row-gap: 4px;
+      gap: 2px;
+
+      .nav-link {
+        padding: 5px 8px;
+        font-size: 12px;
+      }
+
+      .lang-switch {
+        margin-left: 8px;
+        padding-left: 8px;
+      }
+    }
+  }
+}
