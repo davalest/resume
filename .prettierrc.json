@@ -1,0 +1,16 @@
+{
+  "printWidth": 100,
+  "tabWidth": 4,
+  "singleQuote": false,
+  "bracketSpacing": false,
+  "trailingComma": "all",
+  "endOfLine": "lf",
+  "overrides": [
+    {
+      "files": ["*.html", "*.scss", "*.css", "*.json", "*.yml", "*.yaml", "*.md", "*.webmanifest"],
+      "options": {
+        "tabWidth": 2
+      }
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+.KONAMI {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 2147483647;
+    display: none;
+    max-width: 60vw;
+    height: auto;
+    pointer-events: none;
+    transform: translateY(100%);
+}
+
+.KONAMI-source {
+    display: none;
+}
+
+.KONAMI-go,
+.KONAMI-static {
+    display: block;
+}
+
+.KONAMI-go {
+    animation: KONAMI-charge var(--konamize-duration, 2500ms) both;
+}
+
+.KONAMI-static {
+    transform: translateY(0);
+    animation: KONAMI-fade var(--konamize-duration, 2500ms) both;
+}
+
+@keyframes KONAMI-charge {
+    25% {
+        transform: translateY(0);
+    }
+    35% {
+        right: 0;
+        transform: translateY(25%);
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        right: 100%;
+        transform: translateY(25%);
+    }
+}
+
+@keyframes KONAMI-fade {
+    0% {
+        opacity: 0;
+    }
+    20%,
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

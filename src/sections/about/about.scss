@@ -1,0 +1,17 @@
+.about-body {
+  max-width: 68ch;
+
+  p {
+    margin: 0 0 16px;
+    line-height: 1.6;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.about-repo-link {
+  color: var(--color-accent);
+  text-decoration: underline;
+}

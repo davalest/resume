@@ -1,30 +1,20 @@
-# React + TypeScript + Vite
+# Resume
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal CV for **David Valenciano**, front-end engineer. One page, two languages, no backend.
 
-Currently, two official plugins are available:
+🔗 **Live:** https://davalest.github.io/resume
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The production build is **prerendered to one HTML document per language**, so a crawler that
+never runs JavaScript reads the whole CV — in both languages, and so does a visitor whose
+bundle never arrives. 
 
-## Expanding the ESLint configuration
+## Tech stack
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- **React 19** + **TypeScript 5.9**, with `noUncheckedIndexedAccess`, `exactOptionalPropertyTypes`
+  and `verbatimModuleSyntax` on
+- **Vite 8** (Rolldown) — dev server, build, and `vite-imagetools` for the image pipeline
+- **SCSS** — component-scoped styles over CSS custom-property design tokens
+- **Prettier** for formatting, **ESLint 9** (flat config) for linting, with type-aware rules
+  (`recommendedTypeChecked`), `react`, `react-hooks` and `jsx-a11y`
+- **Vitest** for unit tests, **Playwright** for end-to-end, **axe-core** for accessibility,
+  **Lighthouse CI** for Core Web Vitals

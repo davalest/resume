@@ -1,13 +1,14 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import './index.css'
-import {RouterProvider} from "react-router-dom";
-import './i18n';
-import {router} from "./contexts/routes/router.tsx";
+import {StrictMode} from "react";
+import {createRoot} from "react-dom/client";
+import "./index.scss";
+import "./styles/konamize.css";
+import {I18nProvider} from "./i18n.tsx";
+import App from "./App.tsx";
 
-
-ReactDOM.createRoot(document.getElementById('root')!).render(
-    <React.StrictMode>
-        <RouterProvider router={router}/>
-    </React.StrictMode>,
-)
+createRoot(document.getElementById("root")!).render(
+    <StrictMode>
+        <I18nProvider>
+            <App />
+        </I18nProvider>
+    </StrictMode>,
+);
