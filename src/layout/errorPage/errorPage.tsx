@@ -1,7 +1,6 @@
 import {useI18n} from "../../i18n.tsx";
 import "./errorPage.scss";
 
-
 const ErrorPage = () => {
     const {t} = useI18n();
     const home = import.meta.env.BASE_URL;

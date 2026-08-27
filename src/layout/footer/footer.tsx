@@ -12,7 +12,7 @@ const Footer = () => (
                         key={id}
                         className="footer-item"
                         href={href}
-                        {...(isExternal ? {target: "_blank", rel: "noopener noreferrer"} : {})}
+                        {...(isExternal ? {target: "_blank", rel: "noopener"} : {})}
                     >
                         <Icon className="footer-item-icon" />
                         <span className="footer-item-text">{label}</span>

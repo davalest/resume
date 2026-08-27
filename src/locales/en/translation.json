@@ -13,7 +13,7 @@
   },
   "hero": {
     "role": "Senior Front-End Engineer",
-    "pitch": "Over {{years}} years in front-end, {{reactYears}} of them with React. Currently at Docline (healthtech), where I build the online-consultation platform and the component library shared across its products.",
+    "pitch": "Front-end since 2016, with React since 2017. Currently at Docline (healthtech), where I build the online-consultation platform and the component library shared across its products.",
     "availability": "Open to senior and lead roles — remote, or hybrid in Madrid.",
     "photo_alt": "Portrait of David Valenciano",
     "cta": {
@@ -46,6 +46,11 @@
     "title": "Get in touch",
     "lead": "Email is the fastest way to reach me.",
     "email_cta": "Send me an email",
+    "email_subject": "Senior front-end role",
+    "copy_email": "Copy email",
+    "copied": "Email address copied to the clipboard.",
+    "copy_failed": "Could not reach the clipboard — the address is {{email}}",
+    "vcard": "Save contact",
     "availability": "Open to senior and lead front-end roles — remote, or hybrid in Madrid."
   },
   "error": {

@@ -15,6 +15,11 @@ export const email: ContactLink = {
     href: "mailto:david.valenciano.esteban@gmail.com",
 };
 
+export const mailtoWithSubject = (subject: string): string =>
+    `${email.href}?subject=${encodeURIComponent(subject)}`;
+
+export const vCardPath = "david-valenciano.vcf";
+
 export const socialLinks: readonly ContactLink[] = [
     {
         id: "linkedin",

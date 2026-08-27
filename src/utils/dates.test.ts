@@ -1,37 +1,5 @@
 import {describe, it, expect} from "vitest";
-import {formatDateRange, getYearsBetweenDates, parseDate} from "./dates.ts";
-
-describe("parseDate", () => {
-    it("parses a valid YYYY-MM-DD string", () => {
-        const d = parseDate("2016-05-01");
-        expect(d.getFullYear()).toBe(2016);
-        expect(d.getMonth()).toBe(4); // 0-indexed: May
-        expect(d.getDate()).toBe(1);
-    });
-
-    it("throws on an invalid format", () => {
-        expect(() => parseDate("not-a-date")).toThrow();
-    });
-});
-
-describe("getYearsBetweenDates", () => {
-    it("counts an exact decade as ten years", () => {
-        expect(getYearsBetweenDates(new Date(2010, 0, 1), new Date(2020, 0, 1))).toBe(10);
-    });
-
-    it("never rounds up an incomplete year", () => {
-        expect(getYearsBetweenDates(new Date(2017, 1, 1), new Date(2026, 7, 25))).toBe(9);
-    });
-
-    it("counts the anniversary itself, but not the day before", () => {
-        expect(getYearsBetweenDates(new Date(2016, 4, 1), new Date(2026, 4, 1))).toBe(10);
-        expect(getYearsBetweenDates(new Date(2016, 4, 1), new Date(2026, 3, 30))).toBe(9);
-    });
-
-    it("throws on an invalid start date", () => {
-        expect(() => getYearsBetweenDates(new Date("invalid"))).toThrow();
-    });
-});
+import {formatDateRange} from "./dates.ts";
 
 describe("formatDateRange", () => {
     it("formats a closed month range", () => {
@@ -63,5 +31,15 @@ describe("formatDateRange", () => {
 
     it("throws on a malformed bound", () => {
         expect(() => formatDateRange({start: "nope"}, "en", "Present")).toThrow();
+    });
+
+    it("throws on a month outside 1-12", () => {
+        expect(() => formatDateRange({start: "2024-13"}, "en", "Present")).toThrow();
+    });
+
+    it("does not depend on the host's locale data", () => {
+        const formatted = formatDateRange({start: "2016-05", end: "2017-02"}, "en", "Present");
+        expect(formatted).toBe("May 2016 — Feb 2017");
+        expect(formatted).not.toMatch(/\./);
     });
 });

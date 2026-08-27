@@ -41,6 +41,8 @@ export default tseslint.config(
             ...reactHooks.configs.recommended.rules,
             ...jsxA11y.flatConfigs.recommended.rules,
             "react-refresh/only-export-components": ["warn", {allowConstantExport: true}],
+            "jsx-a11y/no-redundant-roles": ["error", {ul: ["list"]}],
+            "react/jsx-no-target-blank": ["error", {allowReferrer: true}],
         },
     },
     {

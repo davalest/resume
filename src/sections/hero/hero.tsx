@@ -3,11 +3,10 @@ import DownloadCv from "../../ui/downloadCv/downloadCv.tsx";
 import {socialLinks} from "../../content/contact.ts";
 import {specialties} from "../../content/specialties.ts";
 import {sectionIds, sectionTitleId} from "../../navigation.ts";
-import {HTML_YEAR_EXPERTISE, REACT_YEAR_EXPERTISE} from "../../utils/dates.ts";
 import {useI18n} from "../../i18n.tsx";
 import "./hero.scss";
 
-const PHOTO_SIZES = "(max-width: 768px) 180px, 220px";
+const PHOTO_SIZES = "(max-width: 768px) min(180px, 50vw), 220px";
 
 const Hero = () => {
     const {t, pick} = useI18n();
@@ -38,9 +37,7 @@ const Hero = () => {
                 </h1>
                 <p className="hero-role">{t("hero.role")}</p>
 
-                {/* Static, not animated: these are the keywords a recruiter scans for, so they
-                    must be in the DOM on first paint rather than typed in a character at a time. */}
-                <ul className="hero-specialties">
+                <ul className="hero-specialties" role="list">
                     {specialties.map((specialty) => (
                         <li className="hero-specialty" key={specialty.en}>
                             {pick(specialty)}
@@ -48,12 +45,7 @@ const Hero = () => {
                     ))}
                 </ul>
 
-                <p className="hero-pitch">
-                    {t("hero.pitch", {
-                        years: HTML_YEAR_EXPERTISE,
-                        reactYears: REACT_YEAR_EXPERTISE,
-                    })}
-                </p>
+                <p className="hero-pitch">{t("hero.pitch")}</p>
 
                 <p className="hero-availability">{t("hero.availability")}</p>
 
@@ -71,7 +63,7 @@ const Hero = () => {
                             className="button button-quiet"
                             href={href}
                             target="_blank"
-                            rel="noopener noreferrer"
+                            rel="noopener"
                         >
                             {label}
                         </a>

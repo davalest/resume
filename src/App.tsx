@@ -1,6 +1,7 @@
 import {useEffect} from "react";
 import {useEasterEgg} from "./ui/konamize/useEasterEgg.ts";
 import {useI18n} from "./i18n.tsx";
+import {applySeoMetadata} from "./utils/seoHead.ts";
 import Header from "./layout/header/header.tsx";
 import Footer from "./layout/footer/footer.tsx";
 import ErrorBoundary from "./layout/errorBoundary/errorBoundary.tsx";
@@ -11,22 +12,9 @@ const App = () => {
 
     useEasterEgg();
 
-   useEffect(() => {
-        document.documentElement.lang = language;
-
-       const alternate = document.querySelector<HTMLLinkElement>(
-            `link[rel="alternate"][hreflang="${language}"]`,
-        );
-        if (!alternate) {
-            return;
-        }
-        document
-            .querySelector<HTMLLinkElement>('link[rel="canonical"]')
-            ?.setAttribute("href", alternate.href);
-        document
-            .querySelector<HTMLMetaElement>('meta[property="og:url"]')
-            ?.setAttribute("content", alternate.href);
-    }, [language]);
+    useEffect(() => {
+        applySeoMetadata(language, t);
+    }, [language, t]);
 
     return (
         <>

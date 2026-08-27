@@ -16,14 +16,12 @@ const Education = () => {
             <SectionLabel id={sectionIds.education} label={t("education.title")} />
 
             <div className="section-body">
-                <ul className="study-list">
+                <ul className="study-list" role="list">
                     {studies.map(({id, title, school, location, year}) => (
                         <li className="study" key={id}>
                             <span className="study-year">{year ?? t("education.in_progress")}</span>
                             <span className="study-title">{pick(title)}</span>
-                            <span className="study-school">
-                                {school} · {location}
-                            </span>
+                            <span className="study-school">{`${school} · ${location}`}</span>
                         </li>
                     ))}
                 </ul>

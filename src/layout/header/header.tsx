@@ -24,7 +24,6 @@ const Header = () => {
                 parseFloat(getComputedStyle(root).getPropertyValue("--header-height-design")) || 0;
             const needed = Math.ceil(entry.contentRect.height) + 8;
 
-
             if (needed > design) {
                 root.style.setProperty("--header-height", `${needed}px`);
             } else {
@@ -83,7 +82,7 @@ const Header = () => {
                                 }}
                             >
                                 {language}
-                                <span className="visually-hidden"> {languageNames[language]}</span>
+                                <span className="visually-hidden">{` ${languageNames[language]}`}</span>
                             </a>
                         ))}
                     </div>

@@ -72,6 +72,32 @@ test("switching language happens in place, without a reload", async ({page}) => 
 
     await expect(page.locator("link[rel=canonical]")).toHaveAttribute("href", /\/resume\/es\/$/);
 
+    await expect(page).toHaveTitle(/Senior Front-End Engineer/);
+    await expect(page.locator('meta[name="description"]')).toHaveAttribute(
+        "content",
+        /Senior Front-End Engineer en Madrid/,
+    );
+    await expect(page.locator('meta[property="og:description"]')).toHaveAttribute(
+        "content",
+        /Abierto a roles senior/,
+    );
+    await expect(page.locator('meta[property="og:locale"]')).toHaveAttribute("content", "es_ES");
+    await expect(page.locator('meta[property="og:locale:alternate"]')).toHaveAttribute(
+        "content",
+        "en_GB",
+    );
+    await expect(page.locator('meta[property="og:url"]')).toHaveAttribute(
+        "content",
+        /\/resume\/es\/$/,
+    );
+    await expect(page.locator('meta[name="twitter:description"]')).toHaveAttribute(
+        "content",
+        /Abierto a roles senior/,
+    );
+
+    const jsonLd = await page.locator('script[type="application/ld+json"]').textContent();
+    expect(jsonLd).toContain("Senior Front-End Engineer en Madrid");
+
     await page.goBack();
     await expect(page.locator("html")).toHaveAttribute("lang", "en");
     await expect(page.locator(".nav-link").first()).toHaveText("Experience");

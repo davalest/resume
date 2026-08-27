@@ -1,26 +1,27 @@
 import {useI18n} from "../../i18n.tsx";
 import {DownloadIcon} from "../icons/icons.tsx";
-import {resumeEn, resumeEs} from "@assets";
 import "./downloadCv.scss";
 
 interface DownloadCvProps {
     variant?: "primary" | "secondary";
 }
 
+const CV_DIRECTORY = `${import.meta.env.BASE_URL}cv/`;
+
 const CV = {
-    en: {file: resumeEn, filename: "David-Valenciano-CV-EN.pdf"},
-    es: {file: resumeEs, filename: "David-Valenciano-CV-ES.pdf"},
+    en: "David-Valenciano-CV-EN.pdf",
+    es: "David-Valenciano-CV-ES.pdf",
 } as const;
 
 const DownloadCv = ({variant = "secondary"}: DownloadCvProps) => {
     const {t, language} = useI18n();
-    const {file, filename} = CV[language];
+    const filename = CV[language];
     const label = t("hero.cta.cv");
 
     return (
         <a
             className={`button download-cv ${variant === "primary" ? "button-primary" : ""}`}
-            href={file}
+            href={`${CV_DIRECTORY}${filename}`}
             download={filename}
         >
             <DownloadIcon />

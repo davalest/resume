@@ -1,7 +1,7 @@
 {
   "ci": {
     "collect": {
-      "startServerCommand": "yarn preview --port 4173",
+      "startServerCommand": "npm run preview -- --port 4173",
       "startServerReadyPattern": "Local:",
       "url": ["http://localhost:4173/", "http://localhost:4173/es/"],
       "numberOfRuns": 3

@@ -16,6 +16,11 @@ export const languageNames: Record<SupportedLanguage, string> = {
     es: "Español",
 };
 
+export const ogLocale: Record<SupportedLanguage, string> = {
+    en: "en_GB",
+    es: "es_ES",
+};
+
 const languageSegment: Record<SupportedLanguage, string> = {
     en: "",
     es: "es/",

@@ -12,7 +12,7 @@ export default defineConfig({
         trace: "on-first-retry",
     },
     webServer: {
-        command: "yarn preview",
+        command: "npm run preview",
         url: "http://localhost:4173",
         reuseExistingServer: !process.env.CI,
     },

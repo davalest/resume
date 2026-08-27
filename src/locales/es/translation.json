@@ -13,7 +13,7 @@
   },
   "hero": {
     "role": "Senior Front-End Engineer",
-    "pitch": "Más de {{years}} años en front-end, {{reactYears}} de ellos con React. Ahora en Docline (healthtech), donde construyo la plataforma de consulta médica online y la librería de componentes que comparten sus productos.",
+    "pitch": "Front-end desde 2016, con React desde 2017. Ahora en Docline (healthtech), donde construyo la plataforma de consulta médica online y la librería de componentes que comparten sus productos.",
     "availability": "Abierto a roles senior y lead — remoto o híbrido en Madrid.",
     "photo_alt": "Retrato de David Valenciano",
     "cta": {
@@ -46,6 +46,11 @@
     "title": "Hablemos",
     "lead": "El email es la vía más rápida para llegar a mí.",
     "email_cta": "Escríbeme un email",
+    "email_subject": "Oportunidad senior de front-end",
+    "copy_email": "Copiar email",
+    "copied": "Dirección copiada al portapapeles.",
+    "copy_failed": "No se pudo acceder al portapapeles — la dirección es {{email}}",
+    "vcard": "Guardar contacto",
     "availability": "Abierto a roles senior y lead de front-end — remoto o híbrido en Madrid."
   },
   "error": {

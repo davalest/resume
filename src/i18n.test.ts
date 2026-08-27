@@ -1,6 +1,6 @@
 import {describe, expect, it} from "vitest";
 import {locales} from "../site.config.mjs";
-import {languageFromPath, pathForLanguage, supportedLanguages} from "./i18n.tsx";
+import {languageFromPath, ogLocale, pathForLanguage, supportedLanguages} from "./i18n.tsx";
 
 describe("language routing", () => {
     it("ships the same languages the build prerenders", () => {
@@ -18,6 +18,12 @@ describe("language routing", () => {
             expect(languageFromPath(`/${locales.find((l) => l.code === code)?.route ?? ""}`)).toBe(
                 code,
             );
+        }
+    });
+
+    it("agrees with the build on each language's Open Graph locale", () => {
+        for (const {code, ogLocale: prerendered} of locales) {
+            expect(ogLocale[code as (typeof supportedLanguages)[number]]).toBe(prerendered);
         }
     });
 

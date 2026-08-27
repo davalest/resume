@@ -40,8 +40,9 @@ test("the Konami code summons the raptor, and the CSP allows it", async ({page})
     await expect(raptor).toHaveAttribute("alt", "");
 
     expect(blocked, "the CSP blocked part of the easter egg").toEqual([]);
-
-    expect(requested.filter((url) => url.includes("assets-D_j-ef-E"))).toEqual([]);
+    
+    const scripts = requested.filter((url) => new URL(url).pathname.endsWith(".js"));
+    expect(scripts, `an extra chunk was loaded: ${scripts.join(", ")}`).toHaveLength(1);
 });
 
 test("the raptor fades instead of charging when less motion was asked for", async ({browser}) => {

@@ -83,6 +83,11 @@ a {
   outline: none;
 }
 
+.layout:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: -4px;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;

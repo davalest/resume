@@ -1,6 +1,5 @@
 import {test, expect} from "@playwright/test";
 
-
 test("the band is untouched at every width where the design height already fits", async ({
                                                                                              page,
                                                                                          }) => {

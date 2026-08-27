@@ -62,7 +62,6 @@ test("every section is exposed as a region a screen reader can jump to", async (
     ]) {
         await expect(page.getByRole("region", {name, exact: true})).toHaveCount(1);
     }
-    // Each recent role announces as its job title rather than as an unlabelled "article".
     await expect(page.getByRole("article")).toHaveCount(3);
 });
 
@@ -71,7 +70,6 @@ test("no interactive target is smaller than 24 by 24", async ({page}) => {
     await expect(page.locator(".lang-link.active")).toHaveAttribute("lang", "en");
 
     const undersized = await page.evaluate(() => {
-        // Exempt: a link inside a sentence, where the surrounding text sets the line height.
         const inlineExceptions = [".about-repo-link"];
 
         return [...document.querySelectorAll("a[href], button, [tabindex]")]
@@ -85,4 +83,21 @@ test("no interactive target is smaller than 24 by 24", async ({page}) => {
     });
 
     expect(undersized).toEqual([]);
+});
+
+test("no list loses its role to list-style: none", async ({page}) => {
+    await page.goto("/");
+    await expect(page.locator(".lang-link.active")).toHaveAttribute("lang", "en");
+
+    const unrolled = await page.evaluate(() =>
+        [...document.querySelectorAll("ul, ol")]
+            .filter(
+                (list) =>
+                    getComputedStyle(list).listStyleType === "none" &&
+                    list.getAttribute("role") !== "list",
+            )
+            .map((list) => list.className || list.tagName),
+    );
+
+    expect(unrolled).toEqual([]);
 });

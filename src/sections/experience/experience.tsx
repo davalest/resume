@@ -28,7 +28,7 @@ const Experience = () => {
                         <div className="role-detail">
                             <h3 className="role-title" id={roleTitleId(id)}>
                                 {pick(title)}
-                                {company && <span className="role-company"> · {company}</span>}
+                                {company && <span className="role-company">{` · ${company}`}</span>}
                             </h3>
                             <p className="role-context">{pick(context)}</p>
                             <ul className="role-bullets">
@@ -41,7 +41,7 @@ const Experience = () => {
                 ))}
 
                 <h3 className="earlier-title">{t("experience.earlier_title")}</h3>
-                <ul className="earlier-list">
+                <ul className="earlier-list" role="list">
                     {earlierRoles.map(({id, company, dates, title, summary}) => (
                         <li className="earlier-role" key={id}>
                             <p className="role-dates">
@@ -50,7 +50,9 @@ const Experience = () => {
                             <div className="role-detail">
                                 <p className="earlier-role-title">
                                     {pick(title)}
-                                    {company && <span className="role-company"> · {company}</span>}
+                                    {company && (
+                                        <span className="role-company">{` · ${company}`}</span>
+                                    )}
                                 </p>
                                 <p className="earlier-role-summary">{pick(summary)}</p>
                             </div>

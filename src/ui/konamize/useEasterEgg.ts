@@ -1,4 +1,4 @@
-import {useKonamize} from "@davalest/konamize/react";
+import {useKonamize} from "@davalest/konamize/react/bare";
 import {raptorImage, raptorSoundM4a, raptorSoundOgg} from "@assets";
 
 export const useEasterEgg = (): void => {

@@ -7,8 +7,14 @@ const CLASS_NAME = "KONAMI";
 const stylesheet = readFileSync("src/styles/konamize.css", "utf-8");
 
 describe("konamize styles", () => {
+    it("says where it came from, so nobody edits it by hand", () => {
+        expect(stylesheet.startsWith("/*")).toBe(true);
+        expect(stylesheet).toContain("@davalest/konamize");
+    });
+
     it("match what the installed version produces", () => {
-        const copied = stylesheet.slice(stylesheet.indexOf("*/") + 2);
+        const headerEnd = stylesheet.indexOf("*/");
+        const copied = stylesheet.slice(headerEnd + 2);
         expect(copied.trim()).toBe(buildStyles(CLASS_NAME).trim());
     });
 

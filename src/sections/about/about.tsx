@@ -18,12 +18,12 @@ const About = () => {
                 <p>{t("about.p1")}</p>
                 <p>{t("about.p2")}</p>
                 <p>
-                    {t("about.p3")}{" "}
+                    {`${t("about.p3")} `}
                     <a
                         className="about-repo-link"
                         href="https://github.com/davalest/resume"
                         target="_blank"
-                        rel="noopener noreferrer"
+                        rel="noopener"
                     >
                         github.com/davalest/resume
                     </a>

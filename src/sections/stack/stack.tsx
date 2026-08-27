@@ -19,7 +19,7 @@ const Stack = () => {
                 {stackGroups.map(({id, label, items}) => (
                     <div className="stack-group" key={id}>
                         <h3 className="stack-group-label">{pick(label)}</h3>
-                        <ul className="stack-items">
+                        <ul className="stack-items" role="list">
                             {items.map((item) => (
                                 <li className="stack-item" key={item}>
                                     {item}

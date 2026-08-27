@@ -7,6 +7,8 @@ export const locales = [
     {code: "es", route: "es/", ogLocale: "es_ES", isDefault: false},
 ];
 
+export const cvDownloads = ["cv/David-Valenciano-CV-EN.pdf", "cv/David-Valenciano-CV-ES.pdf"];
+
 export const urlForLocale = (code) => {
     const locale = locales.find((candidate) => candidate.code === code);
     if (!locale) {
