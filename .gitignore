@@ -2,7 +2,6 @@
 
 # dependencies
 /node_modules
-*/package-lock.json
 
 # testing
 /coverage
@@ -35,6 +34,3 @@ yarn-error.log*
 .idea/gradle.xml
 .idea/dictionaries
 .idea/libraries
-
-# Documents
-package-lock\.json
