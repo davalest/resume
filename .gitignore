@@ -34,3 +34,11 @@ yarn-error.log*
 .idea/gradle.xml
 .idea/dictionaries
 .idea/libraries
+
+# TypeScript incremental build state
+*.tsbuildinfo
+
+# Compiled SCSS output — Vite compiles the .scss itself
+src/**/*.css
+src/**/*.css.map
+!src/styles/konamize.css

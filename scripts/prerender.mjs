@@ -3,18 +3,23 @@ import {mkdir, readFile, writeFile} from "node:fs/promises";
 import path from "node:path";
 import {fileURLToPath} from "node:url";
 import {chromium} from "playwright";
-import {basePath, locales, siteUrl, urlForLocale} from "../site.config.mjs";
+import {basePath, cvDownloads, locales, siteUrl, urlForLocale} from "../site.config.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(__dirname, "..");
 const distDir = path.join(rootDir, "dist");
 
-const LOCALES = locales.map((locale) => ({
-    ...locale,
-    out: `${locale.route}index.html`,
-    ogLocaleAlternate: locales.find(({code}) => code !== locale.code).ogLocale,
-}));
-
+const LOCALES = locales.map((locale) => {
+    const other = locales.find(({code}) => code !== locale.code);
+    if (!other) {
+        throw new Error(`prerender: ${locale.code} has no alternate locale to advertise`);
+    }
+    return {
+        ...locale,
+        out: `${locale.route}index.html`,
+        ogLocaleAlternate: other.ogLocale,
+    };
+});
 
 const LEGACY_ROUTES = [
     {from: "home", hash: ""},
@@ -78,7 +83,6 @@ const structuredData = ({url, seo}) =>
         2,
     );
 
-
 const applyMetadata = (meta) => {
     const set = (selector, attribute, value) => {
         const element = document.querySelector(selector);
@@ -118,6 +122,7 @@ const applyMetadata = (meta) => {
     set('meta[name="twitter:title"]', "content", meta.title);
     set('meta[name="twitter:description"]', "content", meta.ogDescription);
     setOrCreate('meta[name="twitter:image"]', "meta", {name: "twitter:image", content: meta.image});
+    set('meta[name="twitter:image:alt"]', "content", meta.imageAlt);
 
     const jsonLd = document.querySelector('script[type="application/ld+json"]');
     if (!jsonLd) {
@@ -139,6 +144,7 @@ const MIME_TYPES = {
     ".webmanifest": "application/manifest+json",
     ".txt": "text/plain; charset=utf-8",
     ".xml": "application/xml; charset=utf-8",
+    ".vcf": "text/vcard; charset=utf-8",
 };
 
 const server = createServer(async (req, res) => {
@@ -192,14 +198,17 @@ const sitemap = () => {
         return `  <url>\n    <loc>${urlForLocale(code)}</loc>\n${alternates}\n    <changefreq>monthly</changefreq>\n    <priority>1.0</priority>\n  </url>`;
     };
 
+    const download = (file) =>
+        `  <url>\n    <loc>${siteUrl}${file}</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.8</priority>\n  </url>`;
+
     return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 ${locales.map(({code}) => entry(code)).join("\n")}
+${cvDownloads.map((file) => download(file)).join("\n")}
 </urlset>
 `;
 };
-
 
 const robots = () => `User-agent: *
 Allow: /
@@ -216,7 +225,6 @@ try {
         const page = await browser.newPage();
 
         await page.goto(`${origin}${basePath}${locale.route}`, {waitUntil: "networkidle"});
-
 
         await page.waitForFunction(
             (code) =>
@@ -255,7 +263,9 @@ try {
 
     await writeFile(path.join(distDir, "sitemap.xml"), sitemap());
     await writeFile(path.join(distDir, "robots.txt"), robots());
-    console.log(`Wrote sitemap.xml (${locales.length} URLs) and robots.txt from site.config.mjs`);
+    console.log(
+        `Wrote sitemap.xml (${locales.length + cvDownloads.length} URLs) and robots.txt from site.config.mjs`,
+    );
 
     for (const {from, hash} of LEGACY_ROUTES) {
         const outDir = path.join(distDir, from);
