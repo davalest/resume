@@ -54,8 +54,8 @@
       font-size: 14px;
       white-space: nowrap;
       transition:
-              background-color 0.2s ease-in-out,
-              color 0.2s ease-in-out;
+        background-color 0.2s ease-in-out,
+        color 0.2s ease-in-out;
 
       &:hover,
       &.active {
@@ -87,8 +87,8 @@
       letter-spacing: 0.06em;
       text-transform: uppercase;
       transition:
-              background-color 0.2s ease-in-out,
-              color 0.2s ease-in-out;
+        background-color 0.2s ease-in-out,
+        color 0.2s ease-in-out;
 
       &:hover {
         color: var(--color-accent-on-dark);

@@ -9,8 +9,8 @@ for (const [label, url, language] of [
     ["Spanish", "/es/", "es"],
 ] as const) {
     test(`${label} page hydrates the prerendered markup instead of replacing it`, async ({
-                                                                                             page,
-                                                                                         }) => {
+        page,
+    }) => {
         const problems: string[] = [];
         page.on("console", (message) => {
             if (message.type() === "error" || message.type() === "warning") {

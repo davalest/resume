@@ -13,12 +13,12 @@ const Contact = () => {
     const {t} = useI18n();
     const {status, copy} = useCopyEmail(email.label);
 
-     const copyStatus =
+    const copyStatus =
         status === "copied"
             ? t("contact.copied")
             : status === "failed"
-                ? t("contact.copy_failed", {email: email.label})
-                : "";
+              ? t("contact.copy_failed", {email: email.label})
+              : "";
 
     return (
         <section

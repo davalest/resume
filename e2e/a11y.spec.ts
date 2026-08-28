@@ -11,8 +11,8 @@ const pages = [
 for (const {label, url, language} of pages) {
     for (const colorScheme of ["light", "dark"] as const) {
         test(`${label} page has no WCAG violations in the ${colorScheme} theme`, async ({
-                                                                                            browser,
-                                                                                        }) => {
+            browser,
+        }) => {
             const context = await browser.newContext({colorScheme});
             const page = await context.newPage();
 

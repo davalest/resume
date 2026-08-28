@@ -8,8 +8,8 @@ const bundles: Record<string, unknown> = {en, es};
 const leaves = (value: unknown, prefix = ""): [string, unknown][] =>
     typeof value === "object" && value !== null
         ? Object.entries(value).flatMap(([key, child]) =>
-            leaves(child, prefix ? `${prefix}.${key}` : key),
-        )
+              leaves(child, prefix ? `${prefix}.${key}` : key),
+          )
         : [[prefix, value]];
 
 describe.each(supportedLanguages)("%s interface copy", (language) => {

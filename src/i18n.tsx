@@ -59,25 +59,25 @@ const bundles: Record<SupportedLanguage, unknown> = {en, es};
 
 const createTranslator =
     (language: SupportedLanguage): Translate =>
-        (key, vars) => {
-            const value = key
-                .split(".")
-                .reduce<unknown>(
-                    (node, part) =>
-                        typeof node === "object" && node !== null
-                            ? (node as Record<string, unknown>)[part]
-                            : undefined,
-                    bundles[language],
-                );
+    (key, vars) => {
+        const value = key
+            .split(".")
+            .reduce<unknown>(
+                (node, part) =>
+                    typeof node === "object" && node !== null
+                        ? (node as Record<string, unknown>)[part]
+                        : undefined,
+                bundles[language],
+            );
 
-            if (typeof value !== "string") {
-                return key;
-            }
+        if (typeof value !== "string") {
+            return key;
+        }
 
-            return vars
-                ? value.replace(/\{\{(\w+)}}/g, (_, name: string) => String(vars[name] ?? ""))
-                : value;
-        };
+        return vars
+            ? value.replace(/\{\{(\w+)}}/g, (_, name: string) => String(vars[name] ?? ""))
+            : value;
+    };
 
 interface I18n {
     language: SupportedLanguage;
@@ -89,9 +89,9 @@ interface I18n {
 const I18nContext = createContext<I18n | null>(null);
 
 export const I18nProvider = ({
-                                 initialLanguage,
-                                 children,
-                             }: {
+    initialLanguage,
+    children,
+}: {
     initialLanguage?: SupportedLanguage;
     children: ReactNode;
 }) => {

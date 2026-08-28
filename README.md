@@ -6,7 +6,7 @@ Personal CV for **David Valenciano**, front-end engineer. One page, two language
 
 The production build is **prerendered to one HTML document per language**, so a crawler that
 never runs JavaScript reads the whole CV — in both languages, and so does a visitor whose
-bundle never arrives. 
+bundle never arrives.
 
 ## Tech stack
 
