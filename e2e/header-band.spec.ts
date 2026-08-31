@@ -5,8 +5,8 @@ test.describe.configure({mode: "parallel"});
 const MOBILE_BREAKPOINT = 768;
 
 test("the band is untouched at every width where the design height already fits", async ({
-                                                                                             page,
-                                                                                         }) => {
+    page,
+}) => {
     for (const width of [320, 412, 769, 845, 899, 901, 1024, 1440]) {
         await page.setViewportSize({width, height: 800});
         await page.goto("/es/");

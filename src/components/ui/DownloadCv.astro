@@ -15,9 +15,9 @@ const filename = cvFiles[lang];
 ---
 
 <a
-        class:list={["button", "download-cv", variant === "primary" && "button-primary"]}
-        href={withBase(`cv/${filename}`)}
-        download={filename}
+    class:list={["button", "download-cv", variant === "primary" && "button-primary"]}
+    href={withBase(`cv/${filename}`)}
+    download={filename}
 >
     <Icon name="download" />
     {t("hero.cta.cv")}

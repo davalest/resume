@@ -35,30 +35,30 @@ const bundles: Record<SupportedLanguage, unknown> = {en, es};
 
 export const translator =
     (language: SupportedLanguage): Translate =>
-        (key, vars) => {
-            const value = key
-                .split(".")
-                .reduce<unknown>(
-                    (node, part) =>
-                        typeof node === "object" && node !== null
-                            ? (node as Record<string, unknown>)[part]
-                            : undefined,
-                    bundles[language],
-                );
+    (key, vars) => {
+        const value = key
+            .split(".")
+            .reduce<unknown>(
+                (node, part) =>
+                    typeof node === "object" && node !== null
+                        ? (node as Record<string, unknown>)[part]
+                        : undefined,
+                bundles[language],
+            );
 
-            if (typeof value !== "string") {
-                return key;
-            }
+        if (typeof value !== "string") {
+            return key;
+        }
 
-            return vars
-                ? value.replace(/\{\{(\w+)}}/g, (_, name: string) => String(vars[name] ?? ""))
-                : value;
-        };
+        return vars
+            ? value.replace(/\{\{(\w+)}}/g, (_, name: string) => String(vars[name] ?? ""))
+            : value;
+    };
 
 export const picker =
     (language: SupportedLanguage): Pick =>
-        (value) =>
-            value[language];
+    (value) =>
+        value[language];
 
 export const useTranslations = (
     language: SupportedLanguage,

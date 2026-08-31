@@ -22,7 +22,6 @@ export const trackActiveSection = (): void => {
 
     const languageLinks = [...document.querySelectorAll<HTMLAnchorElement>(".lang-link")];
 
-
     const carryPlaceAcross = (id: string | null): void => {
         for (const link of languageLinks) {
             const url = new URL(link.href, location.href);

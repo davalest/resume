@@ -17,26 +17,25 @@ const {t, pick} = useTranslations(lang);
 
 const PHOTO_SIZES = "(max-width: 768px) min(180px, 50vw), 220px";
 
-
 const PHOTO_QUALITY = 60;
 ---
 
 <section class="hero" id={sectionIds.hero} aria-labelledby={sectionTitleId(sectionIds.hero)}>
     <Picture
-            src={portrait}
-            formats={["avif", "webp"]}
-            fallbackFormat="jpg"
-            widths={[220, 440, 640]}
-            sizes={PHOTO_SIZES}
-            quality={PHOTO_QUALITY}
-            alt={t("hero.photo_alt")}
-            width={220}
-            height={220}
-            loading="eager"
-            decoding="sync"
-            fetchpriority="high"
-            pictureAttributes={{class: "hero-photo-frame"}}
-            class="hero-photo"
+        src={portrait}
+        formats={["avif", "webp"]}
+        fallbackFormat="jpg"
+        widths={[220, 440, 640]}
+        sizes={PHOTO_SIZES}
+        quality={PHOTO_QUALITY}
+        alt={t("hero.photo_alt")}
+        width={220}
+        height={220}
+        loading="eager"
+        decoding="sync"
+        fetchpriority="high"
+        pictureAttributes={{class: "hero-photo-frame"}}
+        class="hero-photo"
     />
 
     <div class="hero-content">
@@ -56,9 +55,9 @@ const PHOTO_QUALITY = 60;
             <a class="button" href={`#${sectionIds.contact}`}>{t("hero.cta.contact")}</a>
             {
                 socialLinks.map(({href, label}) => (
-                        <ExternalLink href={href} lang={lang} class="button button-quiet">
-                            {label}
-                        </ExternalLink>
+                    <ExternalLink href={href} lang={lang} class="button button-quiet">
+                        {label}
+                    </ExternalLink>
                 ))
             }
         </div>

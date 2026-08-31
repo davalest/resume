@@ -13,9 +13,9 @@ const {t, pick} = useTranslations(lang);
 ---
 
 <section
-        class="section"
-        id={sectionIds.education}
-        aria-labelledby={sectionTitleId(sectionIds.education)}
+    class="section"
+    id={sectionIds.education}
+    aria-labelledby={sectionTitleId(sectionIds.education)}
 >
     <SectionLabel id={sectionIds.education} label={t("education.title")} />
 
@@ -23,17 +23,17 @@ const {t, pick} = useTranslations(lang);
         <ul class="study-list" role="list">
             {
                 studies.map(({title, school, location, year}) => (
-                        <li class="study">
+                    <li class="study">
                         <span class="study-year">
                             {year ? (
-                                    <time datetime={year}>{year}</time>
+                                <time datetime={year}>{year}</time>
                             ) : (
                                 t("education.in_progress")
                             )}
                         </span>
-                            <span class="study-title">{pick(title)}</span>
-                            <span class="study-school">{`${school} · ${location}`}</span>
-                        </li>
+                        <span class="study-title">{pick(title)}</span>
+                        <span class="study-school">{`${school} · ${location}`}</span>
+                    </li>
                 ))
             }
         </ul>

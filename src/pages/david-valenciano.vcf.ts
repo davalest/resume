@@ -3,7 +3,6 @@ import {siteUrl} from "../../site.config.ts";
 import {email, socialLinks} from "../data/contact.ts";
 import {translator} from "../utils/i18n.ts";
 
-
 export const GET: APIRoute = () => {
     const t = translator("en");
     const profile = (id: string): string => socialLinks.find((link) => link.id === id)?.href ?? "";

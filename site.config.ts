@@ -16,7 +16,6 @@ export const locales = [
 
 export const defaultLocale = locales.find(({isDefault}) => isDefault) ?? locales[0];
 
-
 export const siteUrl: string = process.env.SITE_URL ?? "https://davalest.github.io/resume/";
 
 export const basePath: string =
@@ -42,7 +41,6 @@ export const cvFilesInPublic = [
     "cv/David-Valenciano-CV-EN.pdf",
     "cv/David-Valenciano-CV-ES.pdf",
 ] as const;
-
 
 export const legacyRoutes = [
     {from: "home", hash: ""},

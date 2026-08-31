@@ -18,14 +18,14 @@ const {t, pick} = useTranslations(lang);
     <div class="section-body stack-groups">
         {
             stackGroups.map(({label, items}) => (
-                    <div class="stack-group">
-                        <h3 class="stack-group-label">{pick(label)}</h3>
-                        <ul class="stack-items" role="list">
-                            {items.map((item) => (
-                                    <li class="stack-item">{item}</li>
-                            ))}
-                        </ul>
-                    </div>
+                <div class="stack-group">
+                    <h3 class="stack-group-label">{pick(label)}</h3>
+                    <ul class="stack-items" role="list">
+                        {items.map((item) => (
+                            <li class="stack-item">{item}</li>
+                        ))}
+                    </ul>
+                </div>
             ))
         }
     </div>

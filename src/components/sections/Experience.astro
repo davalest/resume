@@ -20,9 +20,9 @@ const dates = (range: Parameters<typeof dateRangeParts>[0]) =>
 ---
 
 <section
-        class="section"
-        id={sectionIds.experience}
-        aria-labelledby={sectionTitleId(sectionIds.experience)}
+    class="section"
+    id={sectionIds.experience}
+    aria-labelledby={sectionTitleId(sectionIds.experience)}
 >
     <SectionLabel id={sectionIds.experience} label={t("experience.title")} />
 
@@ -33,35 +33,35 @@ const dates = (range: Parameters<typeof dateRangeParts>[0]) =>
                     role.dates,
                 );
                 return (
-                        <article class="role" aria-labelledby={roleTitleId(role.id)}>
-                            <p class="role-dates">
-                                <time datetime={startDateTime}>{startLabel}</time>
-                                {!collapsed && (
-                                        <>
-                                            {" — "}
-                                            {endDateTime ? (
-                                                    <time datetime={endDateTime}>{endLabel}</time>
-                                            ) : (
-                                                    <span>{endLabel}</span>
-                                            )}
-                                        </>
-                                )}
-                            </p>
-                            <div class="role-detail">
-                                <h3 class="role-title" id={roleTitleId(role.id)}>
-                                    {pick(role.title)}
-                                    {role.company && (
-                                            <span class="role-company">{` · ${role.company}`}</span>
+                    <article class="role" aria-labelledby={roleTitleId(role.id)}>
+                        <p class="role-dates">
+                            <time datetime={startDateTime}>{startLabel}</time>
+                            {!collapsed && (
+                                <>
+                                    {" — "}
+                                    {endDateTime ? (
+                                        <time datetime={endDateTime}>{endLabel}</time>
+                                    ) : (
+                                        <span>{endLabel}</span>
                                     )}
-                                </h3>
-                                <p class="role-context">{pick(role.context)}</p>
-                                <ul class="role-bullets">
-                                    {role.bullets.map((bullet) => (
-                                            <li>{pick(bullet)}</li>
-                                    ))}
-                                </ul>
-                            </div>
-                        </article>
+                                </>
+                            )}
+                        </p>
+                        <div class="role-detail">
+                            <h3 class="role-title" id={roleTitleId(role.id)}>
+                                {pick(role.title)}
+                                {role.company && (
+                                    <span class="role-company">{` · ${role.company}`}</span>
+                                )}
+                            </h3>
+                            <p class="role-context">{pick(role.context)}</p>
+                            <ul class="role-bullets">
+                                {role.bullets.map((bullet) => (
+                                    <li>{pick(bullet)}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    </article>
                 );
             })
         }
@@ -74,30 +74,30 @@ const dates = (range: Parameters<typeof dateRangeParts>[0]) =>
                         role.dates,
                     );
                     return (
-                            <li class="earlier-role">
-                                <p class="role-dates">
-                                    <time datetime={startDateTime}>{startLabel}</time>
-                                    {!collapsed && (
-                                            <>
-                                                {" — "}
-                                                {endDateTime ? (
-                                                        <time datetime={endDateTime}>{endLabel}</time>
-                                                ) : (
-                                                        <span>{endLabel}</span>
-                                                )}
-                                            </>
+                        <li class="earlier-role">
+                            <p class="role-dates">
+                                <time datetime={startDateTime}>{startLabel}</time>
+                                {!collapsed && (
+                                    <>
+                                        {" — "}
+                                        {endDateTime ? (
+                                            <time datetime={endDateTime}>{endLabel}</time>
+                                        ) : (
+                                            <span>{endLabel}</span>
+                                        )}
+                                    </>
+                                )}
+                            </p>
+                            <div class="role-detail">
+                                <p class="earlier-role-title">
+                                    {pick(role.title)}
+                                    {role.company && (
+                                        <span class="role-company">{` · ${role.company}`}</span>
                                     )}
                                 </p>
-                                <div class="role-detail">
-                                    <p class="earlier-role-title">
-                                        {pick(role.title)}
-                                        {role.company && (
-                                                <span class="role-company">{` · ${role.company}`}</span>
-                                        )}
-                                    </p>
-                                    <p class="earlier-role-summary">{pick(role.summary)}</p>
-                                </div>
-                            </li>
+                                <p class="earlier-role-summary">{pick(role.summary)}</p>
+                            </div>
+                        </li>
                     );
                 })
             }

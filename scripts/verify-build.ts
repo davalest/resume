@@ -17,14 +17,12 @@ const check = (label: string, condition: boolean, detail = ""): void => {
 const read = (file: string): string => readFileSync(path.join(DIST, file), "utf-8");
 const exists = (file: string): boolean => existsSync(path.join(DIST, file));
 
-
 for (const {route} of locales) {
     check(`dist/${route}index.html exists`, exists(`${route}index.html`));
 }
 check("dist/404.html exists", exists("404.html"));
 check("dist/robots.txt exists", exists("robots.txt"));
 check("dist/sitemap-index.xml exists", exists("sitemap-index.xml"));
-
 
 const home = exists("index.html") ? read("index.html") : "";
 
@@ -40,11 +38,9 @@ check(
     `expected ${expectedBase}favicon.svg`,
 );
 
-
 const robots = exists("robots.txt") ? read("robots.txt") : "";
 
 check("robots.txt points at the sitemap index", robots.includes(`${siteUrl}sitemap-index.xml`));
-
 
 const disallowed = [...robots.matchAll(/^Disallow:\s*(\S+)/gm)].map(([, rule]) => rule ?? "");
 const selfBlocking = disallowed.filter((rule) => rule !== "" && expectedBase.startsWith(rule));
@@ -53,7 +49,6 @@ check(
     selfBlocking.length === 0,
     `these rules block ${expectedBase}: ${selfBlocking.join(", ")}`,
 );
-
 
 const sitemapFile = readdirSync(DIST).find((name) => /^sitemap-\d+\.xml$/.test(name));
 const sitemap = sitemapFile ? read(sitemapFile) : "";
@@ -84,7 +79,6 @@ for (const file of cvFilesInPublic) {
     check(`${file} is still served`, exists(file));
 }
 
-
 const noindexPages = ["404.html", ...legacyRoutes.map(({from}) => `${from}/index.html`)];
 
 for (const name of noindexPages) {
@@ -110,7 +104,6 @@ for (const {from} of legacyRoutes) {
     check(`${name} also offers a link`, /<a [^>]*href=/.test(html));
 }
 
-
 const walk = (dir: string): string[] =>
     readdirSync(dir, {withFileTypes: true}).flatMap((entry) => {
         const full = path.join(dir, entry.name);
@@ -121,7 +114,6 @@ const junk = walk(DIST).filter((file) =>
     /(\.DS_Store|Thumbs\.db|\.map)$/.test(path.basename(file)),
 );
 check("dist carries no editor or OS junk", junk.length === 0, junk.join(", "));
-
 
 if (failures.length) {
     console.error(`\nverify-build: ${failures.length} problem(s) in dist/\n`);

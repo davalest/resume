@@ -16,9 +16,9 @@ const {t} = useTranslations(lang);
 ---
 
 <section
-        class="section"
-        id={sectionIds.contact}
-        aria-labelledby={sectionTitleId(sectionIds.contact)}
+    class="section"
+    id={sectionIds.contact}
+    aria-labelledby={sectionTitleId(sectionIds.contact)}
 >
     <SectionLabel id={sectionIds.contact} label={t("contact.title")} />
 
@@ -39,12 +39,12 @@ const {t} = useTranslations(lang);
             */
             }
             <button
-                    type="button"
-                    class="button"
-                    data-copy-email
-                    data-address={email.label}
-                    data-copied={t("contact.copied")}
-                    data-failed={t("contact.copy_failed", {email: email.label})}
+                type="button"
+                class="button"
+                data-copy-email
+                data-address={email.label}
+                data-copied={t("contact.copied")}
+                data-failed={t("contact.copy_failed", {email: email.label})}
             >
                 <Icon name="copy" />
                 {t("contact.copy_email")}
@@ -63,12 +63,12 @@ const {t} = useTranslations(lang);
         <ul class="contact-links" role="list">
             {
                 socialLinks.map(({icon, label, href}) => (
-                        <li>
-                            <ExternalLink href={href} lang={lang}>
-                                <Icon name={icon} />
-                                {label}
-                            </ExternalLink>
-                        </li>
+                    <li>
+                        <ExternalLink href={href} lang={lang}>
+                            <Icon name={icon} />
+                            {label}
+                        </ExternalLink>
+                    </li>
                 ))
             }
         </ul>

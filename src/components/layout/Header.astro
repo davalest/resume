@@ -21,9 +21,9 @@ const {t, pick} = useTranslations(lang);
         <nav class="header-navigation">
             {
                 navSections.map(({id, label}) => (
-                        <a class="nav-link" href={`#${id}`} data-nav-link={id}>
-                            {pick(label)}
-                        </a>
+                    <a class="nav-link" href={`#${id}`} data-nav-link={id}>
+                        {pick(label)}
+                    </a>
                 ))
             }
 
@@ -36,16 +36,16 @@ const {t, pick} = useTranslations(lang);
             <div class="lang-switch" role="group" aria-label={t("header.language_label")}>
                 {
                     locales.map(({code}) => (
-                            <a
-                                    class:list={["lang-link", code === lang && "active"]}
-                                    href={pathForLocale(code)}
-                                    hreflang={code}
-                                    lang={code}
-                                    aria-current={code === lang ? "page" : undefined}
-                            >
-                                {code}
-                                <span class="visually-hidden">{` ${languageNames[code]}`}</span>
-                            </a>
+                        <a
+                            class:list={["lang-link", code === lang && "active"]}
+                            href={pathForLocale(code)}
+                            hreflang={code}
+                            lang={code}
+                            aria-current={code === lang ? "page" : undefined}
+                        >
+                            {code}
+                            <span class="visually-hidden">{` ${languageNames[code]}`}</span>
+                        </a>
                     ))
                 }
             </div>
