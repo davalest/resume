@@ -1,0 +1,24 @@
+---
+import Icon from "./Icon.astro";
+import {cvFiles} from "../../data/contact.ts";
+import {withBase} from "../../utils/navigation.ts";
+import {useTranslations, type SupportedLanguage} from "../../utils/i18n.ts";
+
+interface Props {
+    lang: SupportedLanguage;
+    variant?: "primary" | "secondary";
+}
+
+const {lang, variant = "secondary"} = Astro.props;
+const {t} = useTranslations(lang);
+const filename = cvFiles[lang];
+---
+
+<a
+        class:list={["button", "download-cv", variant === "primary" && "button-primary"]}
+        href={withBase(`cv/${filename}`)}
+        download={filename}
+>
+    <Icon name="download" />
+    {t("hero.cta.cv")}
+</a>

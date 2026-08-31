@@ -35,7 +35,7 @@ test("the Konami code summons the raptor, and the CSP allows it", async ({page})
 
     const raptor = page.locator("img.KONAMI");
     await expect(raptor).toHaveCount(1);
-    await expect(raptor).toHaveAttribute("src", /^\/assets\/raptor-[A-Za-z0-9_-]+\.webp$/);
+    await expect(raptor).toHaveAttribute("src", /^\/_astro\/raptor\.[A-Za-z0-9_-]+\.webp$/);
     await expect(raptor).toHaveAttribute("aria-hidden", "true");
     await expect(raptor).toHaveAttribute("alt", "");
 

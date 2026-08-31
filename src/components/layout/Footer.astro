@@ -1,0 +1,32 @@
+---
+import Icon from "../ui/Icon.astro";
+import ExternalLink from "../ui/ExternalLink.astro";
+import {allContactLinks} from "../../data/contact.ts";
+import type {SupportedLanguage} from "../../utils/i18n.ts";
+
+interface Props {
+    lang: SupportedLanguage;
+}
+
+const {lang} = Astro.props;
+---
+
+<footer class="footer-container">
+    <div class="footer-content">
+        {
+            allContactLinks.map(({id, icon, label, href}) =>
+                href.startsWith("http") ? (
+                    <ExternalLink href={href} lang={lang} class="footer-item">
+                        <Icon name={icon} class="footer-item-icon" />
+                        <span class="footer-item-text">{label}</span>
+                    </ExternalLink>
+                ) : (
+                    <a class="footer-item" href={href} data-id={id}>
+                        <Icon name={icon} class="footer-item-icon" />
+                        <span class="footer-item-text">{label}</span>
+                    </a>
+                ),
+            )
+        }
+    </div>
+</footer>

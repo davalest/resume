@@ -5,12 +5,15 @@
   "bracketSpacing": false,
   "trailingComma": "all",
   "endOfLine": "lf",
+  "plugins": ["prettier-plugin-astro"],
   "overrides": [
     {
+      "files": ["*.astro"],
+      "options": {"parser": "astro"}
+    },
+    {
       "files": ["*.html", "*.scss", "*.css", "*.json", "*.yml", "*.yaml", "*.md", "*.webmanifest"],
-      "options": {
-        "tabWidth": 2
-      }
+      "options": {"tabWidth": 2}
     }
   ]
 }

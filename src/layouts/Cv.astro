@@ -1,0 +1,63 @@
+---
+import Base from "./Base.astro";
+import Header from "../components/layout/Header.astro";
+import Footer from "../components/layout/Footer.astro";
+import Hero from "../components/sections/Hero.astro";
+import Experience from "../components/sections/Experience.astro";
+import Stack from "../components/sections/Stack.astro";
+import About from "../components/sections/About.astro";
+import Education from "../components/sections/Education.astro";
+import Contact from "../components/sections/Contact.astro";
+import Divider from "../components/ui/Divider.astro";
+import {useTranslations, type SupportedLanguage} from "../utils/i18n.ts";
+
+interface Props {
+    lang: SupportedLanguage;
+}
+
+const {lang} = Astro.props;
+const {t} = useTranslations(lang);
+---
+
+<Base lang={lang}>
+    <a class="skip-link" href="#content">{t("a11y.skip_to_content")}</a>
+
+    <Header lang={lang} />
+
+    <main class="layout" id="content" tabindex="-1">
+        <Hero lang={lang} />
+        <Divider />
+        <Experience lang={lang} />
+        <Divider />
+        <Stack lang={lang} />
+        <Divider />
+        <About lang={lang} />
+        <Divider />
+        <Education lang={lang} />
+        <Divider />
+        <Contact lang={lang} />
+        <div data-bottom-sentinel aria-hidden="true"></div>
+    </main>
+
+    <Footer lang={lang} />
+</Base>
+
+<script>
+    import {trackActiveSection} from "../scripts/activeSection.ts";
+    import {enableCopyEmail} from "../scripts/copyEmail.ts";
+    import {enableEasterEgg} from "../scripts/easterEgg.ts";
+    import {keepHeaderBandHonest} from "../scripts/headerBand.ts";
+
+    for (const enhance of [
+        keepHeaderBandHonest,
+        trackActiveSection,
+        enableCopyEmail,
+        enableEasterEgg,
+    ]) {
+        try {
+            enhance();
+        } catch (error) {
+            console.error(`enhancement ${enhance.name} failed`, error);
+        }
+    }
+</script>

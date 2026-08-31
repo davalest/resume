@@ -1,0 +1,78 @@
+---
+import {ogImage, profileMeta, seoFor} from "../utils/seo.ts";
+import {withBase} from "../utils/navigation.ts";
+import {contentSecurityPolicy} from "../utils/csp.ts";
+import type {SupportedLanguage} from "../utils/i18n.ts";
+import "../styles/global.scss";
+
+interface Props {
+    lang: SupportedLanguage;
+    noindex?: boolean;
+    title?: string | undefined;
+}
+
+const {lang, noindex = false, title: titleOverride} = Astro.props;
+const seo = seoFor(lang);
+const csp = contentSecurityPolicy(import.meta.env.DEV);
+const title = titleOverride ?? seo.title;
+---
+
+<!doctype html>
+<html lang={lang}>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta http-equiv="Content-Security-Policy" content={csp} />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <link rel="icon" type="image/svg+xml" href={withBase("favicon.svg")} />
+    <link rel="apple-touch-icon" href={withBase("apple-touch-icon.png")} />
+
+    <title>{title}</title>
+    <meta name="description" content={seo.description} />
+    <meta name="author" content="David Valenciano" />
+    <meta
+            name="robots"
+            content={noindex ? "noindex, follow" : "index, follow, max-image-preview:large"}
+    />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#242424" media="(prefers-color-scheme: dark)" />
+
+    {!noindex && <link rel="canonical" href={seo.canonical} />}
+    {
+        !noindex &&
+        seo.alternates.map(({hreflang, href}) => (
+                <link rel="alternate" hreflang={hreflang} href={href} />
+        ))
+    }
+
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={seo.ogDescription} />
+    <meta property="og:site_name" content="David Valenciano" />
+    <meta property="og:url" content={seo.canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={seo.imageAlt} />
+    <meta property="og:locale" content={seo.ogLocale} />
+    <meta property="og:locale:alternate" content={seo.ogLocaleAlternate} />
+    <meta property="profile:first_name" content={profileMeta.firstName} />
+    <meta property="profile:last_name" content={profileMeta.lastName} />
+    <meta property="profile:username" content={profileMeta.username} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={seo.ogDescription} />
+    <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image:alt" content={seo.imageAlt} />
+
+    {!noindex && <script type="application/ld+json" is:inline set:html={seo.jsonLd} />}
+
+    <slot name="head" />
+</head>
+<body>
+<slot />
+</body>
+</html>

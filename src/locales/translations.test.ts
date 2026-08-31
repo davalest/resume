@@ -1,5 +1,7 @@
+import {readFileSync} from "node:fs";
+import {globSync} from "node:fs";
 import {describe, expect, it} from "vitest";
-import {supportedLanguages} from "../i18n.tsx";
+import {supportedLanguages} from "../utils/i18n.ts";
 import en from "./en/translation.json";
 import es from "./es/translation.json";
 
@@ -8,8 +10,8 @@ const bundles: Record<string, unknown> = {en, es};
 const leaves = (value: unknown, prefix = ""): [string, unknown][] =>
     typeof value === "object" && value !== null
         ? Object.entries(value).flatMap(([key, child]) =>
-              leaves(child, prefix ? `${prefix}.${key}` : key),
-          )
+            leaves(child, prefix ? `${prefix}.${key}` : key),
+        )
         : [[prefix, value]];
 
 describe.each(supportedLanguages)("%s interface copy", (language) => {
@@ -32,5 +34,22 @@ describe("interface copy bundles", () => {
                 .sort(),
         );
         rest.forEach((keys) => expect(keys).toEqual(reference));
+    });
+});
+
+describe("interface copy is all reachable", () => {
+    const source = [
+        ...globSync("src/**/*.astro"),
+        ...globSync("src/**/*.ts").filter((file) => !file.endsWith(".test.ts")),
+    ]
+        .map((file) => readFileSync(file, "utf-8"))
+        .join("\n");
+
+    it("has no key the site never asks for", () => {
+        const orphans = leaves(bundles.en)
+            .map(([key]) => key)
+            .filter((key) => !source.includes(`"${key}"`));
+
+        expect(orphans).toEqual([]);
     });
 });

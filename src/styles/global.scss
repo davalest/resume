@@ -1,0 +1,29 @@
+/*
+ * The single stylesheet. Astro inlines it into both documents, so the order here
+ * is the cascade order: tokens first, then the base layer, then components, then
+ * sections, then print last so it can override anything above it.
+ *
+ * `@use` has to come before every other rule, which is why the base layer lives
+ * in its own partial instead of sitting in this file.
+ */
+
+@use "tokens";
+@use "base";
+
+@use "components/header";
+@use "components/footer";
+@use "components/sectionLabel";
+@use "components/divider";
+@use "components/downloadCv";
+@use "components/errorPage";
+
+@use "sections/hero";
+@use "sections/experience";
+@use "sections/stack";
+@use "sections/about";
+@use "sections/education";
+@use "sections/contact";
+
+@use "konamize";
+
+@use "print";

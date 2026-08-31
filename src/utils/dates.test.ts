@@ -1,5 +1,5 @@
 import {describe, it, expect} from "vitest";
-import {formatDateRange} from "./dates.ts";
+import {dateRangeParts, formatDateRange} from "./dates.ts";
 
 describe("formatDateRange", () => {
     it("formats a closed month range", () => {
@@ -41,5 +41,45 @@ describe("formatDateRange", () => {
         const formatted = formatDateRange({start: "2016-05", end: "2017-02"}, "en", "Present");
         expect(formatted).toBe("May 2016 — Feb 2017");
         expect(formatted).not.toMatch(/\./);
+    });
+});
+
+describe("dateRangeParts", () => {
+    it("splits a closed range into two machine-readable bounds", () => {
+        expect(dateRangeParts({start: "2022-08", end: "2023-11"}, "en", "Present")).toEqual({
+            startDateTime: "2022-08",
+            endDateTime: "2023-11",
+            startLabel: "Aug 2022",
+            endLabel: "Nov 2023",
+            collapsed: false,
+        });
+    });
+
+    it("leaves the end bound unmachined when the role is ongoing", () => {
+        const parts = dateRangeParts({start: "2024-01"}, "en", "Present");
+        expect(parts.endDateTime).toBeUndefined();
+        expect(parts.endLabel).toBe("Present");
+        expect(parts.collapsed).toBe(false);
+    });
+
+    it("collapses a range whose bounds render the same label", () => {
+        const parts = dateRangeParts({start: "2016", end: "2016"}, "en", "Present");
+        expect(parts.collapsed).toBe(true);
+        expect(parts.startLabel).toBe("2016");
+    });
+
+    it("agrees with formatDateRange on every role in the CV", () => {
+        for (const range of [
+            {start: "2024-01"},
+            {start: "2022-08", end: "2023-11"},
+            {start: "2016", end: "2016"},
+            {start: "2015-09", end: "2016-07"},
+        ]) {
+            const parts = dateRangeParts(range, "en", "Present");
+            const joined = parts.collapsed
+                ? parts.startLabel
+                : `${parts.startLabel} — ${parts.endLabel}`;
+            expect(joined).toBe(formatDateRange(range, "en", "Present"));
+        }
     });
 });

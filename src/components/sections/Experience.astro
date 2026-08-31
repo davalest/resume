@@ -1,0 +1,106 @@
+---
+import SectionLabel from "../ui/SectionLabel.astro";
+import {earlierRoles, featuredRoles} from "../../data/roles.ts";
+import {sectionIds, sectionTitleId} from "../../utils/navigation.ts";
+import {dateRangeParts} from "../../utils/dates.ts";
+import {useTranslations, type SupportedLanguage} from "../../utils/i18n.ts";
+
+interface Props {
+    lang: SupportedLanguage;
+}
+
+const {lang} = Astro.props;
+const {t, pick} = useTranslations(lang);
+const ongoingLabel = t("experience.present");
+
+const roleTitleId = (id: string): string => `role-${id}-title`;
+
+const dates = (range: Parameters<typeof dateRangeParts>[0]) =>
+    dateRangeParts(range, lang, ongoingLabel);
+---
+
+<section
+        class="section"
+        id={sectionIds.experience}
+        aria-labelledby={sectionTitleId(sectionIds.experience)}
+>
+    <SectionLabel id={sectionIds.experience} label={t("experience.title")} />
+
+    <div class="section-body">
+        {
+            featuredRoles.map((role) => {
+                const {startDateTime, endDateTime, startLabel, endLabel, collapsed} = dates(
+                    role.dates,
+                );
+                return (
+                        <article class="role" aria-labelledby={roleTitleId(role.id)}>
+                            <p class="role-dates">
+                                <time datetime={startDateTime}>{startLabel}</time>
+                                {!collapsed && (
+                                        <>
+                                            {" — "}
+                                            {endDateTime ? (
+                                                    <time datetime={endDateTime}>{endLabel}</time>
+                                            ) : (
+                                                    <span>{endLabel}</span>
+                                            )}
+                                        </>
+                                )}
+                            </p>
+                            <div class="role-detail">
+                                <h3 class="role-title" id={roleTitleId(role.id)}>
+                                    {pick(role.title)}
+                                    {role.company && (
+                                            <span class="role-company">{` · ${role.company}`}</span>
+                                    )}
+                                </h3>
+                                <p class="role-context">{pick(role.context)}</p>
+                                <ul class="role-bullets">
+                                    {role.bullets.map((bullet) => (
+                                            <li>{pick(bullet)}</li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </article>
+                );
+            })
+        }
+
+        <h3 class="earlier-title">{t("experience.earlier_title")}</h3>
+        <ul class="earlier-list" role="list">
+            {
+                earlierRoles.map((role) => {
+                    const {startDateTime, endDateTime, startLabel, endLabel, collapsed} = dates(
+                        role.dates,
+                    );
+                    return (
+                            <li class="earlier-role">
+                                <p class="role-dates">
+                                    <time datetime={startDateTime}>{startLabel}</time>
+                                    {!collapsed && (
+                                            <>
+                                                {" — "}
+                                                {endDateTime ? (
+                                                        <time datetime={endDateTime}>{endLabel}</time>
+                                                ) : (
+                                                        <span>{endLabel}</span>
+                                                )}
+                                            </>
+                                    )}
+                                </p>
+                                <div class="role-detail">
+                                    <p class="earlier-role-title">
+                                        {pick(role.title)}
+                                        {role.company && (
+                                                <span class="role-company">{` · ${role.company}`}</span>
+                                        )}
+                                    </p>
+                                    <p class="earlier-role-summary">{pick(role.summary)}</p>
+                                </div>
+                            </li>
+                    );
+                })
+            }
+        </ul>
+    </div>
+</section>

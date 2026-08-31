@@ -3,7 +3,7 @@
     "title": "David Valenciano — Senior Front-End Engineer",
     "description": "Senior Front-End Engineer en Madrid. React, TypeScript y React Native. Ahora en Docline, donde construyo la plataforma de consulta médica online y la librería de componentes que comparten sus productos.",
     "og_description": "React · TypeScript · React Native. Abierto a roles senior y lead — remoto o híbrido en Madrid.",
-    "image_alt": "David Valenciano, Senior Front-End Engineer — React y TypeScript, React Native, Next.js",
+    "image_alt": "David Valenciano, Senior Front-End Engineer — React, TypeScript, React Native",
     "job_title": "Senior Front-End Engineer"
   },
   "header": {
@@ -34,7 +34,7 @@
     "title": "Sobre mí",
     "p1": "Construyo front-ends que aguantan con el tiempo: sistemas de componentes que escalan, TypeScript que caza los problemas antes de que lleguen a QA, e interfaces que funcionan en los dispositivos que la gente tiene de verdad.",
     "p2": "He trabajado en healthtech (Docline, QUO Health), e-commerce (Shopery) y consultoría (Capitole), en equipos de tamaños muy distintos y siempre al lado de gente de la que he aprendido algo.",
-    "p3": "El trabajo con clientes está bajo NDA, así que esta misma web es la muestra de trabajo: React 19, TypeScript estricto, con tests, con CI y con Lighthouse como filtro antes de publicar. Código fuente:"
+    "p3": "El trabajo con clientes está bajo NDA, así que esta misma web es la muestra de trabajo: Astro, TypeScript estricto, cero JavaScript en la carga inicial, con tests de extremo a extremo y con Lighthouse como filtro en CI antes de publicar. Código fuente:"
   },
   "education": {
     "title": "Formación",
@@ -54,11 +54,12 @@
     "availability": "Abierto a roles senior y lead de front-end — remoto o híbrido en Madrid."
   },
   "error": {
-    "title": "Algo ha ido mal",
-    "message": "Esta página se ha encontrado con un error inesperado. Vamos a llevarte a un sitio seguro.",
-    "cta": "Volver al inicio"
+    "not_found_title": "Página no encontrada",
+    "not_found_message": "Esa URL no existe. El CV está a un clic.",
+    "not_found_cta": "Ir al CV"
   },
   "a11y": {
-    "skip_to_content": "Saltar al contenido"
+    "skip_to_content": "Saltar al contenido",
+    "new_tab": "abre en una pestaña nueva"
   }
 }

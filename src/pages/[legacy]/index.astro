@@ -1,0 +1,28 @@
+---
+import type {GetStaticPaths} from "astro";
+import Base from "../../layouts/Base.astro";
+import {basePath, legacyRoutes} from "../../../site.config.ts";
+
+export const getStaticPaths = (() =>
+    legacyRoutes.map(({from, hash}) => ({
+        params: {legacy: from},
+        props: {target: `${basePath}${hash}`},
+    }))) satisfies GetStaticPaths;
+
+interface Props {
+    target: string;
+}
+
+const {target} = Astro.props;
+---
+
+<Base lang="en" noindex>
+    <meta slot="head" http-equiv="refresh" content={`0; url=${target}`} />
+
+    <main class="layout layout-bare" id="content">
+        <div class="error-page">
+            <p class="error-message">This page moved.</p>
+            <a class="button button-primary" href={target}>Continue to the CV</a>
+        </div>
+    </main>
+</Base>

@@ -1,16 +1,10 @@
 dist
+.astro
 .lighthouseci
 playwright-report
 test-results
 coverage
-yarn.lock
-# AI tooling scaffolding, already out of git
-.claude
-_bmad
-_bmad-output
-design-artifacts
-docs
-# Generated: the icon path data is one very long line on purpose
-src/ui/icons/icons.tsx
-# Copied verbatim from @davalest/konamize so a test can compare it byte for byte
+package-lock.json
+cv-source
+src/utils/icons.ts
 src/styles/konamize.css

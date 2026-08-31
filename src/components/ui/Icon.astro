@@ -1,0 +1,19 @@
+---
+import {glyphs, type IconName} from "../../utils/icons.ts";
+
+interface Props {
+    name: IconName;
+    class?: string | undefined;
+}
+
+const {name, class: className} = Astro.props;
+const {viewBox, path} = glyphs[name];
+---
+
+<svg
+        class={className ? `icon ${className}` : "icon"}
+        viewBox={viewBox}
+        fill="currentColor"
+        aria-hidden="true"
+        focusable="false"><path d={path}></path></svg
+>

@@ -1,60 +1,100 @@
 import js from "@eslint/js";
 import globals from "globals";
 import tseslint from "typescript-eslint";
-import react from "eslint-plugin-react";
-import reactHooks from "eslint-plugin-react-hooks";
-import reactRefresh from "eslint-plugin-react-refresh";
+import astro from "eslint-plugin-astro";
+import * as astroParser from "astro-eslint-parser";
 import jsxA11y from "eslint-plugin-jsx-a11y";
 
 export default tseslint.config(
     {
-        ignores: ["dist", "docs", ".claude", "_bmad", "_bmad-output", "design-artifacts"],
+        ignores: [
+            "dist",
+            ".astro",
+            ".lighthouseci",
+            "playwright-report",
+            "test-results",
+            "coverage",
+            "node_modules",
+            "cv-source",
+        ],
     },
     {
-        files: ["**/*.{ts,tsx}"],
+        files: ["**/*.ts", "**/*.tsx"],
         extends: [
             js.configs.recommended,
             ...tseslint.configs.recommendedTypeChecked,
             ...tseslint.configs.stylisticTypeChecked,
         ],
         languageOptions: {
-            ecmaVersion: 2020,
-            globals: globals.browser,
+            ecmaVersion: 2023,
+            globals: {...globals.browser, ...globals.node},
             parserOptions: {
-                ecmaFeatures: {jsx: true},
                 projectService: true,
                 tsconfigRootDir: import.meta.dirname,
+                extraFileExtensions: [".astro"],
             },
         },
-        settings: {
-            react: {version: "detect"},
-        },
-        plugins: {
-            react,
-            "react-hooks": reactHooks,
-            "react-refresh": reactRefresh,
-            "jsx-a11y": jsxA11y,
-        },
         rules: {
-            ...react.configs.flat.recommended.rules,
-            ...react.configs.flat["jsx-runtime"].rules,
-            ...reactHooks.configs.recommended.rules,
-            ...jsxA11y.flatConfigs.recommended.rules,
-            "react-refresh/only-export-components": ["warn", {allowConstantExport: true}],
-            "jsx-a11y/no-redundant-roles": ["error", {ul: ["list"]}],
-            "react/jsx-no-target-blank": ["error", {allowReferrer: true}],
+            "@typescript-eslint/consistent-type-imports": [
+                "error",
+                {prefer: "type-imports", fixStyle: "inline-type-imports"},
+            ],
+            "@typescript-eslint/no-unnecessary-condition": "off",
+            eqeqeq: ["error", "always"],
+            "no-console": ["warn", {allow: ["warn", "error"]}],
         },
     },
+    ...astro.configs.recommended,
+    ...astro.configs["jsx-a11y-recommended"],
     {
-        files: ["src/content/*.ts", "src/navigation.ts", "src/i18n.tsx"],
-        rules: {
-            "react-refresh/only-export-components": "off",
-        },
-    },
-    {
-        files: ["**/*.{test,spec}.{ts,tsx}"],
+        files: ["**/*.astro"],
+        plugins: {"jsx-a11y": jsxA11y},
         languageOptions: {
-            globals: globals.node,
+            parser: astroParser,
+            parserOptions: {
+                parser: tseslint.parser,
+                extraFileExtensions: [".astro"],
+                project: true,
+                tsconfigRootDir: import.meta.dirname,
+            },
+            globals: globals.browser,
         },
+        rules: {
+            "astro/no-set-html-directive": "off",
+            "astro/jsx-a11y/no-redundant-roles": ["error", {ul: ["list"]}],
+        },
+    },
+    {
+        files: ["src/**/*.test.ts"],
+        rules: {
+            "@typescript-eslint/no-unsafe-argument": "off",
+            "@typescript-eslint/no-unsafe-assignment": "off",
+            "@typescript-eslint/no-unsafe-member-access": "off",
+            "@typescript-eslint/no-unsafe-return": "off",
+            "@typescript-eslint/no-unsafe-call": "off",
+        },
+    },
+
+    {
+        files: ["src/scripts/**/*.ts"],
+        languageOptions: {globals: globals.browser},
+    },
+
+    {
+        files: ["scripts/**/*.{ts,mjs}"],
+        rules: {"no-console": "off"},
+    },
+
+    {
+        files: [
+            "*.ts",
+            "*.mjs",
+            "*.js",
+            "scripts/**/*.ts",
+            "e2e/**/*.ts",
+            "src/**/*.test.ts",
+            "src/pages/**/*.ts",
+        ],
+        languageOptions: {globals: globals.node},
     },
 );

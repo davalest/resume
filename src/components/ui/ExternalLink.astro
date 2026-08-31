@@ -1,0 +1,17 @@
+---
+import {useTranslations, type SupportedLanguage} from "../../utils/i18n.ts";
+
+interface Props {
+    href: string;
+    lang: SupportedLanguage;
+    class?: string | undefined;
+}
+
+const {href, lang, class: className} = Astro.props;
+const {t} = useTranslations(lang);
+---
+
+<a href={href} class={className} target="_blank" rel="noopener">
+    <slot />
+    <span class="visually-hidden">{` (${t("a11y.new_tab")})`}</span>
+</a>

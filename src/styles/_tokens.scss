@@ -3,15 +3,16 @@
 :root {
   --color-accent: #46abb7;
   --color-accent-on-dark: #46abb7;
-  --color-accent-strong: #2c7680;
+  --color-accent-strong: #2f7c86;
   --color-on-accent: #ffffff;
   --color-bg: #242424;
   --color-text: rgba(255, 255, 255, 0.87);
   --color-text-muted: #b9b9b9;
   --color-border: rgba(255, 255, 255, 0.2);
-  --color-border-strong: rgba(255, 255, 255, 0.35);
+  --color-border-strong: rgba(255, 255, 255, 0.45);
   --color-surface: #000000;
   --color-on-surface: #979797;
+  --color-border-on-surface: rgba(255, 255, 255, 0.2);
   --layout-max-width: 1024px;
   --layout-gutter: 24px;
   --header-height-design: 110px;
@@ -27,7 +28,7 @@
     --color-text: #213547;
     --color-text-muted: #55606b;
     --color-border: rgba(0, 0, 0, 0.15);
-    --color-border-strong: rgba(0, 0, 0, 0.3);
+    --color-border-strong: rgba(0, 0, 0, 0.55);
   }
 }
 
@@ -36,6 +37,7 @@
     --layout-gutter: 16px;
     --header-clearance: 24px;
     --layout-space-bottom: 64px;
+    --header-height: 0px;
   }
 }
 

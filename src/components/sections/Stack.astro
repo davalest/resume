@@ -1,0 +1,32 @@
+---
+import SectionLabel from "../ui/SectionLabel.astro";
+import {stackGroups} from "../../data/stack.ts";
+import {sectionIds, sectionTitleId} from "../../utils/navigation.ts";
+import {useTranslations, type SupportedLanguage} from "../../utils/i18n.ts";
+
+interface Props {
+    lang: SupportedLanguage;
+}
+
+const {lang} = Astro.props;
+const {t, pick} = useTranslations(lang);
+---
+
+<section class="section" id={sectionIds.stack} aria-labelledby={sectionTitleId(sectionIds.stack)}>
+    <SectionLabel id={sectionIds.stack} label={t("stack.title")} />
+
+    <div class="section-body stack-groups">
+        {
+            stackGroups.map(({label, items}) => (
+                    <div class="stack-group">
+                        <h3 class="stack-group-label">{pick(label)}</h3>
+                        <ul class="stack-items" role="list">
+                            {items.map((item) => (
+                                    <li class="stack-item">{item}</li>
+                            ))}
+                        </ul>
+                    </div>
+            ))
+        }
+    </div>
+</section>

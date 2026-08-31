@@ -1,0 +1,46 @@
+---
+import SectionLabel from "../ui/SectionLabel.astro";
+import {studies} from "../../data/studies.ts";
+import {sectionIds, sectionTitleId} from "../../utils/navigation.ts";
+import {useTranslations, type SupportedLanguage} from "../../utils/i18n.ts";
+
+interface Props {
+    lang: SupportedLanguage;
+}
+
+const {lang} = Astro.props;
+const {t, pick} = useTranslations(lang);
+---
+
+<section
+        class="section"
+        id={sectionIds.education}
+        aria-labelledby={sectionTitleId(sectionIds.education)}
+>
+    <SectionLabel id={sectionIds.education} label={t("education.title")} />
+
+    <div class="section-body">
+        <ul class="study-list" role="list">
+            {
+                studies.map(({title, school, location, year}) => (
+                        <li class="study">
+                        <span class="study-year">
+                            {year ? (
+                                    <time datetime={year}>{year}</time>
+                            ) : (
+                                t("education.in_progress")
+                            )}
+                        </span>
+                            <span class="study-title">{pick(title)}</span>
+                            <span class="study-school">{`${school} · ${location}`}</span>
+                        </li>
+                ))
+            }
+        </ul>
+
+        <p class="languages">
+            <span class="languages-label">{t("education.languages_title")}</span>
+            {t("education.languages")}
+        </p>
+    </div>
+</section>

@@ -1,0 +1,66 @@
+---
+import {Picture} from "astro:assets";
+import DownloadCv from "../ui/DownloadCv.astro";
+import ExternalLink from "../ui/ExternalLink.astro";
+import {socialLinks} from "../../data/contact.ts";
+import {specialties} from "../../data/specialties.ts";
+import {sectionIds, sectionTitleId} from "../../utils/navigation.ts";
+import {useTranslations, type SupportedLanguage} from "../../utils/i18n.ts";
+import portrait from "../../assets/portrait.jpg";
+
+interface Props {
+    lang: SupportedLanguage;
+}
+
+const {lang} = Astro.props;
+const {t, pick} = useTranslations(lang);
+
+const PHOTO_SIZES = "(max-width: 768px) min(180px, 50vw), 220px";
+
+
+const PHOTO_QUALITY = 60;
+---
+
+<section class="hero" id={sectionIds.hero} aria-labelledby={sectionTitleId(sectionIds.hero)}>
+    <Picture
+            src={portrait}
+            formats={["avif", "webp"]}
+            fallbackFormat="jpg"
+            widths={[220, 440, 640]}
+            sizes={PHOTO_SIZES}
+            quality={PHOTO_QUALITY}
+            alt={t("hero.photo_alt")}
+            width={220}
+            height={220}
+            loading="eager"
+            decoding="sync"
+            fetchpriority="high"
+            pictureAttributes={{class: "hero-photo-frame"}}
+            class="hero-photo"
+    />
+
+    <div class="hero-content">
+        <h1 class="hero-name" id={sectionTitleId(sectionIds.hero)}>{t("header.name")}</h1>
+        <p class="hero-role">{t("hero.role")}</p>
+
+        <ul class="hero-specialties" role="list">
+            {specialties.map((specialty) => <li class="hero-specialty">{pick(specialty)}</li>)}
+        </ul>
+
+        <p class="hero-pitch">{t("hero.pitch")}</p>
+        <p class="hero-availability">{t("hero.availability")}</p>
+
+        <div class="hero-actions">
+            <DownloadCv lang={lang} variant="primary" />
+            <a class="button" href={`#${sectionIds.experience}`}>{t("hero.cta.experience")}</a>
+            <a class="button" href={`#${sectionIds.contact}`}>{t("hero.cta.contact")}</a>
+            {
+                socialLinks.map(({href, label}) => (
+                        <ExternalLink href={href} lang={lang} class="button button-quiet">
+                            {label}
+                        </ExternalLink>
+                ))
+            }
+        </div>
+    </div>
+</section>

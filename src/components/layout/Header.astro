@@ -1,0 +1,54 @@
+---
+import {navSections, sectionIds} from "../../utils/navigation.ts";
+import {pathForLocale, locales} from "../../../site.config.ts";
+import {languageNames, useTranslations, type SupportedLanguage} from "../../utils/i18n.ts";
+
+interface Props {
+    lang: SupportedLanguage;
+}
+
+const {lang} = Astro.props;
+const {t, pick} = useTranslations(lang);
+---
+
+<header class="header-container">
+    <div class="header-content" data-header-content>
+        <a class="header-identity" href={`#${sectionIds.hero}`}>
+            <span class="header-name">{t("header.name")}</span>
+            <span class="header-role">{t("header.role")}</span>
+        </a>
+
+        <nav class="header-navigation">
+            {
+                navSections.map(({id, label}) => (
+                        <a class="nav-link" href={`#${id}`} data-nav-link={id}>
+                            {pick(label)}
+                        </a>
+                ))
+            }
+
+            {
+                /*
+              Plain links between two prerendered documents. Each language is its own
+              URL with its own metadata, so switching needs no JavaScript at all.
+            */
+            }
+            <div class="lang-switch" role="group" aria-label={t("header.language_label")}>
+                {
+                    locales.map(({code}) => (
+                            <a
+                                    class:list={["lang-link", code === lang && "active"]}
+                                    href={pathForLocale(code)}
+                                    hreflang={code}
+                                    lang={code}
+                                    aria-current={code === lang ? "page" : undefined}
+                            >
+                                {code}
+                                <span class="visually-hidden">{` ${languageNames[code]}`}</span>
+                            </a>
+                    ))
+                }
+            </div>
+        </nav>
+    </div>
+</header>

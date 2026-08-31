@@ -1,0 +1,14 @@
+---
+import {sectionTitleId} from "../../utils/navigation.ts";
+
+interface Props {
+    id: string;
+    label: string;
+}
+
+const {id, label} = Astro.props;
+---
+
+<div class="section-label">
+    <h2 class="section-label-text" id={sectionTitleId(id)}>{label}</h2>
+</div>

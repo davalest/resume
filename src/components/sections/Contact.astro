@@ -1,0 +1,78 @@
+---
+import SectionLabel from "../ui/SectionLabel.astro";
+import DownloadCv from "../ui/DownloadCv.astro";
+import ExternalLink from "../ui/ExternalLink.astro";
+import Icon from "../ui/Icon.astro";
+import {email, mailtoWithSubject, socialLinks, vCardPath} from "../../data/contact.ts";
+import {sectionIds, sectionTitleId, withBase} from "../../utils/navigation.ts";
+import {useTranslations, type SupportedLanguage} from "../../utils/i18n.ts";
+
+interface Props {
+    lang: SupportedLanguage;
+}
+
+const {lang} = Astro.props;
+const {t} = useTranslations(lang);
+---
+
+<section
+        class="section"
+        id={sectionIds.contact}
+        aria-labelledby={sectionTitleId(sectionIds.contact)}
+>
+    <SectionLabel id={sectionIds.contact} label={t("contact.title")} />
+
+    <div class="section-body contact-body">
+        <p class="contact-lead">{t("contact.lead")}</p>
+
+        <div class="contact-actions">
+            <a class="button button-primary" href={mailtoWithSubject(t("contact.email_subject"))}>
+                <Icon name="envelope" />
+                {t("contact.email_cta")}
+            </a>
+
+            {
+                /*
+              The only button on the page that needs JavaScript. It carries its own
+              copy and its own messages, so the enhancement script stays generic and
+              the strings stay in the locale bundle.
+            */
+            }
+            <button
+                    type="button"
+                    class="button"
+                    data-copy-email
+                    data-address={email.label}
+                    data-copied={t("contact.copied")}
+                    data-failed={t("contact.copy_failed", {email: email.label})}
+            >
+                <Icon name="copy" />
+                {t("contact.copy_email")}
+            </button>
+
+            <DownloadCv lang={lang} />
+
+            <a class="button button-quiet" href={withBase(vCardPath)} download>
+                <Icon name="download" />
+                {t("contact.vcard")}
+            </a>
+        </div>
+
+        <p class="contact-copy-status" role="status" data-copy-status></p>
+
+        <ul class="contact-links" role="list">
+            {
+                socialLinks.map(({icon, label, href}) => (
+                        <li>
+                            <ExternalLink href={href} lang={lang}>
+                                <Icon name={icon} />
+                                {label}
+                            </ExternalLink>
+                        </li>
+                ))
+            }
+        </ul>
+
+        <p class="contact-availability">{t("contact.availability")}</p>
+    </div>
+</section>

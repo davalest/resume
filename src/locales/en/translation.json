@@ -3,7 +3,7 @@
     "title": "David Valenciano — Senior Front-End Engineer",
     "description": "Senior Front-End Engineer in Madrid. React, TypeScript and React Native. Currently at Docline, building the online-consultation platform and the component library shared across its products.",
     "og_description": "React · TypeScript · React Native. Open to senior and lead roles — remote, or hybrid in Madrid.",
-    "image_alt": "David Valenciano, Senior Front-End Engineer — React & TypeScript, React Native, Next.js",
+    "image_alt": "David Valenciano, Senior Front-End Engineer — React, TypeScript, React Native",
     "job_title": "Senior Front-End Engineer"
   },
   "header": {
@@ -34,7 +34,7 @@
     "title": "About",
     "p1": "I build front-ends that hold up over time: component systems that scale, TypeScript that catches problems before QA does, and interfaces that work on the devices people actually use.",
     "p2": "I have worked in healthtech (Docline, QUO Health), e-commerce (Shopery) and consultancy (Capitole), on teams of very different sizes and always next to people I learned something from.",
-    "p3": "Client work is under NDA, so this site is itself the work sample: React 19, strict TypeScript, tested, CI'd, and gated on Lighthouse before it ships. Source:"
+    "p3": "Client work is under NDA, so this site is itself the work sample: Astro, strict TypeScript, zero JavaScript shipped on first load, tested end to end, and gated on Lighthouse in CI before it ships. Source:"
   },
   "education": {
     "title": "Education",
@@ -54,11 +54,12 @@
     "availability": "Open to senior and lead front-end roles — remote, or hybrid in Madrid."
   },
   "error": {
-    "title": "Something went wrong",
-    "message": "This page hit an unexpected error. Let's get you back to safe ground.",
-    "cta": "Back to home"
+    "not_found_title": "Page not found",
+    "not_found_message": "That URL doesn't exist. The CV is one click away.",
+    "not_found_cta": "Go to the CV"
   },
   "a11y": {
-    "skip_to_content": "Skip to content"
+    "skip_to_content": "Skip to content",
+    "new_tab": "opens in a new tab"
   }
 }

@@ -1,0 +1,21 @@
+{
+  "extends": ["stylelint-config-standard-scss"],
+  "ignoreFiles": ["dist/**", "coverage/**", "src/styles/konamize.css"],
+  "rules": {
+    "declaration-property-value-no-unknown": true,
+    "property-no-deprecated": true,
+    "selector-max-id": 0,
+    "custom-property-pattern": "^[a-z][a-z0-9]*(-[a-z0-9]+)*$",
+    "no-descending-specificity": null,
+    "color-hex-length": null,
+    "color-function-notation": null,
+    "color-function-alias-notation": null,
+    "alpha-value-notation": null,
+    "selector-class-pattern": null,
+    "at-rule-empty-line-before": null,
+    "comment-empty-line-before": null,
+    "declaration-empty-line-before": null,
+    "scss/dollar-variable-empty-line-before": null,
+    "scss/comment-no-empty": null
+  }
+}

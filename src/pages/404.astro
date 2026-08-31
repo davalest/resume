@@ -1,0 +1,17 @@
+---
+import Base from "../layouts/Base.astro";
+import {withBase} from "../utils/navigation.ts";
+import {useTranslations} from "../utils/i18n.ts";
+
+const {t} = useTranslations("en");
+---
+
+<Base lang="en" noindex title={`${t("error.not_found_title")} — David Valenciano`}>
+    <main class="layout layout-bare" id="content">
+        <div class="error-page">
+            <h1 class="error-title">{t("error.not_found_title")}</h1>
+            <p class="error-message">{t("error.not_found_message")}</p>
+            <a class="button button-primary" href={withBase("")}>{t("error.not_found_cta")}</a>
+        </div>
+    </main>
+</Base>
