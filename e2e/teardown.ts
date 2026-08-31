@@ -1,5 +1,5 @@
 import {stopPreview} from "./server.ts";
 
-export default function globalTeardown(): void {
-    stopPreview();
+export default async function globalTeardown(): Promise<void> {
+    await stopPreview();
 }
