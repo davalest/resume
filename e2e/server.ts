@@ -3,8 +3,9 @@ import {execFileSync} from "node:child_process";
 const PORT = 4173;
 export const baseURL = `http://localhost:${PORT}`;
 
-const astro = (...args: string[]): string =>
-    execFileSync("npx", ["astro", ...args], {encoding: "utf-8", stdio: ["ignore", "pipe", "pipe"]});
+const astro = (...args: string[]): void => {
+    execFileSync("npx", ["astro", ...args], {stdio: "ignore", timeout: 30_000});
+};
 
 export const stopPreview = (): void => {
     try {

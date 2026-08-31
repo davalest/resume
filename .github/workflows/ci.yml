@@ -21,8 +21,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          # verify-build derives dateModified from the last commit, so a
-          # zero-depth clone would hand it the wrong date.
           fetch-depth: 2
 
       - uses: actions/setup-node@v4
@@ -47,8 +45,6 @@ jobs:
       - name: Unit tests with coverage
         run: npm run test:coverage
 
-      # Two builds on purpose. The first is what the tests run against; the
-      # second is what actually ships, and only it can catch a base-path mistake.
       - name: Build (test shape, base /)
         run: npm run build
 
@@ -56,6 +52,7 @@ jobs:
         run: npx playwright install --with-deps chromium
 
       - name: End-to-end tests
+        timeout-minutes: 10
         run: npm run test:e2e
 
       - name: Lighthouse budgets
