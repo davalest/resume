@@ -30,7 +30,7 @@
     "assets:social": "node --experimental-strip-types scripts/generate-social-assets.ts"
   },
   "dependencies": {
-    "@davalest/konamize": "^1.1.0"
+    "@davalest/konamize": "^1.1.1"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.10",
