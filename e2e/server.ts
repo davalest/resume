@@ -35,6 +35,7 @@ const waitUntilServing = async (timeoutMs = 60_000): Promise<void> => {
 export default async function globalSetup(): Promise<void> {
     stopPreview();
 
+    // `SKIP_BUILD=1` for a fast loop when you know dist/ is current.
     if (!process.env.SKIP_BUILD) {
         execFileSync("npm", ["run", "build"], {stdio: "inherit"});
     }
