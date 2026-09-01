@@ -16,6 +16,12 @@ export default tseslint.config(
             "coverage",
             "node_modules",
             "cv-source",
+            // On disk, not in the repo. CI never sees these; without them the
+            // lint gate reports red locally over files that are not the project.
+            ".claude",
+            "_bmad",
+            "_bmad-output",
+            "design-artifacts",
         ],
     },
     {

@@ -28,3 +28,10 @@ yarn-error.log*
 
 # TypeScript incremental build state
 *.tsbuildinfo
+
+# AI tooling scaffolding: local to this machine, never part of the site.
+# Without this, `git add -A` sweeps the whole BMAD toolchain into the repo.
+/.claude
+/_bmad
+/_bmad-output
+/design-artifacts

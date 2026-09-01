@@ -8,3 +8,14 @@ package-lock.json
 cv-source
 src/utils/icons.ts
 src/styles/konamize.css
+
+# Ownership tokens from third parties. Their content is checked byte for byte by
+# whoever issued them, so formatting one could invalidate it.
+public/google*.html
+
+# AI tooling scaffolding: on disk, not in the repo. Without this, format:check
+# and lint report red locally over files that CI never even sees.
+.claude
+_bmad
+_bmad-output
+design-artifacts
