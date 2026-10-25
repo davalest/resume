@@ -33,15 +33,15 @@
     "@davalest/konamize": "^1.1.0"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.10",
-    "@astrojs/sitemap": "^3.7.3",
+    "@astrojs/check": "^0.9.12",
+    "@astrojs/sitemap": "^3.7.4",
     "@axe-core/playwright": "^4.13.0",
     "@eslint/js": "^9",
     "@lhci/cli": "^0.15.1",
     "@playwright/test": "1.62.1",
     "@types/node": "^26.4.0",
     "@vitest/coverage-v8": "^4",
-    "astro": "^7.2.9",
+    "astro": "^7.4.2",
     "astro-eslint-parser": "^3.1.0",
     "eslint": "^9",
     "eslint-plugin-astro": "^1.7.0",
