@@ -41,7 +41,7 @@
     "@playwright/test": "1.62.1",
     "@types/node": "^26.4.0",
     "@vitest/coverage-v8": "^4",
-    "astro": "^7.2.9",
+    "astro": "^7.3.3",
     "astro-eslint-parser": "^3.1.0",
     "eslint": "^9",
     "eslint-plugin-astro": "^1.7.0",
